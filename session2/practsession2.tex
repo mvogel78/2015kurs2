@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{left=1.2in,top=1in,right=1.2in,bottom=1.5in} %margins
+\parindent0mm
+\parskip2mm
+\begin{document}
+
+\title{Practicals Part 1}
+\author{}
+\date{\today}
+\maketitle
+
+\section{Prepare!}
+\begin{enumerate}
+\item download and save the session2 folder for today's lesson
+\item Run RStudio or Deducer and change your working directory to this copied directory
+\item Try to use R as a calculator: What is greater $e^{\pi}$ or $\pi^{e}$.
+\item Try the graphical demo using \texttt{demo(graphics)} at the commend line.
+\item Look at the objects created by this demo by the function \texttt{ls()}. Please do NOT omit the parenthesis!
+\item Delete all objects with \texttt{rm(list=ls())}
+\end{enumerate}
+
+
+\section{Commands you will need}
+PS: you may not really \textit{need} all of them but \textit{all of them} will be helpful
+\begin{itemize}
+\item \texttt{load()}
+\item \texttt{c()}
+\item \texttt{seq()}
+\item \texttt{rep()}
+\item \texttt{length()}
+\end{itemize}
+
+\section{Indexing}
+\begin{enumerate}
+\item Create a vector w with components 1, -1, 2, -2
+\item Display this vector
+\item Obtain a description of w using str()
+\item Create the vector w2 as w+1, and display it.
+\item Create the vector v with components (0, 1, 5, 10, 15, ... , 75) using c() and/or seq().
+\item Find the length of this vector.
+\end{enumerate}
+
+
+\subsection{Displaying and changing parts of a vector (indexing)}
+First try to understand the following commands: (you can input the vector via the keyboard or load it - it is contained in the session2 folder)
+\begin{verbatim}
+> x <- c(2, 7, 0, 9, 10, 23, 11, 4, 7, 8, 6, 0)
+> x[4]
+> x[3:5]
+> x[c(1, 5, 8)]
+> x[x > 10]
+> x[(1:6) * 2]
+> x[x == 0] <- 1
+> x
+> ifelse(round(x/2) == x/2, "even", "odd")        ## this is an extra
+\end{verbatim}
+
+Now try the following (for the modifying parts, first try to display):
+\begin{enumerate}
+\item Display every third element in x
+\item Display elements that are less than 10, but greater than 4
+\item Modify the vector x, replacing by 10 all values that are greater than 10
+\item Modify the vector x, multiplying by 2 all elements that are smaller than 5
+\item Create a new vector y with elements 0,1,0,1, . . . (12 elements) and a vector z that equals x when y=0 and 3x when y=1. (You can do it using ifelse, but there are other possibilities)
+\end{enumerate}
+
+\subsection{Displaying and changing parts of a data frame (indexing part2)}
+Load the data \texttt{session2/presidential.rdata}. Have a look at the \texttt{presidential} data set. 
+
+\begin{enumerate}
+\item Display only lines containing Republican presidents
+\item Display only lines containing Democratic presidents
+\item Display only lines with presidents reigned longer than 3 but less than 6 years
+\item type and understand the following commands
+\begin{verbatim}
+> table(presidential$party)
+> presidential$durmax <- presidential$duration==8
+> pt <- table(presidential$party,presidential$durmax)
+> pt
+> plot(pt)
+> by(presidential$duration,presidential$party,summary)
+\end{verbatim}
+\end{enumerate}
+
+
+
+\end{document}
+\end
