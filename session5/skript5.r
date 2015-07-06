@@ -61,6 +61,22 @@ p1 <- ggplot(GaltonFamilies, aes(x=midparentHeight,y=childHeight,shape=gender)) 
     geom_smooth() +
     geom_smooth(method="lm")
 
+## dot plots
+ggplot(mtcars, aes(x = mpg)) + geom_dotplot()
+ggsave("dotplot1.png")
+
+ggplot(mtcars, aes(x = mpg)) + geom_dotplot(binwidth = 1.5)
+ggsave("dotplot2.png")
+
+## Use fixed-width bins
+ggplot(mtcars, aes(x = mpg)) +
+    geom_dotplot(method="histodot", binwidth = 1.5)
+ggsave("dotplot3.png")
+
+## Some other stacking methods
+ggplot(mtcars, aes(x = mpg)) +
+    geom_dotplot(binwidth = 1.5, stackdir = "center")
+ggsave("dotplot4.png")
 
 ## INBOtheme
 install.packages("INBOtheme", repos="http://R-Forge.R-project.org")

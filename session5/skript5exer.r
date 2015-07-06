@@ -25,6 +25,26 @@ ggplot(GaltonFamilies, aes(x=mother,y=father)) +
 
 ggsave("scattertrend2.png")
 
+## dot plots
+ggplot(mtcars, aes(x = mpg)) + geom_dotplot()
+ggsave("dotplot1.png")
+
+ggplot(mtcars, aes(x = mpg)) + geom_dotplot(binwidth = 1.5)
+ggsave("dotplot2.png")
+
+## Use fixed-width bins
+ggplot(mtcars, aes(x = mpg)) +
+    geom_dotplot(method="histodot", binwidth = 1.5)
+ggsave("dotplot3.png")
+
+## Some other stacking methods
+ggplot(mtcars, aes(x = mpg)) +
+    geom_dotplot(binwidth = 1.5, stackdir = "center")
+ggsave("dotplot4.png")
+
+
+
+
 
 ## Exercises
 ## use again the GaltonFamilies data set; produce a scatter plot

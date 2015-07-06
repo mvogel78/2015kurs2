@@ -92,6 +92,59 @@ which results in:
 \end{frame}
 
 
+\begin{frame}[fragile]\frametitle{geom\_dotplot()}
+  \begin{itemize}
+  \item it sounds a bit like point, but the function is totally different
+  \item infact it is a alternative for histograms for small sample sizes
+  \end{itemize}\small
+\begin{verbatim}
+> ggplot(mtcars, aes(x = mpg)) + geom_dotplot()
+\end{verbatim}
+which results in:
+\end{frame}
+
+\begin{frame}\frametitle{dot plot example}
+  \begin{center}
+    \includegraphics[width=8cm]{dotplot1.png}
+  \end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]\frametitle{geom\_dotplot()}
+\small
+\begin{verbatim}
+> ggplot(mtcars, aes(x = mpg)) + geom_dotplot(binwidth = 1.5)
+\end{verbatim}
+which results in:
+\end{frame}
+
+\begin{frame}\frametitle{dot plot example}
+  \begin{center}
+    \includegraphics[width=8cm]{dotplot2.png}
+  \end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]\frametitle{geom\_dotplot()}
+\small
+\begin{verbatim}
+> ggplot(mtcars, aes(x = mpg)) +
++     geom_dotplot(binwidth = 1.5, stackdir = "center")
+\end{verbatim}
+which results in:
+\end{frame}
+
+\begin{frame}\frametitle{dot plot example}
+  \begin{center}
+    \includegraphics[width=8cm]{dotplot4.png}
+  \end{center}
+\end{frame}
+
+
+
+
 \begin{frame}[allowframebreaks]\frametitle{Exercises}
   \begin{enumerate}
   \item use again the GaltonFamilies data set; produce a scatter plot of \texttt{childHeight} vs \texttt{midparentHeight}
