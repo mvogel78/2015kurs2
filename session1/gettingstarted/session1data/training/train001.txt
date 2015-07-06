@@ -1,0 +1,375 @@
+Scenario - 												
+												
+												
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+												
+Train001	1	Response	3	1760690	1770035	1						
+Train001	2	Response	3	1764207	2881	1						
+Train001	4	Picture	B1 T1	1776122	0	1	15006	392	0	next	other	0
+Train001	5	Picture	TS09.jpg	1791128	0	391	40779	392	0	next	other	0
+Train001	6	Sound	TS09.wav	1791628	0	2			0		other	0
+Train001	7	Picture	TS09.jpg	1831907	0	1	1599	3	0	next	hit	7
+Train001	7	Response	1	1833343	1436	1						
+Train001	9	Video	Richtig	1844554	0	551			0		other	0
+Train001	11	Picture	B1 T2	1871296	0	1	15196	2	0	next	other	0
+Train001	12	Picture	TS25.jpg	1886492	0	1	38790	2	0	next	other	0
+Train001	13	Sound	TS25.wav	1886992	0	2			0		other	0
+Train001	14	Picture	TS25.jpg	1925282	0	1	9597	2	0	next	hit	13
+Train001	14	Response	2	1934820	9538	1						
+Train001	16	Video	Richtig	1939878	0	1			0		other	0
+Train001	18	Picture	B1 T3	1966071	0	1	15196	2	0	next	other	0
+Train001	19	Picture	TO06.jpg	1981267	0	1	38790	2	0	next	other	0
+Train001	20	Sound	TO06.wav	1981767	0	2			0		other	0
+Train001	21	Picture	TO06.jpg	2020057	0	1	26193	2	0	next	incorrect	19
+Train001	21	Response	1	2046103	26046	1						
+Train001	23	Video	Falsch	2050848	0	2			0		other	0
+Train001	25	Picture	B1 T4	2077441	0	1	15196	2	0	next	other	0
+Train001	26	Picture	TS08.jpg	2092637	0	1	38590	2	0	next	other	0
+Train001	27	Sound	TS08.wav	2093137	0	2			0		other	0
+Train001	28	Picture	TS08.jpg	2131227	0	1	10597	2	0	next	hit	25
+Train001	28	Response	1	2141719	10492	1						
+Train001	30	Video	Richtig	2146623	0	1			0		other	0
+Train001	32	Picture	B1 T5	2173216	0	1	15196	2	0	next	other	0
+Train001	33	Picture	TO25.jpg	2188412	0	1	38789	2	0	next	other	0
+Train001	34	Sound	TO25.wav	2188912	0	2			0		other	0
+Train001	35	Picture	TO25.jpg	2227201	0	1	4199	2	0	next	incorrect	31
+Train001	35	Response	1	2231201	4000	1						
+Train001	37	Video	Falsch	2235999	0	1			0		other	0
+Train001	39	Picture	B1 T6	2261792	0	1	15196	2	0	next	other	0
+Train001	40	Picture	TS23.jpg	2276988	0	1	38990	2	0	next	other	0
+Train001	41	Sound	TS23.wav	2277488	0	2			0		other	0
+Train001	42	Picture	TS23.jpg	2315978	0	1	12996	2	0	next	hit	37
+Train001	42	Response	2	2328886	12908	1						
+Train001	44	Video	Richtig	2332973	0	1			0		other	0
+Train001	46	Picture	B1 T7	2358766	0	1	15196	2	0	next	other	0
+Train001	47	Picture	TS29.jpg	2373962	0	1	38590	2	0	next	other	0
+Train001	48	Sound	TS29.wav	2374462	0	2			0		other	0
+Train001	49	Picture	TS29.jpg	2412552	0	1	8797	2	0	next	incorrect	43
+Train001	49	Response	1	2421243	8691	1						
+Train001	51	Video	Falsch	2425348	0	2			0		other	0
+Train001	53	Picture	B1 T8	2450941	0	1	15196	2	0	next	other	0
+Train001	54	Picture	TS19.jpg	2466137	0	1	39190	2	0	next	other	0
+Train001	55	Sound	TS19.wav	2466637	0	2			0		other	0
+Train001	56	Picture	TS19.jpg	2505327	0	1	1799	2	0	next	hit	49
+Train001	56	Response	2	2507098	1771	1						
+Train001	58	Video	Richtig	2510925	0	2			0		other	0
+Train001	60	Picture	B1 T9	2536719	0	1	15195	2	0	next	other	0
+Train001	61	Picture	TO05.jpg	2551914	0	1	38390	2	0	next	other	0
+Train001	62	Sound	TO05.wav	2552414	0	2			0		other	0
+Train001	63	Picture	TO05.jpg	2590304	0	1	6199	2	0	next	incorrect	55
+Train001	63	Response	2	2596403	6099	1						
+Train001	65	Video	Falsch	2600701	0	2			0		other	0
+Train001	67	Picture	B1 T10	2627494	0	1	15196	2	0	next	other	0
+Train001	68	Picture	TS28.jpg	2642690	0	1	38590	2	0	next	other	0
+Train001	69	Sound	TS28.wav	2643190	0	2			0		other	0
+Train001	70	Picture	TS28.jpg	2681280	0	1	27592	3	0	next	hit	61
+Train001	70	Response	1	2708673	27393	1						
+Train001	72	Video	Richtig	2712871	0	2			0		other	0
+Train001	74	Picture	B1 T11	2738665	0	1	15195	3	0	next	other	0
+Train001	75	Picture	TO04.jpg	2753860	0	2	38790	3	0	next	other	0
+Train001	76	Sound	TO04.wav	2754360	0	2			0		other	0
+Train001	77	Picture	TO04.jpg	2792650	0	1	22194	2	0	next	hit	67
+Train001	77	Response	2	2814663	22013	1						
+Train001	79	Video	Richtig	2818443	0	1			0		other	0
+Train001	81	Picture	B1 T12	2844636	0	1	15196	2	0	next	other	0
+Train001	82	Picture	TO23.jpg	2859832	0	1	38790	2	0	next	other	0
+Train001	83	Sound	TO23.wav	2860332	0	2			0		other	0
+Train001	84	Picture	TO23.jpg	2898622	0	1	30592	2	0	next	hit	73
+Train001	84	Response	1	2929126	30504	1						
+Train001	86	Video	Richtig	2932813	0	1			0		other	0
+Train001	88	Picture	B1 T13	2959406	0	1	15195	3	0	next	other	0
+Train001	89	Picture	TO10.jpg	2974601	0	2	41189	4	0	next	other	0
+Train001	90	Sound	TO10.wav	2975101	0	2			0		other	0
+Train001	91	Picture	TO10.jpg	3015790	0	2	34591	3	0	next	incorrect	79
+Train001	91	Response	1	3050336	34546	1						
+Train001	93	Video	Falsch	3054580	0	1			0		other	0
+Train001	95	Picture	B1 T14	3081173	0	1	15196	2	0	next	other	0
+Train001	96	Picture	TS22.jpg	3096369	0	1	39189	2	0	next	other	0
+Train001	97	Sound	TS22.wav	3096869	0	2			0		other	0
+Train001	98	Picture	TS22.jpg	3135558	0	1	35391	2	0	next	hit	85
+Train001	98	Response	1	3170918	35360	1						
+Train001	100	Video	Richtig	3175148	0	1			0		other	0
+Train001	102	Picture	B1 T15	3201341	0	1	15196	2	0	next	other	0
+Train001	103	Picture	TS11.jpg	3216537	0	1	38589	3	0	next	other	0
+Train001	104	Sound	TS11.wav	3217037	0	2			0		other	0
+Train001	105	Picture	TS11.jpg	3255126	0	2	24194	3	0	next	incorrect	91
+Train001	105	Response	1	3279110	23984	1						
+Train001	107	Video	Falsch	3283119	0	1			0		other	0
+Train001	109	Picture	B1 T16	3309312	0	1	15196	2	0	next	other	0
+Train001	110	Picture	TO30.jpg	3324508	0	1	39589	2	0	next	other	0
+Train001	111	Sound	TO30.wav	3325008	0	2			0		other	0
+Train001	112	Picture	TO30.jpg	3364097	0	1	54386	2	0	next	hit	97
+Train001	112	Response	1	3418432	54335	1						
+Train001	114	Video	Richtig	3423082	0	1			0		other	0
+Train001	115	Pause		3446354	8076		541110					
+Train001	115	Resume		3446354	8076							
+Train001	116	Picture	B1 T17	3449220	0	1	15196	2	0	next	other	0
+Train001	117	Picture	TO18.jpg	3464416	0	1	39589	2	0	next	other	0
+Train001	118	Sound	TO18.wav	3464916	0	2			0		other	0
+Train001	119	Picture	TO18.jpg	3504005	0	1	10597	2	0	next	incorrect	105
+Train001	119	Response	2	3514440	10435	1						
+Train001	121	Video	Falsch	3519401	0	1			0		other	0
+Train001	123	Picture	B1 T18	3545594	0	1	15196	2	0	next	other	0
+Train001	124	Picture	TO19.jpg	3560790	0	1	38990	2	0	next	other	0
+Train001	125	Sound	TO19.wav	3561290	0	2			0		other	0
+Train001	126	Picture	TO19.jpg	3599780	0	1	3399	2	0	next	incorrect	111
+Train001	126	Response	1	3603129	3349	1						
+Train001	128	Video	Falsch	3607378	0	1			0		other	0
+Train001	130	Picture	B1 T19	3633371	0	1	15196	2	0	next	other	0
+Train001	131	Picture	TS13.jpg	3648567	0	1	38789	2	0	next	other	0
+Train001	132	Sound	TS13.wav	3649067	0	2			0		other	0
+Train001	133	Picture	TS13.jpg	3687356	0	1	9798	2	0	next	hit	117
+Train001	133	Response	2	3697112	9756	1						
+Train001	135	Video	Richtig	3701153	0	1			0		other	0
+Train001	137	Picture	B1 T20	3727945	0	1	15196	2	0	next	other	0
+Train001	138	Picture	TO01.jpg	3743141	0	1	38590	2	0	next	other	0
+Train001	139	Sound	TO01.wav	3743641	0	2			0		other	0
+Train001	140	Picture	TO01.jpg	3781731	0	1	29392	2	0	next	hit	123
+Train001	140	Response	2	3811015	29284	1						
+Train001	142	Video	Richtig	3815722	0	1			0		other	0
+Train001	144	Picture	B1 T21	3844914	0	1	15196	2	0	next	other	0
+Train001	145	Picture	TO03.jpg	3860110	0	1	38990	2	0	next	other	0
+Train001	146	Sound	TO03.wav	3860610	0	2			0		other	0
+Train001	147	Picture	TO03.jpg	3899100	0	1	34790	2	0	next	incorrect	129
+Train001	147	Response	2	3933681	34581	1						
+Train001	149	Video	Falsch	3941088	0	2			0		other	0
+Train001	151	Picture	B1 T22	3971880	0	1	15196	2	0	next	other	0
+Train001	152	Picture	TO22.jpg	3987076	0	1	40189	2	0	next	other	0
+Train001	153	Sound	TO22.wav	3987576	0	2			0		other	0
+Train001	154	Picture	TO22.jpg	4027265	0	1	24794	2	0	next	hit	135
+Train001	154	Response	2	4051951	24686	1						
+Train001	156	Video	Richtig	4059257	0	1			0		other	0
+Train001	158	Picture	B1 T23	4088249	0	1	15196	2	0	next	other	0
+Train001	159	Picture	TS10.jpg	4103445	0	1	39589	3	0	next	other	0
+Train001	160	Sound	TS10.wav	4103945	0	2			0		other	0
+Train001	161	Picture	TS10.jpg	4143034	0	2	15596	3	0	next	incorrect	141
+Train001	161	Response	1	4158538	15504	1						
+Train001	163	Video	Falsch	4163229	0	1			0		other	0
+Train001	165	Picture	B1 T24	4189422	0	1	15196	2	0	next	other	0
+Train001	166	Picture	TO28.jpg	4204618	0	1	38790	2	0	next	other	0
+Train001	167	Sound	TO28.wav	4205118	0	2			0		other	0
+Train001	168	Picture	TO28.jpg	4243408	0	1	23193	2	0	next	incorrect	147
+Train001	168	Response	2	4266467	23059	1						
+Train001	170	Video	Falsch	4273800	0	1			0		other	0
+Train001	172	Picture	B1 T25	4304991	0	1	15196	2	0	next	other	0
+Train001	173	Picture	TS14.jpg	4320187	0	1	37590	2	0	next	other	0
+Train001	174	Sound	TS14.wav	4320687	0	2			0		other	0
+Train001	175	Picture	TS14.jpg	4357777	0	1	12997	2	0	next	hit	153
+Train001	175	Response	1	4370761	12984	1						
+Train001	177	Video	Richtig	4377972	0	1			0		other	0
+Train001	179	Picture	B1 T26	4407164	0	1	15196	2	0	next	other	0
+Train001	180	Picture	TS27.jpg	4422360	0	1	40389	2	0	next	other	0
+Train001	181	Sound	TS27.wav	4422860	0	2			0		other	0
+Train001	182	Picture	TS27.jpg	4462749	0	1	2199	2	0	next	hit	159
+Train001	182	Response	2	4464851	2102	1						
+Train001	184	Video	Richtig	4472946	0	1			0		other	0
+Train001	186	Picture	B1 T27	4499939	0	1	15196	2	0	next	other	0
+Train001	187	Picture	TO20.jpg	4515135	0	1	38990	2	0	next	other	0
+Train001	188	Sound	TO20.wav	4515635	0	2			0		other	0
+Train001	189	Picture	TO20.jpg	4554125	0	1	9597	2	0	next	incorrect	165
+Train001	189	Response	2	4563552	9427	1						
+Train001	191	Video	Falsch	4570720	0	2			0		other	0
+Train001	193	Picture	B1 T28	4602712	0	1	15196	2	0	next	other	0
+Train001	194	Picture	TO27.jpg	4617908	0	1	38789	2	0	next	other	0
+Train001	195	Sound	TO27.wav	4618408	0	2			0		other	0
+Train001	196	Picture	TO27.jpg	4656697	0	1	2799	2	0	next	hit	171
+Train001	196	Response	2	4659337	2640	1						
+Train001	198	Video	Richtig	4666495	0	1			0		other	0
+Train001	200	Picture	B1 T29	4695487	0	1	15196	2	0	next	other	0
+Train001	201	Picture	TS20.jpg	4710683	0	1	38389	3	0	next	other	0
+Train001	202	Sound	TS20.wav	4711183	0	2			0		other	0
+Train001	203	Picture	TS20.jpg	4749072	0	2	23594	3	0	next	hit	177
+Train001	203	Response	1	4772645	23573	1						
+Train001	205	Video	Richtig	4779864	0	1			0		other	0
+Train001	207	Picture	B1 T30	4808657	0	1	15195	2	0	next	other	0
+Train001	208	Picture	TS04.jpg	4823852	0	1	38990	2	0	next	other	0
+Train001	209	Sound	TS04.wav	4824352	0	2			0		other	0
+Train001	210	Picture	TS04.jpg	4862842	0	1	11797	2	0	next	incorrect	183
+Train001	210	Response	1	4874453	11611	1						
+Train001	212	Video	Falsch	4881637	0	1			0		other	0
+Train001	214	Picture	Pause	4907030	0	1	3938947	2	0	next	other	0
+Train001	214	Response	3	8845793	3938763	1						
+Train001	215	Response	3	8849987	4010	1						
+Train001	217	Picture	B2 T1	8861373	0	1	15196	2	0	next	other	0
+Train001	218	Picture	TS24.jpg	8876569	0	1	38190	2	0	next	other	0
+Train001	219	Sound	TS24.wav	8877069	0	2			0		other	0
+Train001	220	Picture	TS24.jpg	8914759	0	1	200	2	0	next	hit	192
+Train001	220	Response	1	8914924	165	1						
+Train001	222	Video	Richtig	8919358	0	1			0		other	0
+Train001	224	Picture	B2 T2	8945351	0	1	15196	2	0	next	other	0
+Train001	225	Picture	TO09.jpg	8960547	0	1	42388	2	0	next	other	0
+Train001	226	Sound	TO09.wav	8961047	0	2			0		other	0
+Train001	227	Picture	TO09.jpg	9002935	0	1	12797	2	0	next	hit	198
+Train001	227	Response	1	9015639	12704	1						
+Train001	229	Video	Richtig	9019331	0	1			0		other	0
+Train001	231	Picture	B2 T3	9048123	0	1	15196	2	0	next	other	0
+Train001	232	Picture	TS01.jpg	9063319	0	1	38790	2	0	next	other	0
+Train001	233	Sound	TS01.wav	9063819	0	2			0		other	0
+Train001	234	Response	1	9101907	128	1						
+Train001	237	Picture	B2 T4	9115705	0	1	15196	2	0	next	other	0
+Train001	238	Picture	TO12.jpg	9130901	0	1	38990	2	0	next	other	0
+Train001	239	Sound	TO12.wav	9131401	0	2			0		other	0
+Train001	240	Picture	TO12.jpg	9169891	0	1	6998	2	0	next	hit	208
+Train001	240	Response	2	9176818	6927	1						
+Train001	242	Video	Richtig	9183887	0	1			0		other	0
+Train001	244	Picture	B2 T5	9209480	0	1	15196	2	0	next	other	0
+Train001	245	Picture	TO14.jpg	9224676	0	1	37990	2	0	next	other	0
+Train001	246	Sound	TO14.wav	9225176	0	2			0		other	0
+Train001	247	Picture	TO14.jpg	9262666	0	1	6998	2	0	next	incorrect	214
+Train001	247	Response	1	9269646	6980	1						
+Train001	249	Video	Falsch	9276662	0	1			0		other	0
+Train001	251	Picture	B2 T6	9303055	0	1	15196	2	0	next	other	0
+Train001	252	Picture	TS02.jpg	9318251	0	1	38990	2	0	next	other	0
+Train001	253	Sound	TS02.wav	9318751	0	2			0		other	0
+Train001	254	Picture	TS02.jpg	9357241	0	1	6198	2	0	next	hit	220
+Train001	254	Response	2	9363325	6084	1						
+Train001	256	Video	Richtig	9370437	0	1			0		other	0
+Train001	258	Picture	B2 T7	9396830	0	1	15196	2	0	next	other	0
+Train001	259	Picture	TO24.jpg	9412026	0	1	40589	2	0	next	other	0
+Train001	260	Sound	TO24.wav	9412526	0	2			0		other	0
+Train001	261	Picture	TO24.jpg	9452615	0	1	6798	2	0	next	incorrect	226
+Train001	261	Response	1	9459305	6690	1						
+Train001	263	Video	Falsch	9463412	0	1			0		other	0
+Train001	265	Picture	B2 T8	9489805	0	1	15196	2	0	next	other	0
+Train001	266	Picture	TO07.jpg	9505001	0	1	38790	2	0	next	other	0
+Train001	267	Sound	TO07.wav	9505501	0	2			0		other	0
+Train001	268	Picture	TO07.jpg	9543791	0	1	23793	2	0	next	hit	232
+Train001	268	Response	1	9567532	23741	1						
+Train001	270	Video	Richtig	9571583	0	1			0		other	0
+Train001	272	Picture	B2 T9	9597776	0	1	15196	2	0	next	other	0
+Train001	273	Picture	TO29.jpg	9612972	0	1	39590	2	0	next	other	0
+Train001	274	Sound	TO29.wav	9613472	0	2			0		other	0
+Train001	275	Picture	TO29.jpg	9652562	0	1	6198	2	0	next	incorrect	238
+Train001	275	Response	1	9658729	6167	1						
+Train001	277	Video	Falsch	9662759	0	1			0		other	0
+Train001	279	Picture	B2 T10	9688952	0	1	15196	2	0	next	other	0
+Train001	280	Picture	TS07.jpg	9704148	0	1	39589	2	0	next	other	0
+Train001	281	Sound	TS07.wav	9704648	0	2			0		other	0
+Train001	282	Picture	TS07.jpg	9743737	0	1	2200	2	0	next	incorrect	244
+Train001	282	Response	1	9745813	2076	1						
+Train001	284	Video	Falsch	9750336	0	1			0		other	0
+Train001	286	Picture	B2 T11	9776728	0	2	15196	3	0	next	other	0
+Train001	287	Picture	TS16.jpg	9791924	0	1	38990	2	0	next	other	0
+Train001	288	Sound	TS16.wav	9792424	0	2			0		other	0
+Train001	289	Picture	TS16.jpg	9830914	0	1	22194	2	0	next	hit	250
+Train001	289	Response	1	9852941	22027	1						
+Train001	291	Video	Richtig	9857707	0	1			0		other	0
+Train001	293	Picture	B2 T12	9883700	0	1	15196	2	0	next	other	0
+Train001	294	Picture	TS05.jpg	9898896	0	1	38590	2	0	next	other	0
+Train001	295	Sound	TS05.wav	9899396	0	2			0		other	0
+Train001	296	Picture	TS05.jpg	9937486	0	1	13796	2	0	next	hit	256
+Train001	296	Response	1	9951217	13731	1						
+Train001	298	Video	Richtig	9954881	0	1			0		other	0
+Train001	300	Picture	B2 T13	9980674	0	1	15196	2	0	next	other	0
+Train001	301	Picture	TO02.jpg	9995870	0	1	38989	3	0	next	other	0
+Train001	302	Sound	TO02.wav	9996370	0	2			0		other	0
+Train001	303	Picture	TO02.jpg	10034859	0	2	96575	3	0	next	incorrect	262
+Train001	303	Response	2	10131293	96434	1						
+Train001	305	Video	Falsch	10138632	0	1			0		other	0
+Train001	307	Picture	B2 T14	10164825	0	1	15196	2	0	next	other	0
+Train001	308	Picture	TO16.jpg	10180021	0	1	38589	2	0	next	other	0
+Train001	309	Sound	TO16.wav	10180521	0	2			0		other	0
+Train001	310	Picture	TO16.jpg	10218610	0	1	7798	2	0	next	incorrect	268
+Train001	310	Response	2	10226396	7786	1						
+Train001	312	Video	Falsch	10230407	0	1			0		other	0
+Train001	314	Picture	B2 T15	10256600	0	1	15196	2	0	next	other	0
+Train001	315	Picture	TS21.jpg	10271796	0	1	39390	2	0	next	other	0
+Train001	316	Sound	TS21.wav	10272296	0	2			0		other	0
+Train001	317	Picture	TS21.jpg	10311186	0	1	6598	2	0	next	hit	274
+Train001	317	Response	2	10317733	6547	1						
+Train001	319	Video	Richtig	10322583	0	1			0		other	0
+Train001	321	Picture	B2 T16	10348976	0	1	15195	2	0	next	other	0
+Train001	322	Picture	TO13.jpg	10364171	0	1	38790	2	0	next	other	0
+Train001	323	Sound	TO13.wav	10364671	0	2			0		other	0
+Train001	324	Picture	TO13.jpg	10402961	0	1	800	2	0	next	incorrect	280
+Train001	324	Response	2	10403612	651	1						
+Train001	326	Video	Falsch	10408160	0	1			0		other	0
+Train001	328	Picture	B2 T17	10434153	0	1	15196	2	0	next	other	0
+Train001	329	Picture	TS06.jpg	10449349	0	1	35990	2	0	next	other	0
+Train001	330	Sound	TS06.wav	10449849	0	2			0		other	0
+Train001	331	Picture	TS06.jpg	10485339	0	1	3999	2	0	next	hit	286
+Train001	331	Response	2	10489229	3890	1						
+Train001	333	Video	Richtig	10494337	0	1			0		other	0
+Train001	335	Picture	B2 T18	10520930	0	1	15196	2	0	next	other	0
+Train001	336	Picture	TO21.jpg	10536126	0	1	40789	2	0	next	other	0
+Train001	337	Sound	TO21.wav	10536626	0	2			0		other	0
+Train001	338	Picture	TO21.jpg	10576915	0	1	19394	2	0	next	hit	292
+Train001	338	Response	1	10596153	19238	1						
+Train001	340	Video	Richtig	10601308	0	1			0		other	0
+Train001	342	Picture	B2 T19	10627101	0	1	15196	2	0	next	other	0
+Train001	343	Picture	TS17.jpg	10642297	0	1	38790	2	0	next	other	0
+Train001	344	Sound	TS17.wav	10642797	0	2			0		other	0
+Train001	345	Picture	TS17.jpg	10681087	0	1	6798	2	0	next	hit	298
+Train001	345	Response	2	10687860	6773	1						
+Train001	347	Video	Richtig	10692084	0	1			0		other	0
+Train001	349	Picture	B2 T20	10718277	0	1	15196	2	0	next	other	0
+Train001	350	Picture	TO26.jpg	10733473	0	1	39789	2	0	next	other	0
+Train001	351	Sound	TO26.wav	10733973	0	2			0		other	0
+Train001	352	Picture	TO26.jpg	10773262	0	1	5999	2	0	next	incorrect	304
+Train001	352	Response	2	10779148	5886	1						
+Train001	354	Video	Falsch	10783459	0	2			0		other	0
+Train001	356	Picture	B2 T21	10809652	0	1	15196	2	0	next	other	0
+Train001	357	Picture	TO11.jpg	10824848	0	1	38590	2	0	next	other	0
+Train001	358	Sound	TO11.wav	10825348	0	2			0		other	0
+Train001	359	Picture	TO11.jpg	10863438	0	1	8398	2	0	next	incorrect	310
+Train001	359	Response	2	10871806	8368	1						
+Train001	361	Video	Falsch	10876235	0	1			0		other	0
+Train001	363	Picture	B2 T22	10902228	0	1	15196	2	0	next	other	0
+Train001	364	Picture	TS03.jpg	10917424	0	1	38589	2	0	next	other	0
+Train001	365	Sound	TS03.wav	10917924	0	2			0		other	0
+Train001	366	Picture	TS03.jpg	10956013	0	1	6199	2	0	next	hit	316
+Train001	366	Response	1	10962008	5995	1						
+Train001	368	Video	Richtig	10966610	0	2			0		other	0
+Train001	370	Picture	B2 T23	10993003	0	1	15196	2	0	next	other	0
+Train001	371	Picture	TO17.jpg	11008199	0	1	38390	2	0	next	other	0
+Train001	372	Sound	TO17.wav	11008699	0	2			0		other	0
+Train001	373	Picture	TO17.jpg	11046589	0	1	4199	2	0	next	incorrect	322
+Train001	373	Response	1	11050598	4009	1						
+Train001	375	Video	Falsch	11055387	0	1			0		other	0
+Train001	377	Picture	B2 T24	11081580	0	1	15196	2	0	next	other	0
+Train001	378	Picture	TS12.jpg	11096776	0	1	38989	2	0	next	other	0
+Train001	379	Sound	TS12.wav	11097276	0	2			0		other	0
+Train001	380	Picture	TS12.jpg	11135765	0	1	22394	2	0	next	incorrect	328
+Train001	380	Response	2	11158038	22273	1						
+Train001	382	Video	Falsch	11162558	0	1			0		other	0
+Train001	384	Picture	B2 T25	11189151	0	1	15196	2	0	next	other	0
+Train001	385	Picture	TS18.jpg	11204347	0	1	37390	2	0	next	other	0
+Train001	386	Sound	TS18.wav	11204847	0	2			0		other	0
+Train001	387	Picture	TS18.jpg	11241737	0	1	19995	2	0	next	hit	334
+Train001	387	Response	1	11261664	19927	1						
+Train001	389	Video	Richtig	11266530	0	1			0		other	0
+Train001	391	Picture	B2 T26	11292723	0	1	15196	2	0	next	other	0
+Train001	392	Picture	TO08.jpg	11307919	0	1	37590	2	0	next	other	0
+Train001	393	Sound	TO08.wav	11308419	0	2			0		other	0
+Train001	394	Picture	TO08.jpg	11345509	0	1	2999	2	0	next	incorrect	340
+Train001	394	Response	1	11348393	2884	1						
+Train001	396	Video	Falsch	11353107	0	1			0		other	0
+Train001	398	Picture	B2 T27	11378700	0	1	15196	2	0	next	other	0
+Train001	399	Picture	TS26.jpg	11393896	0	1	39590	2	0	next	other	0
+Train001	400	Sound	TS26.wav	11394396	0	2			0		other	0
+Train001	401	Picture	TS26.jpg	11433486	0	1	17795	2	0	next	hit	346
+Train001	401	Response	1	11451097	17611	1						
+Train001	403	Video	Richtig	11455880	0	1			0		other	0
+Train001	405	Picture	B2 T28	11482273	0	1	15196	2	0	next	other	0
+Train001	406	Picture	TS15.jpg	11497469	0	1	38989	2	0	next	other	0
+Train001	407	Sound	TS15.wav	11497969	0	2			0		other	0
+Train001	408	Picture	TS15.jpg	11536458	0	1	2000	2	0	next	hit	352
+Train001	408	Response	2	11538326	1868	1						
+Train001	410	Video	Richtig	11542057	0	1			0		other	0
+Train001	412	Picture	B2 T29	11568450	0	1	15195	3	0	next	other	0
+Train001	413	Picture	TS30.jpg	11583645	0	2	40590	3	0	next	other	0
+Train001	414	Sound	TS30.wav	11584145	0	2			0		other	0
+Train001	415	Picture	TS30.jpg	11624235	0	1	2199	2	0	next	hit	358
+Train001	415	Response	1	11626248	2013	1						
+Train001	417	Video	Richtig	11631033	0	1			0		other	0
+Train001	419	Picture	B2 T30	11657426	0	1	15196	2	0	next	other	0
+Train001	420	Picture	TO15.jpg	11672622	0	1	39189	2	0	next	other	0
+Train001	421	Sound	TO15.wav	11673122	0	2			0		other	0
+Train001	422	Picture	TO15.jpg	11711811	0	1	4199	2	0	next	incorrect	364
+Train001	422	Response	1	11715997	4186	1						
+Train001	424	Video	Falsch	11720409	0	1			0		other	0
+Train001	426	Picture	Fertig!	11745802	0	1	200	2	0	next	other	0
+Train001	426	Response	3	11835232	89430	1						
+Train001	428	Picture	Fertig!	11987338	0	1	200	2	0	next	other	0
+Train001	428	Response	3	12033686	46348	1						
+Train001	430	Response	3	12147206	108282	1						

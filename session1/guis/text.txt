@@ -1,0 +1,224 @@
+---+ Deducer
+%TOC%
+
+%SLIDESHOWSTART%
+---++ Why Deducer ?
+Deducer is designed to be a free easy-to-use alternative to proprietary data analysis software such as SPSS, JMP, and Minitab. It has a menu system to perform common data manipulation and analysis tasks, and an excel-like spreadsheet in which to view and edit data frames. The goal of the project is two fold.
+   * Provide an intuitive graphical user interface (GUI) for R, encouraging non-technical users to learn and perform analyses without programming getting in their way.
+   *   Increase the efficiency of expert R users when performing common tasks by replacing hundreds of keystrokes with a few mouse clicks. Also, as much as possible the GUI should not get in their way if they just want to do some programming. 
+   * from within R:
+      * run R
+      * type library(JGR)
+      * followed by JGR()
+   * there is also a script created during the installation; the path is shown when you start Deducer via R (e.g. \~/R/i686-pc-linux-gnu-library/2.14/JGR/scripts/run
+---++ Load Packages
+[[http://i.imgur.com/T7dGL.png][<img alt='whole' src='http://i.imgur.com/T7dGL.png' width='350'/>]]
+
+choose Package Manager from menu Packages & Data
+
+[[http://i.imgur.com/DwLCS.png][<img alt='menupack1' src='http://i.imgur.com/DwLCS.png' width='550'/>]]
+
+[[http://i.imgur.com/plXk1.png][<img alt='menupack2' src='http://i.imgur.com/plXk1.png' width='350'/>]]
+
+[[http://i.imgur.com/aoOEj.png][<img alt='packman1' src='http://i.imgur.com/aoOEj.png' width='350'/>]]
+The packages Deducer and DeducerExtra should be chosen as default.
+---++ Package Installer
+[[http://i.imgur.com/UdJcg.png][<img alt='packinst1' src='http://i.imgur.com/UdJcg.png' width='150'/>]]
+
+The package installer can also be found in the menu Packages & Data
+---++ Additional Deducer Packages
+There are three additional packages for Deducer. You can install them by typing:
+<verbatim>
+install.packages(c("DeducerRichOutput",
+                   "DeducerANOVA",
+                   "DeducerPSY220"),
+                 repos="http://R-Forge.R-Project.org")
+</verbatim>
+---++ DeducerRichOutput
+without DeducerRichOutput
+
+[[http://i.imgur.com/YCSM3.png][<img alt='outputnormal' src='http://i.imgur.com/YCSM3.png' width='550'/>]]
+
+with DeducerRichOutput
+
+[[http://i.imgur.com/DOPyu.png][<img alt='outputrich' src='http://i.imgur.com/DOPyu.png' width='550'/>]]
+---++ data types Deducer can handle
+The load data menu can handle the following data types
+|File Type|Extension|
+|R workspace|*.rda and *.rdata|
+|R object|*.robj|
+|Comma seperated|*.csv|
+|Text file|*.txt|
+|SPSS|*.sav|
+|SAS export|*.xpt|
+|DBase|*.dbf|
+|Stata|*.dta|
+|Systat|*.sys and *.syd|
+|ARFF|*.arff|
+|Epiinfo|*.rec|
+|Minitab|*.mtp|
+|S data dump|*.s3 |
+|Excel|*.xls,*.xlsx|
+---++ Loading Data
+It is pretty easy: via the menu File <latex> \to</latex> Open Data
+
+[[http://i.imgur.com/vRSvZ.png][<img alt='loaddata2' src='http://i.imgur.com/vRSvZ.png' width='350'/>]]
+
+---++ Open the Data Viewer
+The data viewer provides an easy to use, spreadsheet-like environment to view and edit data. Copy and pasting is supported, and is compatible with Excel 2003\/2007, so data can be moved from Excel to R by simply copying it to the data viewer. Contextual menus are used to insert, delete and copy rows and columns.
+
+[[http://i.imgur.com/KUKiw.png][<img alt='dataviewer1' src='http://i.imgur.com/KUKiw.png' width='450'/>]]
+---++ The Data Viewer - Data View
+[[http://i.imgur.com/jNuB1.png][<img alt='dataviewer2' src='http://i.imgur.com/jNuB1.png' width='250'/>]]
+---++ The Data Viewer - Data View 2
+   * a right click on the row or column headers 
+      * allows one to insert, copy and delete columns and rows \note{Add column sex}
+      * sort by one column
+   * you can also edit the data
+   * in the drop down menu Data Set you can choose the data frame
+
+[[http://i.imgur.com/xgcn1.png][<img alt='dataviewer4' src='http://i.imgur.com/xgcn1.png' width='350'/>]]
+---++ The Data Viewer - Variable View
+[[http://i.imgur.com/OTdQf.png][<img alt='dataviewer3' src='http://i.imgur.com/OTdQf.png' width='450'/>]]
+---++ The Data Viewer - Variable View 2
+In the variable view  The variable column represents the variable name. The type column determines the storage type.  
+   * the properties of each variable in the data frame can be edited
+   * the type column determines the storage type; variables can be stored as 
+      * Strings (character)
+      * Doubles (Numeric)
+      * Integers
+      * Logicals (yes/no) or 
+      * Factors
+   * The levels of Factors are displayed in the 'Factor Levels' column, and can be edited by clicking on the appropriate cell, which brings up the Factor Editor
+---++ The Data Viewer - Variable View 3
+The levels of Factors are displayed in the 'Factor Levels' column, and can be edited by clicking on the appropriate cell, which brings up the Factor Editor. 
+
+[[http://i.imgur.com/j2FP5.png][<img alt='dataviewer5' src='http://i.imgur.com/j2FP5.png' width='350'/>]]
+---++ Frequencies
+Frequency tables provide descriptive information for categorical and ordinal variables. They display the number of cases that fall into each category of a specific variable, as well as calculate percentages. 
+
+[[http://i.imgur.com/SFxjs.png][<img alt='frequ2' src='http://i.imgur.com/SFxjs.png' width='350'/>]]
+---++ Frequencies Output
+With DeducerRichOutput
+
+[[http://i.imgur.com/T9nwR.png][<img alt='frequ3' src='http://i.imgur.com/T9nwR.png' width='350'/>]]
+
+Without DeducerRichOutput
+
+[[http://i.imgur.com/jJ7Vn.png][<img alt='frequ4' src='http://i.imgur.com/jJ7Vn.png' width='450'/>]]
+---++ Descriptives
+Calculates descriptive statistics for a set of variables. Possibly stratified by another set of variables. 
+
+[[http://i.imgur.com/MCp5B.png][<img alt='descr1' src='http://i.imgur.com/MCp5B.png' width='350'/>]]
+
+[[http://i.imgur.com/xX8AU.png][<img alt='descr2' src='http://i.imgur.com/xX8AU.png' width='350'/>]]
+---++ Contingency Tables
+Contingency tables (sometimes called crosstabs) are used to summarize and analyze the joint distribution of two variables, possibly stratified by a third. A table of observation counts will be created for each combination of the variables in the row list and each variable in the column list. If a stratum variable is specified, separate tables are created for each level of the variable. 
+
+[[http://i.imgur.com/YvUhN.png][<img alt='conting1' src='http://i.imgur.com/YvUhN.png' width='350'/>]]
+
+[[http://i.imgur.com/PyS9V.png][<img alt='conting2' src='http://i.imgur.com/PyS9V.png' width='350'/>]]
+---++ Contingency Tables - Cells
+In addition to observation counts, there are a number of additional cell values that can be displayed.
+   * Percentages
+   * Row - Percentage in cell out of observations within each row
+   * Column - Percentage in cell out of observations within each column
+   * Total - Percentage in cell 
+   * <latex> \chi^2 </latex>-test
+   * Expected - The expected count of the cell if there were no relationship between the two variables
+   * Residuals - The observed count minus the expected count.
+   * Standardized residuals - The residuals standardized such that (if the two variables were independent) they have mean 0 and standard deviation 1. These residuals are useful in determining which cells of a contingency table contribute most to a significant <latex> \chi^2</latex> test.
+   * Adjusted residuals - These adjust the residuals by the row and column totals. 
+---++ Contingency Tables - Cells
+[[http://i.imgur.com/yMiYt.png][<img alt='conting3' src='http://i.imgur.com/yMiYt.png' width='350'/>]]
+---++ Contingency Tables - Stats
+[[http://i.imgur.com/JwAeV.png][<img alt='conting4' src='http://i.imgur.com/JwAeV.png' width='350'/>]]
+---++ Table Statistics - Nominal by Nominal
+[[http://i.imgur.com/CZTzi.png][<img alt='conting5' src='http://i.imgur.com/CZTzi.png' width='350'/>]]
+
+One rule of thumb is that all expected cell counts should be _above 5_. If this is violated, or if one wishes to be safe, the p-value can be calculated via monte _carlo method_. This yields an approximate p-value that is more accurate at small sample sizes, and can be made arbitrarily exact by increasing the simulation sample size. 
+By default no Yates continuity 'correction' is used, and the mid p-value is used for the monte carlo simulation. These can be changed to their more conservative counterparts by selecting the 'Conservative' option. }
+---++ Table Statistics - Nominal by Nominal
+   * test for any significant departures from independence
+   * cell counts have to be sufficiently large (rule of thumb <latex> > 5 </latex>)
+   * monte carlo method provides more accurate <latex> p </latex>-values for small sample sizes
+   * by default no Yates continuity 'correction' is used
+   * by default mid p-value is used for the monte carlo simulation
+---++ Table Statistics - Nominal by Nominal
+   * alternative to the <latex> \chi^2</latex> test
+   * assumes that the cell counts are sufficiently large\note{ Williams' continuity 'correction' can be used by selecting the Conservative option}
+   *  used with very small sample sizes and very sparse data\note{It is exact, in that it is based on the exact distribution of the data. Deducer gives the mid p-value version of this test, whereas many other software packages give a more conservative version}
+   * like the <latex> \chi^2</latex> test except that it adjusts for the stratification of a third variable
+   * assumes that the cell counts for a collapsed table \note{(i.e. one that ignores the stratification variable)} are sufficiently large 
+   * assumes that the relationship between the two variables of interest is constant across strata. 
+---++ Table Statistics - Ordinal by Ordinal
+Ordinal variable have a natural order, such as building floor or height. 
+   * measure of association similar to Pearson's correlation, but valid for discrete variables
+   * assumes a sufficiently large sample size 
+   * Spearman's rho is the result of calculating the Pearson's correlation on the rank transformed data
+Both correlations measure the strength of monotonic assosiation between the two variables on a scale similar to Pearson's Correlation. The relative virtues of two approaches have been debated, and some favor the use of Kendall's tau. 
+---++ Table Statistics - Nominal by Ordinal
+   * determines whether the ordinal variable tends to be greater in some categories of the nominal variable as opposed to others
+   * assumes a sufficiently large <latex> N</latex>
+   * assumes exchangability, which is similar to an equal variance assumption
+---++ One Sample Test
+   * tests whether the mean of a population is not equal to a specified value
+   * requires that either the sample size be sufficiently large, or the variable be normally distributed
+   * performs the test against normality
+   * determines if there is enough evidence to conclude that a variable in not normally distributed
+A better alternative to normality testing is to examine the histogram. Is it skewed or roughly symmetrical? Are its tails fat? If your sample is small and your variable is skewed you can try switching to non-parametric methods or transforming the variable so it looks more normal. Alternatively if you can program, you can run simulations to assess the procedure's sensitivity to departures from normality.}
+
+[[http://i.imgur.com/EVuqo.png][<img alt='testonesample' src='http://i.imgur.com/EVuqo.png' width='350'/>]]
+---++ One Sample Test - Options
+[[http://i.imgur.com/CbJfQ.png][<img alt='onesamplettestoptions' src='http://i.imgur.com/CbJfQ.png' width='200'/>]]
+[[http://i.imgur.com/wDijR.png][<img alt='onesampleplot' src='http://i.imgur.com/wDijR.png' width='200'/>]]
+
+   * specification of the alternate hypothesis 
+   * adjust the null hypothesis mean
+   * two types of plots can be obtained through this dialog: if box plot is unchecked, a histogram is produced, otherwise, box and jitted plots are given
+   * if Scale variables is checked, all variables are standardized. 
+---++ One Sample Test - Results
+[[http://i.imgur.com/JtN5C.png][<img alt='testonesample2' src='http://i.imgur.com/JtN5C.png' width='550'/>]]
+
+[[http://i.imgur.com/KgKwQ.png][<img alt='onesampleplot2' src='http://i.imgur.com/KgKwQ.png' width='350'/>]]
+---++ Two Sample Test
+
+[[http://i.imgur.com/LAAtO.png][<img alt='test1' src='http://i.imgur.com/LAAtO.png' width='250'/>]]
+
+[[http://i.imgur.com/1fl55.png][<img alt='testtwosample' src='http://i.imgur.com/1fl55.png' width='350'/>]]
+---++ Two Sample Test - Equality of Means
+   * tests whether two means are different from one another
+   * Welch t-test is performed by default, doesn't require the assumption of equal variance
+   * student's t-test does rely on the equal variance assumption 
+   * Welch test requires sufficiently large sample sizes
+   * student's test requires that either the data be normally distributed, or the sample size is sufficiently large
+   * Practically speaking, the Welch test performs well even at very small sample sizes when the data is normally distributed.
+   * *both tests are sensitive to outliers*
+   * does the same
+   * does not require that the samples be large,
+   * assumes exchangeability, which is a similar assumption to the equal variance assumption
+   * if this assumption does not hold, the default permutation test, which permutes the t-statistic, still will be valid if the samples are large enough 
+---++ Two Sample Test - Central Tendency
+   * tests wether <latex> AUC\neq\frac{1}{2}</latex>
+   * assumes a sufficiently large sample
+   * and exchangability
+   * does the same as the Wilcoxon except that it does not require the exchangability assumption
+---++ Two Sample Test - Distribution
+   * tests whether two groups have the same probability distribution
+   * differences in distribution can manifest in any manner, such as different means, standard deviations, or skew 
+   * requires a sufficiently large sample
+---++ K-Sample Test
+
+[[http://i.imgur.com/G8VK3.png][<img alt='test1' src='http://i.imgur.com/G8VK3.png' width='250'/>]]
+
+[[http://i.imgur.com/FTU8n.png][<img alt='testmultsample' src='http://i.imgur.com/FTU8n.png' width='350'/>]]
+---++ K-Sample Tests
+   * generalization of the Welch t-test
+   * tests whether the means of the outcome variables are different across the factor levels
+   * assumes sufficiently large sample 
+   * sensitive to the existence of outliers
+   * Similar to the Welch Anova
+   * the classical Anova tests equality of means
+   * unlike the Welch test, it requires that the variances of the outcomes across the factor levels is the same
+   * tests whether the medians of the distributions are the same
+   * unlike the Anova, this test is not sensitive to the presence of outliers

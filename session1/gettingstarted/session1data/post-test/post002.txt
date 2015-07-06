@@ -1,0 +1,494 @@
+Scenario - 												
+												
+												
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+												
+POST002	1	Response	3	36079	45479	1						
+POST002	2	Response	3	40063	3876	1						
+POST002	4	Picture	B1 T1	48184	0	1	5009	392	0	next	other	0
+POST002	5	Picture	RO26.jpg	53193	0	391	39380	392	0	next	other	0
+POST002	6	Sound	RO26.wav	53693	0	2			0		other	0
+POST002	7	Picture	RO26.jpg	92573	0	1	3199	2	0	next	hit	7
+POST002	7	Response	2	95657	3084	1						
+POST002	9	Picture	B1 T2	103770	0	1	5199	2	0	next	other	0
+POST002	10	Picture	RO19.jpg	108969	0	1	36990	2	0	next	other	0
+POST002	11	Sound	RO19.wav	109469	0	2			0		other	0
+POST002	12	Picture	RO19.jpg	145959	0	1	1600	2	0	next	incorrect	12
+POST002	12	Response	2	147427	1468	1						
+POST002	14	Picture	B1 T3	155557	0	1	5186	2	0	next	other	0
+POST002	14	Pause		155578	21		177765					
+POST002	14	Resume		155578	21							
+POST002	15	Picture	RS23.jpg	160743	0	1	38191	2	0	next	other	0
+POST002	16	Sound	RS23.wav	161243	0	2			0		other	0
+POST002	17	Picture	RS23.jpg	198934	0	1	7198	2	0	next	hit	19
+POST002	17	Response	2	205993	7059	1						
+POST002	19	Picture	B1 T4	213930	0	1	5198	2	0	next	other	0
+POST002	20	Picture	OF22.jpg	219128	0	1	28193	2	0	next	other	0
+POST002	21	Sound	OF22.wav	219628	0	2			0		other	0
+POST002	22	Picture	OF22.jpg	247321	0	1	6198	2	0	next	incorrect	24
+POST002	22	Response	1	253455	6134	1						
+POST002	24	Picture	B1 T5	261517	0	1	5199	2	0	next	other	0
+POST002	25	Picture	AT08.jpg	266716	0	1	27193	2	0	next	other	0
+POST002	26	Sound	AT08.wav	267216	0	2			0		other	0
+POST002	27	Picture	AT08.jpg	293909	0	1	1800	2	0	next	hit	29
+POST002	27	Response	2	295513	1604	1						
+POST002	29	Picture	B1 T6	303706	0	1	5199	2	0	next	other	0
+POST002	30	Picture	AT30.jpg	308905	0	1	29592	2	0	next	other	0
+POST002	31	Sound	AT30.wav	309405	0	2			0		other	0
+POST002	32	Response	2	338355	28	1						
+POST002	34	Picture	B1 T7	346495	0	1	5199	2	0	next	other	0
+POST002	35	Picture	OF27.jpg	351694	0	1	30192	2	0	next	other	0
+POST002	36	Sound	OF27.wav	352194	0	2			0		other	0
+POST002	37	Picture	OF27.jpg	381886	0	1	6199	2	0	next	incorrect	38
+POST002	37	Response	1	387881	5995	1						
+POST002	39	Picture	B1 T8	396083	0	1	5198	2	0	next	other	0
+POST002	40	Picture	RO16.jpg	401281	0	1	39190	2	0	next	other	0
+POST002	41	Sound	RO16.wav	401781	0	2			0		other	0
+POST002	42	Picture	RO16.jpg	440471	0	1	200	2	0	next	hit	43
+POST002	42	Response	2	440614	143	1						
+POST002	44	Picture	B1 T9	448069	0	1	5199	2	0	next	other	0
+POST002	45	Picture	OF18.jpg	453268	0	1	28392	2	0	next	other	0
+POST002	46	Sound	OF18.wav	453768	0	2			0		other	0
+POST002	47	Picture	OF18.jpg	481660	0	1	1200	2	0	next	hit	48
+POST002	47	Response	1	482714	1054	1						
+POST002	49	Picture	B1 T10	494057	0	1	5199	2	0	next	other	0
+POST002	50	Picture	OF20.jpg	499256	0	1	29592	2	0	next	other	0
+POST002	51	Sound	OF20.wav	499756	0	2			0		other	0
+POST002	52	Picture	OF20.jpg	528848	0	1	800	2	0	next	hit	53
+POST002	52	Response	2	529556	708	1						
+POST002	54	Picture	B1 T11	537046	0	1	5199	2	0	next	other	0
+POST002	55	Picture	AT12.jpg	542245	0	1	28392	2	0	next	other	0
+POST002	56	Sound	AT12.wav	542745	0	2			0		other	0
+POST002	57	Picture	AT12.jpg	570637	0	1	8998	2	0	next	incorrect	58
+POST002	57	Response	1	579510	8873	1						
+POST002	59	Picture	B1 T12	587433	0	1	5199	2	0	next	other	0
+POST002	60	Picture	AT05.jpg	592632	0	1	26593	2	0	next	other	0
+POST002	61	Sound	AT05.wav	593132	0	2			0		other	0
+POST002	62	Picture	AT05.jpg	619225	0	1	3799	2	0	next	incorrect	63
+POST002	62	Response	2	622827	3602	1						
+POST002	64	Picture	B1 T13	631222	0	1	5198	2	0	next	other	0
+POST002	65	Picture	RO02.jpg	636420	0	1	38390	2	0	next	other	0
+POST002	66	Sound	RO02.wav	636920	0	2			0		other	0
+POST002	67	Picture	RO02.jpg	674810	0	1	1000	2	0	next	incorrect	68
+POST002	67	Response	1	675749	939	1						
+POST002	69	Picture	B1 T14	684008	0	1	5199	2	0	next	other	0
+POST002	70	Picture	RS11.jpg	689207	0	1	37190	2	0	next	other	0
+POST002	71	Sound	RS11.wav	689707	0	2			0		other	0
+POST002	72	Picture	RS11.jpg	726397	0	1	2200	2	0	next	hit	73
+POST002	72	Response	2	728424	2027	1						
+POST002	74	Picture	B1 T15	736594	0	1	5199	2	0	next	other	0
+POST002	75	Picture	OF24.jpg	741793	0	1	28593	2	0	next	other	0
+POST002	76	Sound	OF24.wav	742293	0	2			0		other	0
+POST002	77	Picture	OF24.jpg	770386	0	1	3999	2	0	next	hit	78
+POST002	77	Response	1	774247	3861	1						
+POST002	79	Picture	B1 T16	781983	0	1	5198	2	0	next	other	0
+POST002	80	Picture	OF10.jpg	787181	0	1	28593	2	0	next	other	0
+POST002	81	Sound	OF10.wav	787681	0	2			0		other	0
+POST002	82	Picture	OF10.jpg	815774	0	1	6798	2	0	next	incorrect	83
+POST002	82	Response	2	822364	6590	1						
+POST002	84	Picture	B1 T17	830770	0	1	5199	2	0	next	other	0
+POST002	85	Picture	OF05.jpg	835969	0	1	29792	2	0	next	other	0
+POST002	86	Sound	OF05.wav	836469	0	2			0		other	0
+POST002	87	Picture	OF05.jpg	865761	0	1	7998	2	0	next	hit	88
+POST002	87	Response	2	873673	7912	1						
+POST002	89	Picture	B1 T18	881957	0	1	5198	3	0	next	other	0
+POST002	90	Picture	RS27.jpg	887155	0	2	37991	3	0	next	other	0
+POST002	91	Sound	RS27.wav	887655	0	2			0		other	0
+POST002	92	Picture	RS27.jpg	925146	0	1	1199	2	0	next	incorrect	93
+POST002	92	Response	2	926210	1064	1						
+POST002	94	Picture	B1 T19	934543	0	1	5199	2	0	next	other	0
+POST002	95	Picture	RS05.jpg	939742	0	1	40189	3	0	next	other	0
+POST002	96	Sound	RS05.wav	940242	0	2			0		other	0
+POST002	97	Picture	RS05.jpg	979931	0	2	6199	3	0	next	hit	98
+POST002	97	Response	2	986070	6139	1						
+POST002	99	Picture	B1 T20	993528	0	1	5199	2	0	next	other	0
+POST002	100	Picture	OF03.jpg	998727	0	1	28192	2	0	next	other	0
+POST002	101	Sound	OF03.wav	999227	0	2			0		other	0
+POST002	102	Picture	OF03.jpg	1026919	0	1	2400	2	0	next	incorrect	103
+POST002	102	Response	1	1029118	2199	1						
+POST002	104	Picture	B1 T21	1037317	0	1	5198	2	0	next	other	0
+POST002	105	Picture	OF16.jpg	1042515	0	1	29993	2	0	next	other	0
+POST002	106	Sound	OF16.wav	1043015	0	2			0		other	0
+POST002	107	Picture	OF16.jpg	1072508	0	1	2199	2	0	next	hit	108
+POST002	107	Response	1	1074588	2080	1						
+POST002	109	Picture	B1 T22	1082305	0	1	5199	2	0	next	other	0
+POST002	110	Picture	RO07.jpg	1087504	0	1	37790	2	0	next	other	0
+POST002	111	Sound	RO07.wav	1088004	0	2			0		other	0
+POST002	112	Picture	RO07.jpg	1125294	0	1	7398	2	0	next	hit	113
+POST002	112	Response	2	1132635	7341	1						
+POST002	114	Picture	B1 T23	1140690	0	1	5199	2	0	next	other	0
+POST002	115	Picture	RS29.jpg	1145889	0	1	38989	2	0	next	other	0
+POST002	116	Sound	RS29.wav	1146389	0	2			0		other	0
+POST002	117	Picture	RS29.jpg	1184878	0	1	5399	2	0	next	incorrect	118
+POST002	117	Response	2	1190080	5202	1						
+POST002	119	Picture	B1 T24	1198675	0	1	5199	2	0	next	other	0
+POST002	120	Picture	RO12.jpg	1203874	0	1	36790	2	0	next	other	0
+POST002	121	Sound	RO12.wav	1204374	0	2			0		other	0
+POST002	122	Picture	RO12.jpg	1240664	0	1	6798	2	0	next	incorrect	123
+POST002	122	Response	2	1247429	6765	1						
+POST002	124	Picture	B1 T25	1255060	0	1	5199	2	0	next	other	0
+POST002	125	Picture	RS21.jpg	1260259	0	1	37390	2	0	next	other	0
+POST002	126	Sound	RS21.wav	1260759	0	2			0		other	0
+POST002	127	Picture	RS21.jpg	1297649	0	1	1800	2	0	next	hit	128
+POST002	127	Response	1	1299339	1690	1						
+POST002	129	Picture	B1 T26	1307447	0	1	5198	2	0	next	other	0
+POST002	130	Picture	RS08.jpg	1312645	0	1	35991	2	0	next	other	0
+POST002	131	Sound	RS08.wav	1313145	0	2			0		other	0
+POST002	132	Picture	RS08.jpg	1348636	0	1	27593	2	0	next	incorrect	133
+POST002	132	Response	2	1376165	27529	1						
+POST002	134	Picture	B1 T27	1384027	0	1	5199	2	0	next	other	0
+POST002	135	Picture	AT01.jpg	1389226	0	1	26793	2	0	next	other	0
+POST002	136	Sound	AT01.wav	1389726	0	2			0		other	0
+POST002	137	Picture	AT01.jpg	1416019	0	1	799	2	0	next	incorrect	138
+POST002	137	Response	1	1416692	673	1						
+POST002	139	Picture	B1 T28	1424616	0	1	5199	2	0	next	other	0
+POST002	140	Picture	AT14.jpg	1429815	0	1	27993	2	0	next	other	0
+POST002	141	Sound	AT14.wav	1430315	0	2			0		other	0
+POST002	142	Picture	AT14.jpg	1457808	0	1	32391	2	0	next	hit	143
+POST002	142	Response	2	1490020	32212	1						
+POST002	144	Picture	B1 T29	1498197	0	1	5199	2	0	next	other	0
+POST002	145	Picture	RO21.jpg	1503396	0	1	40590	2	0	next	other	0
+POST002	146	Sound	RO21.wav	1503896	0	2			0		other	0
+POST002	147	Picture	RO21.jpg	1543986	0	1	5598	2	0	next	hit	148
+POST002	147	Response	2	1549471	5485	1						
+POST002	149	Picture	B1 T30	1557582	0	1	5199	2	0	next	other	0
+POST002	150	Picture	OF09.jpg	1562781	0	1	29792	2	0	next	other	0
+POST002	151	Sound	OF09.wav	1563281	0	2			0		other	0
+POST002	152	Picture	OF09.jpg	1592573	0	1	8598	2	0	next	hit	153
+POST002	152	Response	2	1601092	8519	1						
+POST002	154	Picture	B1 T31	1609169	0	1	5198	2	0	next	other	0
+POST002	155	Picture	OF30.jpg	1614367	0	1	29793	2	0	next	other	0
+POST002	156	Sound	OF30.wav	1614867	0	2			0		other	0
+POST002	157	Picture	OF30.jpg	1644160	0	1	3599	2	0	next	hit	158
+POST002	157	Response	1	1647601	3441	1						
+POST002	159	Picture	B1 T32	1655957	0	1	5198	2	0	next	other	0
+POST002	160	Picture	RS22.jpg	1661155	0	1	37391	2	0	next	other	0
+POST002	161	Sound	RS22.wav	1661655	0	2			0		other	0
+POST002	162	Picture	RS22.jpg	1698546	0	1	25593	2	0	next	hit	163
+POST002	162	Response	2	1723978	25432	1						
+POST002	164	Picture	B1 T33	1731937	0	1	5199	2	0	next	other	0
+POST002	165	Picture	OF14.jpg	1737136	0	1	30392	2	0	next	other	0
+POST002	166	Sound	OF14.wav	1737636	0	2			0		other	0
+POST002	167	Picture	OF14.jpg	1767528	0	1	3399	2	0	next	hit	168
+POST002	167	Response	1	1770763	3235	1						
+POST002	169	Picture	B1 T34	1778725	0	1	5198	2	0	next	other	0
+POST002	170	Picture	RS24.jpg	1783923	0	1	35591	2	0	next	other	0
+POST002	171	Sound	RS24.wav	1784423	0	2			0		other	0
+POST002	172	Picture	RS24.jpg	1819514	0	1	3799	2	0	next	hit	173
+POST002	172	Response	1	1823244	3730	1						
+POST002	174	Picture	B1 T35	1831511	0	1	5199	2	0	next	other	0
+POST002	175	Picture	AT28.jpg	1836710	0	1	29392	2	0	next	other	0
+POST002	176	Sound	AT28.wav	1837210	0	2			0		other	0
+POST002	177	Picture	AT28.jpg	1866102	0	1	33192	2	0	next	hit	178
+POST002	177	Response	1	1899207	33105	1						
+POST002	179	Picture	B1 T36	1907292	0	1	5198	2	0	next	other	0
+POST002	180	Picture	AT16.jpg	1912490	0	1	28993	2	0	next	other	0
+POST002	181	Sound	AT16.wav	1912990	0	2			0		other	0
+POST002	182	Picture	AT16.jpg	1941483	0	1	14396	2	0	next	hit	183
+POST002	182	Response	2	1955848	14365	1						
+POST002	184	Picture	B1 T37	1964077	0	1	5198	3	0	next	other	0
+POST002	185	Picture	RO30.jpg	1969275	0	2	39790	3	0	next	other	0
+POST002	186	Sound	RO30.wav	1969775	0	2			0		other	0
+POST002	187	Picture	RO30.jpg	2009065	0	1	2599	3	0	next	hit	188
+POST002	187	Response	2	2011560	2495	1						
+POST002	189	Picture	B1 T38	2019662	0	1	5199	2	0	next	other	0
+POST002	190	Picture	RO14.jpg	2024861	0	1	37990	2	0	next	other	0
+POST002	191	Sound	RO14.wav	2025361	0	2			0		other	0
+POST002	192	Picture	RO14.jpg	2062851	0	1	100174	2	0	next	miss	0
+POST002	194	Picture	B1 T39	2170623	0	1	5130	2	0	next	other	0
+POST002	194	Pause		2171129	506		422959					
+POST002	194	Resume		2171129	506							
+POST002	195	Picture	RO04.jpg	2175753	0	1	37590	3	0	next	other	0
+POST002	196	Sound	RO04.wav	2176253	0	2			0		other	0
+POST002	197	Picture	RO04.jpg	2213343	0	2	14797	3	0	next	hit	199
+POST002	197	Response	1	2228112	14769	1						
+POST002	199	Picture	B1 T40	2236138	0	1	5198	2	0	next	other	0
+POST002	200	Picture	AT19.jpg	2241336	0	1	28993	2	0	next	other	0
+POST002	201	Sound	AT19.wav	2241836	0	2			0		other	0
+POST002	202	Picture	AT19.jpg	2270329	0	1	7998	2	0	next	incorrect	204
+POST002	202	Response	1	2278248	7919	1						
+POST002	204	Picture	B1 T41	2286724	0	2	5199	3	0	next	other	0
+POST002	205	Picture	RO15.jpg	2291923	0	1	38590	2	0	next	other	0
+POST002	206	Sound	RO15.wav	2292423	0	2			0		other	0
+POST002	207	Picture	RO15.jpg	2330513	0	1	1400	2	0	next	incorrect	209
+POST002	207	Response	2	2331880	1367	1						
+POST002	209	Picture	B1 T42	2340111	0	1	5198	2	0	next	other	0
+POST002	210	Picture	AT24.jpg	2345309	0	1	28193	2	0	next	other	0
+POST002	211	Sound	AT24.wav	2345809	0	2			0		other	0
+POST002	212	Picture	AT24.jpg	2373502	0	1	6998	2	0	next	hit	214
+POST002	212	Response	2	2380452	6950	1						
+POST002	214	Picture	B1 T43	2388498	0	1	5199	2	0	next	other	0
+POST002	215	Picture	AT07.jpg	2393697	0	1	27193	2	0	next	other	0
+POST002	216	Sound	AT07.wav	2394197	0	2			0		other	0
+POST002	217	Picture	AT07.jpg	2420890	0	1	3599	2	0	next	hit	219
+POST002	217	Response	1	2424432	3542	1						
+POST002	219	Picture	B1 T44	2432687	0	1	5198	2	0	next	other	0
+POST002	220	Picture	AT02.jpg	2437885	0	1	28993	2	0	next	other	0
+POST002	221	Sound	AT02.wav	2438385	0	2			0		other	0
+POST002	222	Picture	AT02.jpg	2466878	0	1	1599	2	0	next	incorrect	224
+POST002	222	Response	2	2468323	1445	1						
+POST002	224	Picture	B1 T45	2476475	0	1	5199	2	0	next	other	0
+POST002	225	Picture	RO08.jpg	2481674	0	1	38390	2	0	next	other	0
+POST002	226	Sound	RO08.wav	2482174	0	2			0		other	0
+POST002	227	Picture	RO08.jpg	2520064	0	1	4199	2	0	next	incorrect	229
+POST002	227	Response	2	2524163	4099	1						
+POST002	229	Picture	B1 T46	2532261	0	1	5199	2	0	next	other	0
+POST002	230	Picture	RS12.jpg	2537460	0	1	37190	2	0	next	other	0
+POST002	231	Sound	RS12.wav	2537960	0	2			0		other	0
+POST002	232	Picture	RS12.jpg	2574650	0	1	5599	2	0	next	hit	234
+POST002	232	Response	1	2580235	5585	1						
+POST002	234	Picture	B1 T47	2588246	0	2	5199	3	0	next	other	0
+POST002	235	Picture	RS20.jpg	2593445	0	1	37990	2	0	next	other	0
+POST002	236	Sound	RS20.wav	2593945	0	2			0		other	0
+POST002	237	Picture	RS20.jpg	2631435	0	1	2000	2	0	next	incorrect	239
+POST002	237	Response	1	2633277	1842	1						
+POST002	239	Picture	B1 T48	2641433	0	1	5198	2	0	next	other	0
+POST002	240	Picture	RS14.jpg	2646631	0	1	37191	2	0	next	other	0
+POST002	241	Sound	RS14.wav	2647131	0	2			0		other	0
+POST002	242	Picture	RS14.jpg	2683822	0	1	2199	2	0	next	hit	244
+POST002	242	Response	2	2685939	2117	1						
+POST002	244	Picture	B1 T49	2693819	0	1	5199	2	0	next	other	0
+POST002	245	Picture	AT18.jpg	2699018	0	1	28392	2	0	next	other	0
+POST002	246	Sound	AT18.wav	2699518	0	2			0		other	0
+POST002	247	Picture	AT18.jpg	2727410	0	1	6999	2	0	next	incorrect	249
+POST002	247	Response	2	2734228	6818	1						
+POST002	249	Picture	B1 T50	2742607	0	1	5198	2	0	next	other	0
+POST002	250	Picture	RO03.jpg	2747805	0	1	36991	2	0	next	other	0
+POST002	251	Sound	RO03.wav	2748305	0	2			0		other	0
+POST002	252	Picture	RO03.jpg	2784796	0	1	1199	2	0	next	hit	254
+POST002	252	Response	2	2785886	1090	1						
+POST002	254	Picture	B1 T51	2793993	0	1	5199	2	0	next	other	0
+POST002	255	Picture	OF08.jpg	2799192	0	1	29192	2	0	next	other	0
+POST002	256	Sound	OF08.wav	2799692	0	2			0		other	0
+POST002	257	Picture	OF08.jpg	2828384	0	1	7998	2	0	next	hit	259
+POST002	257	Response	1	2836219	7835	1						
+POST002	259	Picture	B1 T52	2844380	0	1	5199	2	0	next	other	0
+POST002	260	Picture	OF17.jpg	2849579	0	1	30192	2	0	next	other	0
+POST002	261	Sound	OF17.wav	2850079	0	2			0		other	0
+POST002	262	Picture	OF17.jpg	2879771	0	1	2599	2	0	next	hit	264
+POST002	262	Response	2	2882310	2539	1						
+POST002	264	Picture	B1 T53	2890168	0	1	5199	2	0	next	other	0
+POST002	265	Picture	OF25.jpg	2895367	0	1	29592	2	0	next	other	0
+POST002	266	Sound	OF25.wav	2895867	0	2			0		other	0
+POST002	267	Picture	OF25.jpg	2924959	0	1	5999	2	0	next	hit	269
+POST002	267	Response	2	2930784	5825	1						
+POST002	269	Picture	B1 T54	2938956	0	1	5198	2	0	next	other	0
+POST002	270	Picture	RS02.jpg	2944154	0	1	37191	2	0	next	other	0
+POST002	271	Sound	RS02.wav	2944654	0	2			0		other	0
+POST002	272	Picture	RS02.jpg	2981345	0	1	1799	2	0	next	incorrect	274
+POST002	272	Response	2	2983112	1767	1						
+POST002	274	Picture	B1 T55	2991142	0	1	5199	2	0	next	other	0
+POST002	275	Picture	AT23.jpg	2996341	0	1	28992	2	0	next	other	0
+POST002	276	Sound	AT23.wav	2996841	0	2			0		other	0
+POST002	277	Picture	AT23.jpg	3025333	0	1	400	2	0	next	incorrect	279
+POST002	277	Response	2	3025570	237	1						
+POST002	279	Picture	B1 T56	3033731	0	1	5199	2	0	next	other	0
+POST002	280	Picture	OF01.jpg	3038930	0	1	29992	2	0	next	other	0
+POST002	281	Sound	OF01.wav	3039430	0	2			0		other	0
+POST002	282	Picture	OF01.jpg	3068922	0	1	13197	2	0	next	hit	284
+POST002	282	Response	2	3081924	13002	1						
+POST002	284	Picture	B1 T57	3090117	0	1	5198	2	0	next	other	0
+POST002	285	Picture	OF07.jpg	3095315	0	1	28793	2	0	next	other	0
+POST002	286	Sound	OF07.wav	3095815	0	2			0		other	0
+POST002	287	Picture	OF07.jpg	3124108	0	1	1599	2	0	next	incorrect	289
+POST002	287	Response	1	3125603	1495	1						
+POST002	289	Picture	B1 T58	3133705	0	1	5199	2	0	next	other	0
+POST002	290	Picture	OF21.jpg	3138904	0	1	29992	2	0	next	other	0
+POST002	291	Sound	OF21.wav	3139404	0	2			0		other	0
+POST002	292	Picture	OF21.jpg	3168896	0	1	3999	2	0	next	hit	294
+POST002	292	Response	1	3172858	3962	1						
+POST002	294	Picture	B1 T59	3180893	0	1	5199	2	0	next	other	0
+POST002	295	Picture	RS03.jpg	3186092	0	1	36390	2	0	next	other	0
+POST002	296	Sound	RS03.wav	3186592	0	2			0		other	0
+POST002	297	Picture	RS03.jpg	3222482	0	1	5599	2	0	next	incorrect	299
+POST002	297	Response	1	3227966	5484	1						
+POST002	299	Picture	B1 T60	3236079	0	1	5198	3	0	next	other	0
+POST002	300	Picture	OF06.jpg	3241277	0	2	29793	3	0	next	other	0
+POST002	301	Sound	OF06.wav	3241777	0	2			0		other	0
+POST002	302	Picture	OF06.jpg	3271070	0	1	400	2	0	next	hit	304
+POST002	302	Response	1	3271384	314	1						
+POST002	304	Picture	B1 T61	3279668	0	1	5198	2	0	next	other	0
+POST002	305	Picture	AT10.jpg	3284866	0	1	28593	2	0	next	other	0
+POST002	306	Sound	AT10.wav	3285366	0	2			0		other	0
+POST002	307	Picture	AT10.jpg	3313459	0	1	1000	2	0	next	incorrect	309
+POST002	307	Response	2	3314413	954	1						
+POST002	309	Picture	B1 T62	3322257	0	1	5198	2	0	next	other	0
+POST002	310	Picture	AT27.jpg	3327455	0	1	28593	2	0	next	other	0
+POST002	311	Sound	AT27.wav	3327955	0	2			0		other	0
+POST002	312	Picture	AT27.jpg	3356048	0	1	2199	2	0	next	incorrect	314
+POST002	312	Response	1	3358195	2147	1						
+POST002	314	Picture	B1 T63	3366245	0	1	5199	2	0	next	other	0
+POST002	315	Picture	RO09.jpg	3371444	0	1	38190	2	0	next	other	0
+POST002	316	Sound	RO09.wav	3371944	0	2			0		other	0
+POST002	317	Picture	RO09.jpg	3409634	0	1	1200	2	0	next	hit	319
+POST002	317	Response	1	3410644	1010	1						
+POST002	319	Picture	B1 T64	3418832	0	1	5198	2	0	next	other	0
+POST002	320	Picture	RS28.jpg	3424030	0	1	37990	2	0	next	other	0
+POST002	321	Sound	RS28.wav	3424530	0	2			0		other	0
+POST002	322	Response	1	3461815	96	1						
+POST002	324	Picture	B1 T65	3470018	0	1	5199	2	0	next	other	0
+POST002	325	Picture	RS26.jpg	3475217	0	1	40190	2	0	next	other	0
+POST002	326	Sound	RS26.wav	3475717	0	2			0		other	0
+POST002	327	Picture	RS26.jpg	3515407	0	1	11397	2	0	next	hit	328
+POST002	327	Response	2	3526634	11227	1						
+POST002	329	Picture	B1 T66	3534802	0	1	5198	2	0	next	other	0
+POST002	330	Picture	RS30.jpg	3540000	0	1	39990	2	0	next	other	0
+POST002	331	Sound	RS30.wav	3540500	0	2			0		other	0
+POST002	332	Picture	RS30.jpg	3579990	0	1	200	2	0	next	hit	333
+POST002	332	Response	2	3580014	24	1						
+POST002	334	Picture	B1 T67	3588388	0	1	5198	2	0	next	other	0
+POST002	335	Picture	AT26.jpg	3593586	0	1	29393	2	0	next	other	0
+POST002	336	Sound	AT26.wav	3594086	0	2			0		other	0
+POST002	337	Picture	AT26.jpg	3622979	0	1	30792	2	0	next	hit	338
+POST002	337	Response	1	3653572	30593	1						
+POST002	339	Picture	B1 T68	3661769	0	1	5198	2	0	next	other	0
+POST002	340	Picture	RO18.jpg	3666967	0	1	38390	2	0	next	other	0
+POST002	341	Sound	RO18.wav	3667467	0	2			0		other	0
+POST002	342	Picture	RO18.jpg	3705357	0	1	800	2	0	next	hit	343
+POST002	342	Response	2	3706107	750	1						
+POST002	344	Picture	B1 T69	3714155	0	1	5199	2	0	next	other	0
+POST002	345	Picture	RS16.jpg	3719354	0	1	37590	2	0	next	other	0
+POST002	346	Sound	RS16.wav	3719854	0	2			0		other	0
+POST002	347	Picture	RS16.jpg	3756944	0	1	800	2	0	next	incorrect	348
+POST002	347	Response	1	3757709	765	1						
+POST002	349	Picture	B1 T70	3765942	0	1	5198	2	0	next	other	0
+POST002	350	Picture	AT17.jpg	3771140	0	1	29593	2	0	next	other	0
+POST002	351	Sound	AT17.wav	3771640	0	2			0		other	0
+POST002	352	Picture	AT17.jpg	3800733	0	1	200	2	0	next	hit	353
+POST002	352	Response	2	3800891	158	1						
+POST002	354	Picture	B1 T71	3808931	0	1	5198	2	0	next	other	0
+POST002	355	Picture	RS04.jpg	3814129	0	1	40390	2	0	next	other	0
+POST002	356	Sound	RS04.wav	3814629	0	2			0		other	0
+POST002	357	Picture	RS04.jpg	3854519	0	1	2799	2	0	next	hit	358
+POST002	357	Response	1	3857115	2596	1						
+POST002	359	Picture	B1 T72	3865716	0	1	5199	2	0	next	other	0
+POST002	360	Picture	AT09.jpg	3870915	0	1	27792	2	0	next	other	0
+POST002	361	Sound	AT09.wav	3871415	0	2			0		other	0
+POST002	362	Picture	AT09.jpg	3898707	0	1	16196	2	0	next	incorrect	363
+POST002	362	Response	1	3914796	16089	1						
+POST002	364	Picture	B1 T73	3923101	0	1	5199	2	0	next	other	0
+POST002	365	Picture	RO01.jpg	3928300	0	1	39589	2	0	next	other	0
+POST002	366	Sound	RO01.wav	3928800	0	2			0		other	0
+POST002	367	Picture	RO01.jpg	3967889	0	1	5599	2	0	next	hit	368
+POST002	367	Response	1	3973343	5454	1						
+POST002	369	Picture	B1 T74	3981486	0	1	5070	2	0	next	other	0
+POST002	369	Pause		3982743	1257		178682					
+POST002	369	Resume		3982743	1257							
+POST002	370	Picture	OF12.jpg	3986556	0	1	28792	2	0	next	other	0
+POST002	371	Sound	OF12.wav	3987056	0	2			0		other	0
+POST002	372	Picture	OF12.jpg	4015348	0	1	1600	2	0	next	hit	375
+POST002	372	Response	1	4016793	1445	1						
+POST002	374	Picture	B1 T75	4024946	0	1	5198	3	0	next	other	0
+POST002	375	Picture	RS17.jpg	4030144	0	2	36991	3	0	next	other	0
+POST002	376	Sound	RS17.wav	4030644	0	2			0		other	0
+POST002	377	Picture	RS17.jpg	4067135	0	1	1599	3	0	next	hit	380
+POST002	377	Response	1	4068583	1448	1						
+POST002	379	Picture	B1 T76	4076532	0	2	5199	3	0	next	other	0
+POST002	380	Picture	RO29.jpg	4081731	0	1	40190	2	0	next	other	0
+POST002	381	Sound	RO29.wav	4082231	0	2			0		other	0
+POST002	382	Picture	RO29.jpg	4121921	0	1	5398	2	0	next	hit	385
+POST002	382	Response	1	4127254	5333	1						
+POST002	384	Picture	B1 T77	4134717	0	1	5199	2	0	next	other	0
+POST002	385	Picture	OF11.jpg	4139916	0	1	27593	2	0	next	other	0
+POST002	386	Sound	OF11.wav	4140416	0	2			0		other	0
+POST002	387	Picture	OF11.jpg	4167509	0	1	4399	2	0	next	hit	390
+POST002	387	Response	2	4171844	4335	1						
+POST002	389	Picture	B1 T78	4180306	0	1	5198	2	0	next	other	0
+POST002	390	Picture	RO25.jpg	4185504	0	1	40190	2	0	next	other	0
+POST002	391	Sound	RO25.wav	4186004	0	2			0		other	0
+POST002	392	Picture	RO25.jpg	4225694	0	1	1000	2	0	next	hit	395
+POST002	392	Response	1	4226607	913	1						
+POST002	394	Picture	B1 T79	4234891	0	2	5199	3	0	next	other	0
+POST002	395	Picture	OF04.jpg	4240090	0	1	27393	2	0	next	other	0
+POST002	396	Sound	OF04.wav	4240590	0	2			0		other	0
+POST002	397	Picture	OF04.jpg	4267483	0	1	13597	2	0	next	incorrect	400
+POST002	397	Response	2	4281049	13566	1						
+POST002	399	Picture	B1 T80	4289077	0	2	5199	3	0	next	other	0
+POST002	400	Picture	AT20.jpg	4294276	0	1	28793	2	0	next	other	0
+POST002	401	Sound	AT20.wav	4294776	0	2			0		other	0
+POST002	402	Picture	AT20.jpg	4323069	0	1	3399	2	0	next	hit	405
+POST002	402	Response	1	4326288	3219	1						
+POST002	404	Picture	B1 T81	4334066	0	1	5198	3	0	next	other	0
+POST002	405	Picture	RO05.jpg	4339264	0	2	43189	3	0	next	other	0
+POST002	406	Sound	RO05.wav	4339764	0	2			0		other	0
+POST002	407	Picture	RO05.jpg	4382453	0	1	9398	2	0	next	incorrect	410
+POST002	407	Response	1	4391696	9243	1						
+POST002	409	Picture	B1 T82	4399849	0	1	5198	3	0	next	other	0
+POST002	410	Picture	AT29.jpg	4405047	0	2	29393	3	0	next	other	0
+POST002	411	Sound	AT29.wav	4405547	0	2			0		other	0
+POST002	412	Response	1	4434316	7	1						
+POST002	414	Picture	B1 T83	4442438	0	1	5198	2	0	next	other	0
+POST002	415	Picture	RO23.jpg	4447636	0	1	39990	2	0	next	other	0
+POST002	416	Sound	RO23.wav	4448136	0	2			0		other	0
+POST002	417	Picture	RO23.jpg	4487626	0	1	2399	3	0	next	hit	419
+POST002	417	Response	2	4489824	2198	1						
+POST002	419	Picture	B1 T84	4498023	0	1	5199	2	0	next	other	0
+POST002	420	Picture	RS06.jpg	4503222	0	1	35791	2	0	next	other	0
+POST002	421	Sound	RS06.wav	4503722	0	2			0		other	0
+POST002	422	Picture	RS06.jpg	4539013	0	1	24393	3	0	next	hit	424
+POST002	422	Response	1	4563201	24188	1						
+POST002	424	Picture	B1 T85	4571404	0	1	5199	2	0	next	other	0
+POST002	425	Picture	RS19.jpg	4576603	0	1	38590	2	0	next	other	0
+POST002	426	Sound	RS19.wav	4577103	0	2			0		other	0
+POST002	427	Picture	RS19.jpg	4615193	0	1	3199	2	0	next	hit	429
+POST002	427	Response	1	4618339	3146	1						
+POST002	429	Picture	B1 T86	4626390	0	1	5199	2	0	next	other	0
+POST002	430	Picture	OF26.jpg	4631589	0	1	29392	2	0	next	other	0
+POST002	431	Sound	OF26.wav	4632089	0	2			0		other	0
+POST002	432	Picture	OF26.jpg	4660981	0	1	3599	2	0	next	incorrect	434
+POST002	432	Response	2	4664494	3513	1						
+POST002	434	Picture	B1 T87	4672578	0	1	5199	2	0	next	other	0
+POST002	435	Picture	AT21.jpg	4677777	0	1	28792	3	0	next	other	0
+POST002	436	Sound	AT21.wav	4678277	0	2			0		other	0
+POST002	437	Picture	AT21.jpg	4706569	0	2	8198	3	0	next	hit	439
+POST002	437	Response	2	4714605	8036	1						
+POST002	439	Picture	B1 T88	4722965	0	1	5199	2	0	next	other	0
+POST002	440	Picture	AT04.jpg	4728164	0	1	26793	2	0	next	other	0
+POST002	441	Sound	AT04.wav	4728664	0	2			0		other	0
+POST002	442	Picture	AT04.jpg	4754957	0	1	800	2	0	next	hit	444
+POST002	442	Response	1	4755684	727	1						
+POST002	444	Picture	B1 T89	4763755	0	1	5198	2	0	next	other	0
+POST002	445	Picture	RS09.jpg	4768953	0	1	38590	2	0	next	other	0
+POST002	446	Sound	RS09.wav	4769453	0	2			0		other	0
+POST002	447	Picture	RS09.jpg	4807543	0	1	10798	2	0	next	incorrect	449
+POST002	447	Response	1	4818310	10767	1						
+POST002	449	Picture	B1 T90	4826138	0	2	5199	3	0	next	other	0
+POST002	450	Picture	OF15.jpg	4831337	0	1	29792	2	0	next	other	0
+POST002	451	Sound	OF15.wav	4831837	0	2			0		other	0
+POST002	452	Picture	OF15.jpg	4861129	0	1	22994	3	0	next	incorrect	454
+POST002	452	Response	1	4884005	22876	1						
+POST002	454	Picture	B1 T91	4892121	0	1	5199	2	0	next	other	0
+POST002	455	Picture	RO22.jpg	4897320	0	1	40190	2	0	next	other	0
+POST002	456	Sound	RO22.wav	4897820	0	2			0		other	0
+POST002	457	Picture	RO22.jpg	4937510	0	1	7998	2	0	next	hit	459
+POST002	457	Response	1	4945368	7858	1						
+POST002	459	Picture	B1 T92	4953706	0	1	5198	2	0	next	other	0
+POST002	460	Picture	RO28.jpg	4958904	0	1	40190	2	0	next	other	0
+POST002	461	Sound	RO28.wav	4959404	0	2			0		other	0
+POST002	462	Picture	RO28.jpg	4999094	0	1	1399	2	0	next	hit	464
+POST002	462	Response	1	5000355	1261	1						
+POST002	464	Picture	B1 T93	5008691	0	1	5199	2	0	next	other	0
+POST002	465	Picture	RS13.jpg	5013890	0	1	36790	2	0	next	other	0
+POST002	466	Sound	RS13.wav	5014390	0	2			0		other	0
+POST002	467	Picture	RS13.jpg	5050680	0	1	7998	2	0	next	hit	469
+POST002	467	Response	1	5058521	7841	1						
+POST002	469	Picture	B1 T94	5066676	0	1	5199	2	0	next	other	0
+POST002	470	Picture	RO20.jpg	5071875	0	1	37790	2	0	next	other	0
+POST002	471	Sound	RO20.wav	5072375	0	2			0		other	0
+POST002	472	Picture	RO20.jpg	5109665	0	1	600	2	0	next	incorrect	474
+POST002	472	Response	1	5110246	581	1						
+POST002	474	Picture	B1 T95	5118463	0	1	5199	2	0	next	other	0
+POST002	475	Picture	RO13.jpg	5123662	0	1	37790	2	0	next	other	0
+POST002	476	Sound	RO13.wav	5124162	0	2			0		other	0
+POST002	477	Picture	RO13.jpg	5161452	0	1	3599	2	0	next	hit	479
+POST002	477	Response	2	5164961	3509	1						
+POST002	479	Picture	B1 T96	5173049	0	1	5198	2	0	next	other	0
+POST002	480	Picture	AT15.jpg	5178247	0	1	29393	2	0	next	other	0
+POST002	481	Sound	AT15.wav	5178747	0	2			0		other	0
+POST002	482	Picture	AT15.jpg	5207640	0	1	100174	2	0	next	miss	0
+POST002	484	Picture	Fertig!	5315012	0	1	200	2	0	next	other	0
+POST002	484	Response	3	5392377	77365	1						
+POST002	485	Response	3	5539027	144636	1						
+POST002	486	Picture	Fertig!	5544553	0	1	200	2	0	next	other	0
+POST002	486	Response	3	5559845	15292	1						
+POST002	488	Response	3	5670479	107131	1						

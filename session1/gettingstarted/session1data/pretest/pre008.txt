@@ -1,0 +1,464 @@
+Scenario - 												
+												
+												
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+												
+PRE008	1	Response	3	-1946	7454	1						
+PRE008	2	Response	3	47603	49405	1						
+PRE008	4	Picture	B1 T1	55782	0	1	5009	392	0	next	other	0
+PRE008	5	Picture	RO09.jpg	60791	0	391	38180	392	0	next	other	0
+PRE008	6	Sound	RO09.wav	61291	0	2			0		other	0
+PRE008	7	Picture	RO09.jpg	98971	0	1	7198	2	0	next	hit	7
+PRE008	7	Response	1	105959	6988	1						
+PRE008	9	Picture	B1 T2	114167	0	1	5198	2	0	next	other	0
+PRE008	10	Picture	RO20.jpg	119365	0	1	37790	2	0	next	other	0
+PRE008	11	Sound	RO20.wav	119865	0	2			0		other	0
+PRE008	12	Picture	RO20.jpg	157155	0	1	7798	2	0	next	incorrect	12
+PRE008	12	Response	1	164766	7611	1						
+PRE008	14	Picture	B1 T3	173151	0	1	5199	2	0	next	other	0
+PRE008	15	Picture	RS28.jpg	178350	0	1	37790	2	0	next	other	0
+PRE008	16	Sound	RS28.wav	178850	0	2			0		other	0
+PRE008	17	Picture	RS28.jpg	216140	0	1	12997	2	0	next	hit	17
+PRE008	17	Response	2	228926	12786	1						
+PRE008	19	Picture	B1 T4	237134	0	1	5199	2	0	next	other	0
+PRE008	20	Picture	AT26.jpg	242333	0	1	29392	2	0	next	other	0
+PRE008	21	Sound	AT26.wav	242833	0	2			0		other	0
+PRE008	22	Picture	AT26.jpg	271725	0	1	4799	2	0	next	hit	22
+PRE008	22	Response	1	276512	4787	1						
+PRE008	24	Picture	B1 T5	284522	0	1	5199	2	0	next	other	0
+PRE008	25	Picture	RS23.jpg	289721	0	1	38190	2	0	next	other	0
+PRE008	26	Sound	RS23.wav	290221	0	2			0		other	0
+PRE008	27	Picture	RS23.jpg	327911	0	1	9797	2	0	next	hit	27
+PRE008	27	Response	2	337569	9658	1						
+PRE008	29	Picture	B1 T6	345506	0	1	5199	2	0	next	other	0
+PRE008	30	Picture	OF04.jpg	350705	0	1	27192	2	0	next	other	0
+PRE008	31	Sound	OF04.wav	351205	0	2			0		other	0
+PRE008	32	Picture	OF04.jpg	377897	0	1	11197	2	0	next	hit	32
+PRE008	32	Response	1	389071	11174	1						
+PRE008	34	Picture	B1 T7	397092	0	1	5199	2	0	next	other	0
+PRE008	35	Picture	AT18.jpg	402291	0	1	28392	3	0	next	other	0
+PRE008	36	Sound	AT18.wav	402791	0	2			0		other	0
+PRE008	37	Picture	AT18.jpg	430683	0	2	8598	3	0	next	hit	37
+PRE008	37	Response	1	439253	8570	1						
+PRE008	39	Picture	B1 T8	447479	0	1	5199	2	0	next	other	0
+PRE008	40	Picture	OF30.jpg	452678	0	1	29592	2	0	next	other	0
+PRE008	41	Sound	OF30.wav	453178	0	2			0		other	0
+PRE008	42	Picture	OF30.jpg	482270	0	1	11397	2	0	next	hit	42
+PRE008	42	Response	1	493485	11215	2						
+PRE008	44	Picture	B1 T9	501265	0	1	5199	2	0	next	other	0
+PRE008	45	Picture	AT10.jpg	506464	0	1	28792	2	0	next	other	0
+PRE008	46	Sound	AT10.wav	506964	0	2			0		other	0
+PRE008	47	Picture	AT10.jpg	535256	0	1	8998	2	0	next	hit	47
+PRE008	47	Response	1	544045	8789	1						
+PRE008	49	Picture	B1 T10	552252	0	1	5198	2	0	next	other	0
+PRE008	50	Picture	RS05.jpg	557450	0	1	40190	2	0	next	other	0
+PRE008	51	Sound	RS05.wav	557950	0	2			0		other	0
+PRE008	52	Picture	RS05.jpg	597640	0	1	5598	2	0	next	hit	52
+PRE008	52	Response	2	603117	5477	1						
+PRE008	54	Picture	B1 T11	611236	0	1	5199	2	0	next	other	0
+PRE008	55	Picture	RO08.jpg	616435	0	1	38390	2	0	next	other	0
+PRE008	56	Sound	RO08.wav	616935	0	2			0		other	0
+PRE008	57	Picture	RO08.jpg	654825	0	1	10597	2	0	next	incorrect	57
+PRE008	57	Response	2	665235	10410	1						
+PRE008	59	Picture	B1 T12	673620	0	1	5198	2	0	next	other	0
+PRE008	60	Picture	AT20.jpg	678818	0	1	28793	2	0	next	other	0
+PRE008	61	Sound	AT20.wav	679318	0	2			0		other	0
+PRE008	62	Picture	AT20.jpg	707611	0	1	10797	2	0	next	hit	62
+PRE008	62	Response	1	718383	10772	1						
+PRE008	64	Picture	B1 T13	725806	0	1	5198	3	0	next	other	0
+PRE008	65	Picture	OF10.jpg	731004	0	2	28793	3	0	next	other	0
+PRE008	66	Sound	OF10.wav	731504	0	2			0		other	0
+PRE008	67	Picture	OF10.jpg	759797	0	1	19795	2	0	next	hit	67
+PRE008	67	Response	1	779422	19625	1						
+PRE008	69	Picture	B1 T14	787590	0	1	5198	2	0	next	other	0
+PRE008	70	Picture	RO14.jpg	792788	0	1	37990	2	0	next	other	0
+PRE008	71	Sound	RO14.wav	793288	0	2			0		other	0
+PRE008	72	Picture	RO14.jpg	830778	0	1	16196	2	0	next	hit	72
+PRE008	72	Response	1	846865	16087	1						
+PRE008	74	Picture	B1 T15	854972	0	1	5199	2	0	next	other	0
+PRE008	75	Picture	RO02.jpg	860171	0	1	38589	2	0	next	other	0
+PRE008	76	Sound	RO02.wav	860671	0	2			0		other	0
+PRE008	77	Picture	RO02.jpg	898760	0	1	10398	2	0	next	incorrect	77
+PRE008	77	Response	1	909012	10252	1						
+PRE008	79	Picture	B1 T16	916756	0	1	5198	2	0	next	other	0
+PRE008	80	Picture	RO03.jpg	921954	0	1	36991	2	0	next	other	0
+PRE008	81	Sound	RO03.wav	922454	0	2			0		other	0
+PRE008	82	Picture	RO03.jpg	958945	0	1	17995	2	0	next	hit	82
+PRE008	82	Response	2	976873	17928	1						
+PRE008	84	Picture	B1 T17	984738	0	1	5198	2	0	next	other	0
+PRE008	85	Picture	AT14.jpg	989936	0	1	27793	2	0	next	other	0
+PRE008	86	Sound	AT14.wav	990436	0	2			0		other	0
+PRE008	87	Picture	AT14.jpg	1017729	0	1	23194	2	0	next	hit	87
+PRE008	87	Response	2	1040895	23166	1						
+PRE008	89	Picture	B1 T18	1049121	0	1	5198	2	0	next	other	0
+PRE008	90	Picture	RS30.jpg	1054319	0	1	40190	2	0	next	other	0
+PRE008	91	Sound	RS30.wav	1054819	0	2			0		other	0
+PRE008	92	Picture	RS30.jpg	1094509	0	1	6798	2	0	next	incorrect	92
+PRE008	92	Response	1	1101189	6680	1						
+PRE008	94	Picture	B1 T19	1109105	0	1	5199	2	0	next	other	0
+PRE008	95	Picture	AT15.jpg	1114304	0	1	29592	2	0	next	other	0
+PRE008	96	Sound	AT15.wav	1114804	0	2			0		other	0
+PRE008	97	Picture	AT15.jpg	1143896	0	1	16795	3	0	next	hit	97
+PRE008	97	Response	1	1160497	16601	1						
+PRE008	99	Picture	B1 T20	1168689	0	1	5199	2	0	next	other	0
+PRE008	100	Picture	AT23.jpg	1173888	0	1	28992	2	0	next	other	0
+PRE008	101	Sound	AT23.wav	1174388	0	2			0		other	0
+PRE008	102	Picture	AT23.jpg	1202880	0	1	3799	2	0	next	hit	102
+PRE008	102	Response	1	1206620	3740	1						
+PRE008	104	Picture	B1 T21	1214477	0	1	5199	2	0	next	other	0
+PRE008	105	Picture	OF08.jpg	1219676	0	1	28992	2	0	next	other	0
+PRE008	106	Sound	OF08.wav	1220176	0	2			0		other	0
+PRE008	107	Picture	OF08.jpg	1248668	0	1	5599	2	0	next	hit	107
+PRE008	107	Response	1	1254107	5439	1						
+PRE008	109	Picture	B1 T22	1262265	0	1	5198	2	0	next	other	0
+PRE008	110	Picture	RS22.jpg	1267463	0	1	37591	2	0	next	other	0
+PRE008	111	Sound	RS22.wav	1267963	0	2			0		other	0
+PRE008	112	Picture	RS22.jpg	1305054	0	1	13596	2	0	next	hit	112
+PRE008	112	Response	2	1318598	13544	2						
+PRE008	114	Picture	B1 T23	1326248	0	1	5199	2	0	next	other	0
+PRE008	115	Picture	AT24.jpg	1331447	0	1	28192	2	0	next	other	0
+PRE008	116	Sound	AT24.wav	1331947	0	2			0		other	0
+PRE008	117	Picture	AT24.jpg	1359639	0	1	3399	2	0	next	hit	117
+PRE008	117	Response	2	1362959	3320	1						
+PRE008	119	Picture	B1 T24	1371236	0	1	5199	2	0	next	other	0
+PRE008	120	Picture	RS09.jpg	1376435	0	1	38590	2	0	next	other	0
+PRE008	121	Sound	RS09.wav	1376935	0	2			0		other	0
+PRE008	122	Picture	RS09.jpg	1415025	0	1	7798	2	0	next	hit	122
+PRE008	122	Response	2	1422681	7656	1						
+PRE008	124	Picture	B1 T25	1430820	0	1	5199	2	0	next	other	0
+PRE008	125	Picture	AT05.jpg	1436019	0	1	26593	2	0	next	other	0
+PRE008	126	Sound	AT05.wav	1436519	0	2			0		other	0
+PRE008	127	Picture	AT05.jpg	1462612	0	1	8598	2	0	next	hit	127
+PRE008	127	Response	1	1471019	8407	1						
+PRE008	129	Picture	B1 T26	1479208	0	1	5198	2	0	next	other	0
+PRE008	130	Picture	OF16.jpg	1484406	0	1	30192	2	0	next	other	0
+PRE008	131	Sound	OF16.wav	1484906	0	2			0		other	0
+PRE008	132	Picture	OF16.jpg	1514598	0	1	16796	2	0	next	incorrect	132
+PRE008	132	Response	2	1531289	16691	1						
+PRE008	134	Picture	B1 T27	1539392	0	1	5198	3	0	next	other	0
+PRE008	135	Picture	OF07.jpg	1544590	0	2	28993	3	0	next	other	0
+PRE008	136	Sound	OF07.wav	1545090	0	2			0		other	0
+PRE008	137	Picture	OF07.jpg	1573583	0	1	11397	2	0	next	hit	137
+PRE008	137	Response	2	1584906	11323	1						
+PRE008	139	Picture	B1 T28	1592978	0	1	5198	2	0	next	other	0
+PRE008	140	Picture	OF24.jpg	1598176	0	1	28593	2	0	next	other	0
+PRE008	141	Sound	OF24.wav	1598676	0	2			0		other	0
+PRE008	142	Picture	OF24.jpg	1626769	0	1	11797	2	0	next	hit	142
+PRE008	142	Response	1	1638534	11765	1						
+PRE008	144	Picture	B1 T29	1646764	0	1	5198	2	0	next	other	0
+PRE008	145	Picture	RS19.jpg	1651962	0	1	38590	2	0	next	other	0
+PRE008	146	Sound	RS19.wav	1652462	0	2			0		other	0
+PRE008	147	Picture	RS19.jpg	1690552	0	1	3199	2	0	next	hit	147
+PRE008	147	Response	1	1693610	3058	1						
+PRE008	149	Picture	B1 T30	1701949	0	1	5199	2	0	next	other	0
+PRE008	150	Picture	AT27.jpg	1707148	0	1	28592	2	0	next	other	0
+PRE008	151	Sound	AT27.wav	1707648	0	2			0		other	0
+PRE008	152	Picture	AT27.jpg	1735740	0	1	36191	2	0	next	hit	152
+PRE008	152	Response	2	1771912	36172	1						
+PRE008	154	Picture	B1 T31	1779929	0	1	5198	2	0	next	other	0
+PRE008	155	Picture	AT30.jpg	1785127	0	1	29592	2	0	next	other	0
+PRE008	156	Sound	AT30.wav	1785627	0	2			0		other	0
+PRE008	157	Picture	AT30.jpg	1814719	0	1	4199	2	0	next	hit	157
+PRE008	157	Response	1	1818728	4009	1						
+PRE008	159	Picture	B1 T32	1827116	0	1	5199	2	0	next	other	0
+PRE008	160	Picture	RO25.jpg	1832315	0	1	40389	2	0	next	other	0
+PRE008	161	Sound	RO25.wav	1832815	0	2			0		other	0
+PRE008	162	Picture	RO25.jpg	1872704	0	1	2400	2	0	next	incorrect	162
+PRE008	162	Response	2	1874934	2230	2						
+PRE008	164	Picture	B1 T33	1882702	0	1	5198	2	0	next	other	0
+PRE008	165	Picture	RO23.jpg	1887900	0	1	39990	2	0	next	other	0
+PRE008	166	Sound	RO23.wav	1888400	0	2			0		other	0
+PRE008	167	Picture	RO23.jpg	1927890	0	1	9397	2	0	next	incorrect	167
+PRE008	167	Response	1	1937186	9296	1						
+PRE008	169	Picture	B1 T34	1945285	0	1	5199	2	0	next	other	0
+PRE008	170	Picture	RO26.jpg	1950484	0	1	39389	2	0	next	other	0
+PRE008	171	Sound	RO26.wav	1950984	0	2			0		other	0
+PRE008	172	Picture	RO26.jpg	1989873	0	1	28593	2	0	next	hit	172
+PRE008	172	Response	2	2018311	28438	1						
+PRE008	174	Picture	B1 T35	2026664	0	1	5198	2	0	next	other	0
+PRE008	175	Picture	RS08.jpg	2031862	0	1	36191	2	0	next	other	0
+PRE008	176	Sound	RS08.wav	2032362	0	2			0		other	0
+PRE008	177	Picture	RS08.jpg	2068053	0	1	14396	2	0	next	hit	177
+PRE008	177	Response	1	2082425	14372	1						
+PRE008	179	Picture	B1 T36	2090647	0	1	5199	2	0	next	other	0
+PRE008	180	Picture	AT02.jpg	2095846	0	1	28992	2	0	next	other	0
+PRE008	181	Sound	AT02.wav	2096346	0	2			0		other	0
+PRE008	182	Picture	AT02.jpg	2124838	0	1	14796	2	0	next	incorrect	182
+PRE008	182	Response	2	2139473	14635	1						
+PRE008	184	Picture	B1 T37	2147832	0	1	5198	2	0	next	other	0
+PRE008	185	Picture	OF17.jpg	2153030	0	1	29993	2	0	next	other	0
+PRE008	186	Sound	OF17.wav	2153530	0	2			0		other	0
+PRE008	187	Picture	OF17.jpg	2183023	0	1	25993	2	0	next	incorrect	187
+PRE008	187	Response	1	2208891	25868	1						
+PRE008	189	Picture	B1 T38	2216814	0	1	5198	2	0	next	other	0
+PRE008	190	Picture	RO12.jpg	2222012	0	1	36791	2	0	next	other	0
+PRE008	191	Sound	RO12.wav	2222512	0	2			0		other	0
+PRE008	192	Picture	RO12.jpg	2258803	0	1	69781	2	0	next	incorrect	192
+PRE008	192	Response	2	2328550	69747	1						
+PRE008	194	Picture	B1 T39	2336582	0	1	5199	2	0	next	other	0
+PRE008	195	Picture	OF05.jpg	2341781	0	1	29592	2	0	next	other	0
+PRE008	196	Sound	OF05.wav	2342281	0	2			0		other	0
+PRE008	197	Picture	OF05.jpg	2371373	0	1	5399	2	0	next	hit	197
+PRE008	197	Response	2	2376721	5348	1						
+PRE008	199	Picture	B1 T40	2384170	0	1	5198	2	0	next	other	0
+PRE008	200	Picture	OF11.jpg	2389368	0	1	27793	2	0	next	other	0
+PRE008	201	Sound	OF11.wav	2389868	0	2			0		other	0
+PRE008	202	Picture	OF11.jpg	2417161	0	1	4799	2	0	next	incorrect	202
+PRE008	202	Response	1	2421863	4702	1						
+PRE008	204	Picture	B1 T41	2429958	0	1	5198	2	0	next	other	0
+PRE008	205	Picture	RS04.jpg	2435156	0	1	40390	2	0	next	other	0
+PRE008	206	Sound	RS04.wav	2435656	0	2			0		other	0
+PRE008	207	Picture	RS04.jpg	2475546	0	1	16795	2	0	next	hit	207
+PRE008	207	Response	1	2492308	16762	1						
+PRE008	209	Picture	B1 T42	2500539	0	1	5199	2	0	next	other	0
+PRE008	210	Picture	OF21.jpg	2505738	0	1	29792	2	0	next	other	0
+PRE008	211	Sound	OF21.wav	2506238	0	2			0		other	0
+PRE008	212	Picture	OF21.jpg	2535530	0	1	12597	2	0	next	hit	212
+PRE008	212	Response	1	2548015	12485	1						
+PRE008	214	Picture	B1 T43	2556324	0	1	5199	2	0	next	other	0
+PRE008	215	Picture	OF25.jpg	2561523	0	1	29592	2	0	next	other	0
+PRE008	216	Sound	OF25.wav	2562023	0	2			0		other	0
+PRE008	217	Picture	OF25.jpg	2591115	0	1	12997	2	0	next	incorrect	217
+PRE008	217	Response	1	2604084	12969	1						
+PRE008	219	Picture	B1 T44	2612110	0	1	5198	2	0	next	other	0
+PRE008	220	Picture	RS11.jpg	2617308	0	1	37390	3	0	next	other	0
+PRE008	221	Sound	RS11.wav	2617808	0	2			0		other	0
+PRE008	222	Picture	RS11.jpg	2654698	0	2	7599	3	0	next	incorrect	222
+PRE008	222	Response	1	2662101	7403	1						
+PRE008	224	Picture	B1 T45	2670094	0	1	5199	2	0	next	other	0
+PRE008	225	Picture	RS02.jpg	2675293	0	1	37190	2	0	next	other	0
+PRE008	226	Sound	RS02.wav	2675793	0	2			0		other	0
+PRE008	227	Picture	RS02.jpg	2712483	0	1	18595	2	0	next	hit	227
+PRE008	227	Response	1	2730939	18456	1						
+PRE008	229	Picture	B1 T46	2739076	0	1	5199	2	0	next	other	0
+PRE008	230	Picture	RS24.jpg	2744275	0	1	35591	2	0	next	other	0
+PRE008	231	Sound	RS24.wav	2744775	0	2			0		other	0
+PRE008	232	Picture	RS24.jpg	2779866	0	1	2399	2	0	next	hit	232
+PRE008	232	Response	1	2782199	2333	1						
+PRE008	234	Picture	B1 T47	2789863	0	1	5199	2	0	next	other	0
+PRE008	235	Picture	RO13.jpg	2795062	0	1	37790	2	0	next	other	0
+PRE008	236	Sound	RO13.wav	2795562	0	2			0		other	0
+PRE008	237	Picture	RO13.jpg	2832852	0	1	1199	2	0	next	incorrect	237
+PRE008	237	Response	1	2833940	1088	1						
+PRE008	239	Picture	B1 T48	2842049	0	1	5199	2	0	next	other	0
+PRE008	240	Picture	RO04.jpg	2847248	0	1	37590	2	0	next	other	0
+PRE008	241	Sound	RO04.wav	2847748	0	2			0		other	0
+PRE008	242	Picture	RO04.jpg	2884838	0	1	11397	2	0	next	hit	242
+PRE008	242	Response	1	2896151	11313	1						
+PRE008	244	Picture	B1 T49	2904233	0	1	5198	3	0	next	other	0
+PRE008	245	Picture	RO07.jpg	2909431	0	2	37791	3	0	next	other	0
+PRE008	246	Sound	RO07.wav	2909931	0	2			0		other	0
+PRE008	247	Picture	RO07.jpg	2947222	0	1	9997	2	0	next	hit	247
+PRE008	247	Response	2	2957180	9958	1						
+PRE008	249	Picture	B1 T50	2965017	0	1	5199	2	0	next	other	0
+PRE008	250	Picture	OF12.jpg	2970216	0	1	28992	2	0	next	other	0
+PRE008	251	Sound	OF12.wav	2970716	0	2			0		other	0
+PRE008	252	Picture	OF12.jpg	2999208	0	1	13596	2	0	next	hit	252
+PRE008	252	Response	1	3012730	13522	1						
+PRE008	254	Picture	B1 T51	3020602	0	1	5199	2	0	next	other	0
+PRE008	255	Picture	AT09.jpg	3025801	0	1	27793	2	0	next	other	0
+PRE008	256	Sound	AT09.wav	3026301	0	2			0		other	0
+PRE008	257	Picture	AT09.jpg	3053594	0	1	6398	2	0	next	hit	257
+PRE008	257	Response	2	3059868	6274	1						
+PRE008	259	Picture	B1 T52	3067390	0	1	5199	2	0	next	other	0
+PRE008	260	Picture	AT07.jpg	3072589	0	1	27392	2	0	next	other	0
+PRE008	261	Sound	AT07.wav	3073089	0	2			0		other	0
+PRE008	262	Picture	AT07.jpg	3099981	0	1	5799	2	0	next	hit	262
+PRE008	262	Response	1	3105636	5655	1						
+PRE008	264	Picture	B1 T53	3113378	0	1	5198	3	0	next	other	0
+PRE008	265	Picture	OF18.jpg	3118576	0	2	28393	3	0	next	other	0
+PRE008	266	Sound	OF18.wav	3119076	0	2			0		other	0
+PRE008	267	Picture	OF18.jpg	3146969	0	1	13996	2	0	next	hit	267
+PRE008	267	Response	1	3160830	13861	1						
+PRE008	269	Picture	B1 T54	3168963	0	1	5199	2	0	next	other	0
+PRE008	270	Picture	RS29.jpg	3174162	0	1	38990	2	0	next	other	0
+PRE008	271	Sound	RS29.wav	3174662	0	2			0		other	0
+PRE008	272	Picture	RS29.jpg	3213152	0	1	6598	2	0	next	incorrect	272
+PRE008	272	Response	2	3219669	6517	1						
+PRE008	274	Picture	B1 T55	3227948	0	1	5198	2	0	next	other	0
+PRE008	275	Picture	OF01.jpg	3233146	0	1	30192	2	0	next	other	0
+PRE008	276	Sound	OF01.wav	3233646	0	2			0		other	0
+PRE008	277	Picture	OF01.jpg	3263338	0	1	17396	2	0	next	hit	277
+PRE008	277	Response	2	3280668	17330	1						
+PRE008	279	Picture	B1 T56	3288932	0	1	5198	2	0	next	other	0
+PRE008	280	Picture	RO16.jpg	3294130	0	1	39190	2	0	next	other	0
+PRE008	281	Sound	RO16.wav	3294630	0	2			0		other	0
+PRE008	282	Picture	RO16.jpg	3333320	0	1	1800	2	0	next	incorrect	282
+PRE008	282	Response	1	3335051	1731	1						
+PRE008	284	Picture	B1 T57	3343317	0	1	5199	2	0	next	other	0
+PRE008	285	Picture	AT17.jpg	3348516	0	1	29592	2	0	next	other	0
+PRE008	286	Sound	AT17.wav	3349016	0	2			0		other	0
+PRE008	287	Picture	AT17.jpg	3378108	0	1	10198	2	0	next	hit	287
+PRE008	287	Response	2	3388197	10089	1						
+PRE008	289	Picture	B1 T58	3396303	0	1	5199	2	0	next	other	0
+PRE008	290	Picture	AT21.jpg	3401502	0	1	28992	2	0	next	other	0
+PRE008	291	Sound	AT21.wav	3402002	0	2			0		other	0
+PRE008	292	Picture	AT21.jpg	3430494	0	1	8398	2	0	next	hit	292
+PRE008	292	Response	2	3438761	8267	1						
+PRE008	294	Picture	B1 T59	3446890	0	1	5199	2	0	next	other	0
+PRE008	295	Picture	RO01.jpg	3452089	0	1	39589	2	0	next	other	0
+PRE008	296	Sound	RO01.wav	3452589	0	2			0		other	0
+PRE008	297	Picture	RO01.jpg	3491678	0	1	24794	2	0	next	incorrect	297
+PRE008	297	Response	2	3516434	24756	1						
+PRE008	299	Picture	B1 T60	3524470	0	1	5198	2	0	next	other	0
+PRE008	300	Picture	RS13.jpg	3529668	0	1	36591	2	0	next	other	0
+PRE008	301	Sound	RS13.wav	3530168	0	2			0		other	0
+PRE008	302	Picture	RS13.jpg	3566259	0	1	30792	2	0	next	hit	302
+PRE008	302	Response	1	3596991	30732	1						
+PRE008	304	Picture	B1 T61	3604849	0	1	5198	2	0	next	other	0
+PRE008	305	Picture	OF26.jpg	3610047	0	1	29392	3	0	next	other	0
+PRE008	306	Sound	OF26.wav	3610547	0	2			0		other	0
+PRE008	307	Picture	OF26.jpg	3639439	0	2	25994	3	0	next	hit	307
+PRE008	307	Response	1	3665222	25783	2						
+PRE008	309	Picture	B1 T62	3673431	0	1	5198	2	0	next	other	0
+PRE008	310	Picture	RS20.jpg	3678629	0	1	37790	2	0	next	other	0
+PRE008	311	Sound	RS20.wav	3679129	0	2			0		other	0
+PRE008	312	Picture	RS20.jpg	3716419	0	1	5799	2	0	next	hit	312
+PRE008	312	Response	2	3722181	5762	1						
+PRE008	314	Picture	B1 T63	3730615	0	2	5199	3	0	next	other	0
+PRE008	315	Picture	RS27.jpg	3735814	0	1	37990	2	0	next	other	0
+PRE008	316	Sound	RS27.wav	3736314	0	2			0		other	0
+PRE008	317	Picture	RS27.jpg	3773804	0	1	8398	2	0	next	hit	317
+PRE008	317	Response	1	3782155	8351	1						
+PRE008	319	Picture	B1 T64	3790200	0	1	5198	2	0	next	other	0
+PRE008	320	Picture	RO18.jpg	3795398	0	1	38390	2	0	next	other	0
+PRE008	321	Sound	RO18.wav	3795898	0	2			0		other	0
+PRE008	322	Picture	RO18.jpg	3833788	0	1	31592	2	0	next	hit	322
+PRE008	322	Response	2	3865255	31467	1						
+PRE008	324	Picture	B1 T65	3873578	0	1	5199	2	0	next	other	0
+PRE008	325	Picture	RO21.jpg	3878777	0	1	40789	2	0	next	other	0
+PRE008	326	Sound	RO21.wav	3879277	0	2			0		other	0
+PRE008	327	Picture	RO21.jpg	3919566	0	1	25193	2	0	next	incorrect	327
+PRE008	327	Response	1	3944560	24994	1						
+PRE008	329	Picture	B1 T66	3952557	0	1	5199	2	0	next	other	0
+PRE008	330	Picture	OF03.jpg	3957756	0	1	28192	2	0	next	other	0
+PRE008	331	Sound	OF03.wav	3958256	0	2			0		other	0
+PRE008	332	Picture	OF03.jpg	3985948	0	1	12797	2	0	next	hit	332
+PRE008	332	Response	2	3998551	12603	1						
+PRE008	334	Picture	B1 T67	4006543	0	1	5199	2	0	next	other	0
+PRE008	335	Picture	RO05.jpg	4011742	0	1	42988	2	0	next	other	0
+PRE008	336	Sound	RO05.wav	4012242	0	2			0		other	0
+PRE008	337	Picture	RO05.jpg	4054730	0	1	2000	2	0	next	hit	337
+PRE008	337	Response	2	4056528	1798	1						
+PRE008	339	Picture	B1 T68	4064728	0	1	5198	2	0	next	other	0
+PRE008	340	Picture	AT04.jpg	4069926	0	1	26793	2	0	next	other	0
+PRE008	341	Sound	AT04.wav	4070426	0	2			0		other	0
+PRE008	342	Picture	AT04.jpg	4096719	0	1	2200	2	0	next	hit	342
+PRE008	342	Response	1	4098840	2121	1						
+PRE008	344	Picture	B1 T69	4107116	0	1	5199	2	0	next	other	0
+PRE008	345	Picture	RS21.jpg	4112315	0	1	37390	2	0	next	other	0
+PRE008	346	Sound	RS21.wav	4112815	0	2			0		other	0
+PRE008	347	Picture	RS21.jpg	4149705	0	1	23994	2	0	next	hit	347
+PRE008	347	Response	1	4173536	23831	1						
+PRE008	349	Picture	B1 T70	4181497	0	1	5199	2	0	next	other	0
+PRE008	350	Picture	OF14.jpg	4186696	0	1	30392	2	0	next	other	0
+PRE008	351	Sound	OF14.wav	4187196	0	2			0		other	0
+PRE008	352	Picture	OF14.jpg	4217088	0	1	2199	2	0	next	hit	352
+PRE008	352	Response	1	4219077	1989	1						
+PRE008	354	Picture	B1 T71	4227285	0	1	5198	3	0	next	other	0
+PRE008	355	Picture	RO15.jpg	4232483	0	2	38390	3	0	next	other	0
+PRE008	356	Sound	RO15.wav	4232983	0	2			0		other	0
+PRE008	357	Picture	RO15.jpg	4270873	0	1	35191	2	0	next	incorrect	357
+PRE008	357	Response	2	4305880	35007	1						
+PRE008	359	Picture	B1 T72	4314062	0	1	5058	2	0	next	other	0
+PRE008	359	Pause		4314795	733		243876					
+PRE008	359	Resume		4314795	733							
+PRE008	360	Picture	RS26.jpg	4319120	0	1	40389	2	0	next	other	0
+PRE008	361	Sound	RS26.wav	4319620	0	2			0		other	0
+PRE008	362	Picture	RS26.jpg	4359509	0	1	7998	2	0	next	hit	364
+PRE008	362	Response	2	4367415	7906	1						
+PRE008	364	Picture	B1 T73	4378704	0	1	5199	2	0	next	other	0
+PRE008	365	Picture	RS03.jpg	4383903	0	1	36590	2	0	next	other	0
+PRE008	366	Sound	RS03.wav	4384403	0	2			0		other	0
+PRE008	367	Picture	RS03.jpg	4420493	0	1	1800	2	0	next	hit	369
+PRE008	367	Response	2	4422220	1727	1						
+PRE008	369	Picture	B1 T74	4430291	0	1	5198	2	0	next	other	0
+PRE008	370	Picture	OF27.jpg	4435489	0	1	30192	2	0	next	other	0
+PRE008	371	Sound	OF27.wav	4435989	0	2			0		other	0
+PRE008	372	Picture	OF27.jpg	4465681	0	1	17996	2	0	next	incorrect	374
+PRE008	372	Response	1	4483608	17927	1						
+PRE008	374	Picture	B1 T75	4491675	0	1	5198	2	0	next	other	0
+PRE008	375	Picture	RS14.jpg	4496873	0	1	37190	2	0	next	other	0
+PRE008	376	Sound	RS14.wav	4497373	0	2			0		other	0
+PRE008	377	Picture	RS14.jpg	4534063	0	1	28793	2	0	next	hit	379
+PRE008	377	Response	2	4562721	28658	1						
+PRE008	379	Picture	B1 T76	4570854	0	1	5198	2	0	next	other	0
+PRE008	380	Picture	OF06.jpg	4576052	0	1	29992	2	0	next	other	0
+PRE008	381	Sound	OF06.wav	4576552	0	2			0		other	0
+PRE008	382	Picture	OF06.jpg	4606044	0	1	3000	2	0	next	hit	384
+PRE008	382	Response	1	4608925	2881	1						
+PRE008	384	Picture	B1 T77	4617042	0	1	5198	2	0	next	other	0
+PRE008	385	Picture	AT29.jpg	4622240	0	1	29392	2	0	next	other	0
+PRE008	386	Sound	AT29.wav	4622740	0	2			0		other	0
+PRE008	387	Picture	AT29.jpg	4651632	0	1	14797	2	0	next	hit	389
+PRE008	387	Response	2	4666231	14599	1						
+PRE008	389	Picture	B1 T78	4674426	0	1	5199	2	0	next	other	0
+PRE008	390	Picture	RO19.jpg	4679625	0	1	36790	2	0	next	other	0
+PRE008	391	Sound	RO19.wav	4680125	0	2			0		other	0
+PRE008	392	Picture	RO19.jpg	4716415	0	1	35191	2	0	next	incorrect	394
+PRE008	392	Response	2	4751577	35162	1						
+PRE008	394	Picture	B1 T79	4759804	0	1	5199	2	0	next	other	0
+PRE008	395	Picture	RS17.jpg	4765003	0	1	36990	2	0	next	other	0
+PRE008	396	Sound	RS17.wav	4765503	0	2			0		other	0
+PRE008	397	Picture	RS17.jpg	4801993	0	1	36190	2	0	next	hit	399
+PRE008	397	Response	1	4837977	35984	1						
+PRE008	399	Picture	B1 T80	4845981	0	1	5199	2	0	next	other	0
+PRE008	400	Picture	AT12.jpg	4851180	0	1	28392	3	0	next	other	0
+PRE008	401	Sound	AT12.wav	4851680	0	2			0		other	0
+PRE008	402	Picture	AT12.jpg	4879572	0	2	28193	3	0	next	hit	404
+PRE008	402	Response	2	4907607	28035	1						
+PRE008	404	Picture	B1 T81	4915763	0	1	5199	2	0	next	other	0
+PRE008	405	Picture	RO29.jpg	4920962	0	1	40189	2	0	next	other	0
+PRE008	406	Sound	RO29.wav	4921462	0	2			0		other	0
+PRE008	407	Picture	RO29.jpg	4961151	0	1	17795	2	0	next	incorrect	409
+PRE008	407	Response	2	4978869	17718	1						
+PRE008	409	Picture	B1 T82	4990143	0	1	5199	2	0	next	other	0
+PRE008	410	Picture	OF20.jpg	4995342	0	1	29592	2	0	next	other	0
+PRE008	411	Sound	OF20.wav	4995842	0	2			0		other	0
+PRE008	412	Picture	OF20.jpg	5024934	0	1	7998	2	0	next	incorrect	414
+PRE008	412	Response	1	5032788	7854	1						
+PRE008	414	Picture	B1 T83	5040530	0	1	5199	2	0	next	other	0
+PRE008	415	Picture	AT01.jpg	5045729	0	1	26793	2	0	next	other	0
+PRE008	416	Sound	AT01.wav	5046229	0	2			0		other	0
+PRE008	417	Picture	AT01.jpg	5072522	0	1	7798	2	0	next	hit	419
+PRE008	417	Response	2	5080134	7612	1						
+PRE008	419	Picture	B1 T84	5088518	0	1	5198	2	0	next	other	0
+PRE008	420	Picture	RS06.jpg	5093716	0	1	35791	2	0	next	other	0
+PRE008	421	Sound	RS06.wav	5094216	0	2			0		other	0
+PRE008	422	Picture	RS06.jpg	5129507	0	1	24793	2	0	next	hit	424
+PRE008	422	Response	1	5154271	24764	1						
+PRE008	424	Picture	B1 T85	5162298	0	1	5199	2	0	next	other	0
+PRE008	425	Picture	RO28.jpg	5167497	0	1	40189	2	0	next	other	0
+PRE008	426	Sound	RO28.wav	5167997	0	2			0		other	0
+PRE008	427	Picture	RO28.jpg	5207686	0	1	9198	2	0	next	incorrect	429
+PRE008	427	Response	2	5216683	8997	1						
+PRE008	429	Picture	B1 T86	5224882	0	1	5198	2	0	next	other	0
+PRE008	430	Picture	RO30.jpg	5230080	0	1	39790	2	0	next	other	0
+PRE008	431	Sound	RO30.wav	5230580	0	2			0		other	0
+PRE008	432	Picture	RO30.jpg	5269870	0	1	3599	2	0	next	incorrect	434
+PRE008	432	Response	1	5273444	3574	1						
+PRE008	434	Picture	B1 T87	5281267	0	1	5198	2	0	next	other	0
+PRE008	435	Picture	OF15.jpg	5286465	0	1	29793	2	0	next	other	0
+PRE008	436	Sound	OF15.wav	5286965	0	2			0		other	0
+PRE008	437	Picture	OF15.jpg	5316258	0	1	31791	2	0	next	incorrect	439
+PRE008	437	Response	1	5347899	31641	1						
+PRE008	439	Picture	B1 T88	5355847	0	1	5199	2	0	next	other	0
+PRE008	440	Picture	OF22.jpg	5361046	0	1	28192	2	0	next	other	0
+PRE008	441	Sound	OF22.wav	5361546	0	2			0		other	0
+PRE008	442	Picture	OF22.jpg	5389238	0	1	9198	2	0	next	incorrect	444
+PRE008	442	Response	1	5398332	9094	2						
+PRE008	444	Picture	B1 T89	5405834	0	1	5199	2	0	next	other	0
+PRE008	445	Picture	AT08.jpg	5411033	0	1	27193	2	0	next	other	0
+PRE008	446	Sound	AT08.wav	5411533	0	2			0		other	0
+PRE008	447	Picture	AT08.jpg	5438226	0	1	21794	2	0	next	hit	449
+PRE008	447	Response	2	5459902	21676	1						
+PRE008	449	Picture	B1 T90	5471017	0	1	5199	2	0	next	other	0
+PRE008	450	Picture	RS12.jpg	5476216	0	1	37190	2	0	next	other	0
+PRE008	451	Sound	RS12.wav	5476716	0	2			0		other	0
+PRE008	452	Picture	RS12.jpg	5513406	0	1	1999	2	0	next	hit	454
+PRE008	452	Response	1	5515370	1964	1						
+PRE008	454	Picture	Fertig!	5522603	0	1	200	2	0	next	other	0
+PRE008	454	Response	3	5567480	44877	2						
+PRE008	456	Picture	Fertig!	5722551	0	1	200	2	0	next	other	0
+PRE008	456	Response	3	5736515	13964	1						
+PRE008	458	Response	3	10684108	4939963	1						
