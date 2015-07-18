@@ -3,7 +3,7 @@ require(ggplot2)
 require(HistData)
 
 ## bivariate plots
-ggplot(GaltonFamilies, aes(x=mother,y=father)) +
+ggplot(GaltonFamilies, aes(x=mother,y=father,size=children,shape=gender)) +
     geom_point() 
 
 
@@ -15,7 +15,6 @@ ggplot(GaltonFamilies, aes(x=mother,y=father)) +
     geom_smooth()
 
 ggsave("scattertrend1.png")
-
 
 
 ## adding a trend line
@@ -44,8 +43,8 @@ ggplot(GaltonFamilies, aes(x=midparentHeight,y=childHeight)) +
 ## add a second trend line, this time a linear one!
 ggplot(GaltonFamilies, aes(x=midparentHeight,y=childHeight)) +
     geom_point() +
-    geom_smooth() +
-    geom_smooth(method="lm")
+    geom_smooth(se=F,colour="red",size=3) +
+    geom_smooth(method="lm",se=F)
 
 
 ## now use the aesthetic colour in the first line of the plot
@@ -96,7 +95,7 @@ install.packages("oaPlots", repos = "http://repos.openanalytics.eu", type = "sou
 require(oaPlots)
 scatterplotDL(GaltonFamilies$mother,GaltonFamilies$childHeight,
               colorVar = GaltonFamilies$childHeight,
-              colorPalette = INBOextra,
+              colorPalette = blues9,
               pch = 19)
 
 scatterplotDL(GaltonFamilies$mother,GaltonFamilies$childHeight,
@@ -131,7 +130,7 @@ ggplot(data,aes(x=values,fill=membrane)) +
     facet_wrap(~ membrane,nrow=2)
 
 ggplot(data,aes(x=membrane,y=values)) +
-    geom_point(size=5,shape=21,fill="red") 
+    geom_point(size=15,shape=21,fill="red") 
 
 
 
@@ -139,19 +138,22 @@ ggplot(data,aes(x=membrane,y=values)) +
 
 ## data
 data <- data <- data.frame(x=c(12.42,9.31,6.83,11.51,10.42,8.87,6.73,9.53,8.8,8.01,7.01,9.69),
-                   y=c(13.8,10,8.51,11.95,10.66,8.76,7.93,11.81,11.62,9.76,9.2,11.2))
+                           y=c(13.8,10,8.51,11.95,10.66,8.76,7.93,11.81,11.62,9.76,9.2,11.2))
 
 
 ## investigate deviation from normality
 ## histogram
+dev.new()
 hist(data$x - data$y)
 ks.test(data$x - data$y,"pnorm",mean=mean(data$x - data$y))
 
 ## test
 t.test(data$y,data$x,paired = T)
+t.test(data$y-data$x,mu=0)
 
 
 ## visualization
+require(granovaGG)
 granovagg.ds(data,revc = T)
 
 
@@ -169,6 +171,17 @@ table(magnets$Active)
 
 ggplot(magnets,aes(x=Active,y=diff)) +
     geom_boxplot()
+
+
+ggplot(magnets,aes(x=diff,fill=Active)) +
+    geom_dotplot(position = position_dodge(width=0.8),alpha=0.2)
+
+ggplot(magnets,aes(x=diff,fill=Active)) +
+    geom_dotplot(alpha=0.2)
+
+
+ggplot(magnets,aes(x=diff,fill=Active)) +
+    geom_histogram(position = position_dodge(width=0.8))
 
 ggplot(magnets,aes(x=Active,y=diff)) +
     geom_dotplot(binaxis = "y",stackdir = "center")

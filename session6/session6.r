@@ -36,7 +36,7 @@ confint(m)
 
 
 ## relationship bweight ~ hyp * gestwks
-m <- lm(bweight ~ hyp + gestwks, data=births)
+m <- lm(bweight ~ hyp * gestwks, data=births)
 summary(m)
 coef(m)
 confint(m)
