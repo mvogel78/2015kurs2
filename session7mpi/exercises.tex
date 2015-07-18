@@ -1,0 +1,51 @@
+% TEMPLATE FOR STANDARD QUIZ
+% by laura
+
+
+\documentclass[11pt]{article}
+
+\oddsidemargin=0in
+\evensidemargin=0in
+\textwidth=6.3in
+\topmargin=-0.5in
+\textheight=9in
+
+\parindent=0in
+\pagestyle{empty}
+
+\begin{document}
+  \begin{enumerate}
+  \item Follow the following steps:
+    \begin{enumerate}
+    \item load the data frame normtemp, which is contained in the UsingR package; it contains the body temperature of several individuals, the gender and the heart rate
+    \item test if the temperature is different in male (coded as 1) and female (coded as 2), use the appropriate test.
+    \item test again, compare the results of the t test and the wilcoxon.
+    \item plot the respective boxplots!
+    \end{enumerate}
+  \item Load the \texttt{UsingR} package (install it it is not already done)
+  \item The Simple data set \texttt{iq} contains simulated scores on a hypothetical IQ test. What analysis is appropriate for measuring the center of the distribution? Why?
+  \item The Simple data set \texttt{slc} contains data on red blood cell sodium-lithium countertransport activity for 190 individuals. Describe the shape of the distribution, estimate the center, state what is an appropriate measure of center for this data.
+  \item  Load the Simple data set \texttt{vacation}. This gives the number of paid holidays and vacation taken by workers in
+    the textile industry.
+    \begin{enumerate}
+    \item Is a test for $\bar{y}$ appropriate for this data?
+    \item Does a t-test seem appropriate?
+    \item If so, test the null hypothesis that $\mu = 24$. 
+    \end{enumerate}
+  \item  Repeat the above for the Simple data set \texttt{smokyph}. This data set measures pH levels for water samples in the Great Smoky Mountains. Use the waterph column \texttt{smokyph[[’waterph’]]} to test the null hypothesis that
+    $\mu = 7$.
+  \item n the babies (UsingR) data set, the variable dht contains the father’s height. Do a significance test of the null hypothesis that  the mean height is 68 inches against an alternative that it is taller. Remove the values of 99 from the data, as these indicate missing data.
+  \item \textbf{Length of cell-phone calls} Suppose a cell-phone bill contains this data for the number of minutes per call: 
+
+2 1 3 3 3 3 1 3 16 2 2 12 20 31 
+
+Is this consistent with an assumption that the median call length is 5 minutes, or does it indicate that the median length is less than 5? 
+\item he babies (UsingR) data set contains data covering many births. Information included is the gestation period, and a factor indicating whether the mother was a smoker. Extracting the rows for mothers who smoked during pregnancy can be done with these commands: 
+\begin{verbatim}
+> require(dplyr)
+> babies <- filter(babies, smoke == 1 & gestation != 999)
+\end{verbatim}
+Perform a significance test of the null hypothesis that the average gestation period is 40 weeks against a two-sided alternative. Explain what test you used, and why you chose that one. 
+  \end{enumerate}
+
+\end{document}
