@@ -46,315 +46,238 @@
 \item instead a empirical distribution is created from randomization of observed data
 \item robust against deviations from normality
 \item sensitive to differences in treatment variances
+\item scope of inference is limited to the sample (importance has been questioned by a number of authors)
 \end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{Permutation Tests - Examples}
-\begin{center}\small
-    \rowcolors[]{1}{gray!10}{gray!30}
-  \begin{tabular}{@{} >{\ttfamily}l l} 
-    \rowcolor{gray!40}
-Explanatory Variables are & \\
-all  continuous                  & Regression                     \\ 
-all categorical & Analysis of variance (ANOVA)   \\
-both continuous and categorical & Analysis of covariance (ANCOVA)\\
-  \end{tabular}
-\end{center}
-\end{frame}
-
-\begin{frame}\frametitle{Choosing the appropriate method}
-\begin{center}
-    \rowcolors[]{1}{gray!10}{gray!30}
-  \begin{tabular}{@{} >{\ttfamily}l l} 
-    \rowcolor{gray!40}
-Response Variables & \\
-(a) Continuous   & Normal regression, ANOVA or ANCOVA\\
-(b) Proportion   & Logistic regression               \\
-(c) Count        & Log-linear models                 \\
-(d) Binary       & Binary logistic analysis          \\
-(e) Time at death& Survival analysis                 \\
-  \end{tabular}
-\end{center}
-The best model is the model that produces the \textbf{least unexplained variation} (the minimal residual
-deviance), subject to the constraint that \textbf{all the parameters} in the model \textbf{should be statistically
-significant}.
-\end{frame}
-
-\begin{frame}\frametitle{Choosing the appropriate method}
-It is very important to understand that there is not \textit{one} model; this is one of the common implicit errors involved in traditional regression and ANOVA, where the same models are used, often uncritically, over and over again. In most
-circumstances, there will be a large number of different, more or less plausible models that
-might be fitted to any given set of data. 
-
-And of course: We are looking for the BEST.
-\end{frame}
-
-\begin{frame}\frametitle{Maximum Likelihood}
-We define \emph{best} in terms of maximum likelihood.
+\begin{frame}[fragile]\frametitle{Excurse - \texttt{tapply()}}
 \begin{itemize}
-\item given the data,                                                                
-\item and given our choice of model,                                                 
-\item what values of the parameters of that model make the observed data most likely?
+\item \texttt{tapply()} allows you to create tables (hence the "t") of the value of a function on subgroups defined by its second argument, which can be a factor or a list of factors.
+\item e.g. in the \texttt{sleep} data frame, we can  summarize \texttt{extra} (increase in hours of sleep) classify by \texttt{group} (drug given) as follows:
+\begin{exampleblock}{Input/Output}\small
+\begin{verbatim}
+> tapply(X = sleep$extra, INDEX = sleep$group, FUN = mean)
+   1    2 
+0.75 2.33 
+> tapply(sleep$extra,sleep$group,mean)
+   1    2 
+0.75 2.33 
+\end{verbatim}
+\end{exampleblock}
+\item \texttt{lapply()} is a member of the apply functions 
 \end{itemize}
-We judge the model on the basis how likely the data would be if the model were correct. 
 \end{frame}
 
-\begin{frame}\frametitle{Ockham's Razor}
 
-For statistical modelling, the principle of
-parsimony means that:
+\begin{frame}[fragile]\frametitle{Excurse - \texttt{replicate()}}
 \begin{itemize}
-\item models should have as few parameters as possible;
-\item linear models should be preferred to non-linear models;
-\item experiments relying on few assumptions should be preferred to those relying on many;
-\item models should be pared down until they are minimal adequate;
-\item simple explanations should be preferred to complex explanations.
+\item the function \texttt{replicate()} is also a member of the apply family
+\item it is used for repeated evaluation of an expression (usually in the context of random number generation)
+\item example: roll 6 dice and sum them up 10000 times
 \end{itemize}
 \end{frame}
 
-\subsection{Types of Models}
-
-\begin{frame}\frametitle{The Null model}
-\begin{columns}
-\begin{column}{0.6\textwidth}
-\linkimage{\includegraphics[width=6.5cm]{nullmodel.png}}{nullmodel.png}
-\end{column}
-\begin{column}{0.4\textwidth}
-\begin{itemize}
-\item Just one parameter, the overall mean $\bar{y}$
-\item Fit: none; $SSE = SSY$
-\item Degrees of freedom: $n-1$
-\item Explanatory power of the model: none
-\end{itemize}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}\frametitle{Adding Information}
-\begin{columns}
-\begin{column}{0.6\textwidth}
-\linkimage{\includegraphics[width=6.5cm]{minimalmodel.png}}{minimalmodel.png}
-\end{column}
-\begin{column}{0.4\textwidth}
-\begin{itemize}
-\item model with $0 \le p' \le p$ parameters
-\item Fit: less than the maximal model, but not significantly so
-\item Degrees of freedom: $n-p'-1$
-\item Explanatory power of the model: $r^2 = \frac{SSR}{SSY}$    
-\end{itemize}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}\frametitle{Adding Information}
-\begin{columns}
-\begin{column}{0.6\textwidth}
-\linkimage{\includegraphics[width=6.5cm]{minimalmodel2.png}}{minimalmodel2.png}
-\end{column}
-\begin{column}{0.4\textwidth}
-\begin{itemize}
-\item model with $0 \le p' \le p$ parameters
-\item Fit: less than the maximal model, but not significantly so
-\item Degrees of freedom: $n-p'-1$
-\item Explanatory power of the model: $r^2 = \frac{SSR}{SSY}$    
-\end{itemize}
-\end{column}
-\end{columns}
-\end{frame}
-
-%% \begin{frame}\frametitle{Saturated/Maximal Model}
-%% \begin{columns}[t]
-%% \begin{column}{0.5\textwidth}
-%% saturated model
-%% \begin{itemize}
-%% \item One parameter for every data point
-%% \item Fit: perfect
-%% \item Degrees of freedom: none
-%% \item Explanatory power of the model: none
-%% \end{itemize}
-%% \end{column}
-%% \begin{column}{0.5\textwidth}
-%% maximal model
-%% \begin{itemize}
-%% \item Contains all $p$ factors, interactions and covariates that
-%% \item might be of any interest. Many of the model’s terms are likely to be insignificant
-%% \item Degrees of freedom: $n-p-1$
-%% \item Explanatory power of the model: it depends
-%% \end{itemize}
-%% \end{column}
-%% \end{columns}
-%% \end{frame}
-
-%% \begin{frame}\frametitle{How to choose...}
-%% \begin{itemize}
-%% \item models are representations of reality that should be both accurate and convenient
-%% \item it is impossible to maximize a model’s realism, generality and holism simultaneously
-%% \item the principle of parsimony is a vital tool in helping to choose one model over another
-%% \item only include an explanatory variable in a model if it significantly improved the fit of the model
-%% \item the fact that we went to the trouble of measuring something does not mean we have to have it in our model
-%% \end{itemize}
-%% \end{frame}
-
-
-\section{Modelling in R}
-\subsection{Model Formulae in R}
-\begin{frame}\frametitle{General Formula Syntax}
-\begin{center}
-\large 
-\textbf{response variable $\sim$ explanatory variable(s)}
-
-\vspace*{1.5cm}
-
-one can read the tilde symbol as \emph{is modelled as a function of}
-\end{center}
-\end{frame}
-
-\begin{frame}[fragile]\frametitle{Simple Linear Regression}
-\begin{center}
-\large 
-\begin{math}\mbox{lm}(y\sim x)\end{math}
-\end{center}
-\begin{exampleblock}{Output}
-\begin{semiverbatim}
-Call:
-lm(formula = y ~ x, data = df)
-
-Coefficients:
-(Intercept)            x  
-    -0.1253       1.0207  
-\end{semiverbatim}
+\begin{frame}[fragile]\frametitle{Excurse - \texttt{replicate()}}
+\begin{exampleblock}{Input/Output}\footnotesize
+\begin{verbatim}
+> sample(1:6,size = 6, replace = T)
+[1] 2 6 2 3 5 3
+> sum(sample(1:6,size = 6, replace = T))
+[1] 19 ## not the same sample as above
+> dice <- replicate(10000,sum(sample(1:6,size = 6,replace = T)))
+> table(dice)
+dice
+  6   7   8   9  10  11  12  13  14  15  16  17  18  19 ... 
+  1   1   3   7  16  49  80 163 274 357 494 602 723 842 ...
+ 26  27  28  29  30  31  32  33  34 
+483 356 270 170 108  63  33  11   4 
+\end{verbatim}
 \end{exampleblock}
 \end{frame}
 
-\begin{frame}[fragile]\frametitle{Simple Linear Regression}
-The model contains much more information. We can access them if we assign it to a variable.
-\begin{exampleblock}{Input}
-\begin{semiverbatim}
-> m <- lm(y~x,data=df)
-> summary(m)
-\end{semiverbatim}
+
+\begin{frame}\frametitle{Permutation Tests - Example}
+  \begin{itemize}
+  \item we use the \texttt{sleep} data set
+  \item first we calculate the difference of the group means using the functions \texttt{lapply()} and \texttt{diff()}
+  \item we use the absolute difference (this corresponds to a two-sided test)
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Permutation Tests - Example}
+\begin{exampleblock}{Input/Output}\small
+\begin{verbatim}
+## use tapply to calculate the group means (not necessary)
+> tapply(sleep$extra,sleep$group,FUN = mean)
+   1    2 
+0.75 2.33 
+> ## calculate the difference between the group means
+> ## (not necessary)
+> diff(tapply(sleep$extra,sleep$group,FUN = mean))
+   2 
+1.58 
+> ## calculate the absolute difference (two-sided test)
+> orig.diff <- abs(diff(tapply(sleep$extra,sleep$group,mean)))
+> orig.diff
+   2 
+1.58 
+\end{verbatim}
 \end{exampleblock}
 \end{frame}
 
-\begin{frame}[fragile]\frametitle{Simple Linear Regression}
-\begin{exampleblock}{Output}\footnotesize
-\begin{semiverbatim}
-Call:
-lm(formula = y ~ x, data = df)
 
-Residuals:
-     Min       1Q   Median       3Q      Max 
--1.30324 -0.59581  0.00489  0.57777  1.42182 
-
-Coefficients:
-            Estimate Std. Error t value Pr(>|t|)    
-(Intercept)  -0.1253     0.3658  -0.343    0.735    
-x             1.0207     0.0203  50.293   <2e-16 ***
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
-
-Residual standard error: 0.7412 on 28 degrees of freedom
-Multiple R-squared: 0.9891,	Adjusted R-squared: 0.9887 
-F-statistic:  2529 on 1 and 28 DF,  p-value: < 2.2e-16 
-\end{semiverbatim}
+\begin{frame}[fragile]\frametitle{Permutation Tests - Example}
+\begin{exampleblock}{Input/Output}\small
+\begin{verbatim}
+> ## do it a 10000 times
+> res <- replicate(10000, 
++    abs(diff(tapply(sleep$extra,sample(sleep$group),mean))))
+> sum(orig.diff <= res)/10000 ## p-value
+[1] 0.0724
+\end{verbatim}
 \end{exampleblock}
 \end{frame}
 
-\begin{frame}[shrink=3,fragile]\frametitle{Simple Linear Regression}
-With \texttt{aov(m)} you can fit an analysis of variance model for each stratum.
-\begin{exampleblock}{Input}
-\begin{semiverbatim}
-> aov(m)
-\end{semiverbatim}
-\end{exampleblock}
-\begin{exampleblock}{Output}\footnotesize
-\begin{semiverbatim}
-Call:
-   aov(formula = m)
 
-Terms:
-                        x Residuals
-Sum of Squares  1389.7606   15.3842
-Deg. of Freedom         1        28
+\begin{frame}[fragile]\frametitle{Permutation Tests - Example}
+\begin{exampleblock}{Input/Output}\small
+\begin{verbatim}
+> ## compare with t-test
+> t.test(sleep$extra ~ sleep$group)
 
-Residual standard error: 0.7412399 
-Estimated effects may be unbalanced
-\end{semiverbatim}
+	Welch Two Sample t-test
+
+data:  sleep$extra by sleep$group
+t = -1.8608, df = 17.776, p-value = 0.07939
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -3.3654832  0.2054832
+sample estimates:
+mean in group 1 mean in group 2 
+           0.75            2.33 
+\end{verbatim}
 \end{exampleblock}
 \end{frame}
 
-\begin{frame}\frametitle{Notation}
-\begin{center}
-    \rowcolors[]{1}{gray!10}{gray!30}
-  \begin{tabular}{@{} >{\ttfamily}l p{9cm}} 
-    \rowcolor{gray!40}
-symbol & meaning\\
-$+$ & indicates inclusion of an explanatory variable in the model (not addition)\\
-$-$ & indicates deletion of an explanatory variable from the model (not subtraction)\\
-$*$ & indicates inclusion of explanatory variables and interactions (not multiplication)\\
-$/$ & indicates nesting of explanatory variables in the model (not division)\\
-$|$ & indicates conditioning (not ``or''), so that $y \sim x | z $ is read as $y$ as a function of $x$ given $z$.\\
-\end{tabular}
-\end{center}
-$A:B$ means the two way interaction between $A$ and $B$ and $A:B:C:D$ means the four-way interaction between the four variables.
+\subsection{Rank-Based Permutation Tests}
+\begin{frame}\frametitle{Rank-Based Permutation Tests}
+\begin{itemize}
+\item requiring a single null distribution given a particular sample size
+\item much less sensitive to outliers compared to parametric methods
+\item scope of inference is generally less considered an issue
+\item slightly less powerful than parametric methods if their parametric assumptions hold
+\item computational problems of ties
+\item rank transformation throws out a large amount of information
+\item also sensitive to heteroscedasticity
+\end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{Notation 2}
-A term of the form \texttt{A/x} where \texttt{A} is a factor, gives ``separate'' regression lines of type $1+x$ for different levels of \texttt{A}. In this case the intercept term is not needed (removed by \texttt{-1}).
-
-Another important function term is the identity function \texttt{I(...)}. It is used to evaluate its argument with operators having their arithmetical meaning and returns the result. 
-\end{frame}
-
-\section{Examples}
-
-\begin{frame}\frametitle{examples}
-\begin{center}\footnotesize
-    \rowcolors[]{1}{gray!10}{gray!30}
-  \begin{tabular}{p{1.5cm} >{\ttfamily}p{2cm} p{6.2cm}} 
-    \rowcolor{gray!40}
-Model&Formula&Comments\\
-Null&$y\sim 1$&is the intercept in regression models, but here it is the overall mean y\\
-Regression&$y\sim x$ &x is a continuous explanatory variable\\
-Regression through origin &$y \sim x-1$ & Do not fit an intercept\\
-One-way ANOVA&$y \sim sex$ &sex is a two-level categorical variable\\
-One-way ANOVA&$ y \sim sex-1$& as above, but do not fit an
-                       intercept (gives two means
-                      rather than a mean and a
-                     difference)\\
-Two-way ANOVA&$y \sim sex + genotype$&genotype is a three-level
-                                catEegorical variable\\
-Analysis of covariance&$y \sim x + sex$& A common slope for y against
-                                  x but with two intercepts, one
-                                 for each sex\\
-Analysis of covariance&$y \sim x * sex$& Two slopes and two intercepts\\
-\end{tabular}
-\end{center}
-\end{frame}
-
-\begin{frame}\frametitle{examples}
-\begin{center}\footnotesize
-    \rowcolors[]{1}{gray!10}{gray!30}
-  \begin{tabular}{p{1.5cm} >{\ttfamily}p{2cm} p{6.2cm}} 
-    \rowcolor{gray!40}
-Model&Formula&Comments\\
-Multiple regression&$y\sim x + z$& Two continuous explanatory
-                           variables, flat surface fit\\
-Multiple regression&$y\sim x * z$& Fits an interaction term as well
-                           (x + z + x:z)\\
-Multiple regression &$y \sim x + I(x^2) + z + I(z^2)$& Fit a quadratic term for both x
-                                               and z\\
-Multiple regression&$y \sim poly(x,2) + z$& Fit a quadratic polynomial for x
-                                      and linear z\\
-Multiple regression&$y \sim (x + z + w)^2$& Fit three variables plus all their
-                                     interactions up to two-way
-\end{tabular}
-\end{center}
+\begin{frame}\frametitle{Rank-Based Permutation Tests}
+  \begin{alertblock}{Warnings}
+    \begin{itemize}
+    \item these tests are not free from assumptions
+    \item hypotheses statements will generally differ from parametric tests
+    \end{itemize}
+  \end{alertblock}
 \end{frame}
 
 
+\begin{frame}\frametitle{Rank-Based Permutation Tests - Example}
+
+  \begin{itemize}
+  \item consider to hypothesized populations $X_1$ and $X_2$
+  \item assume two observations for $X_1$ and three observations for $X_2$ 
+  \item one-tailed test: H_0: $X_1 \ge X_2$ versus H_A: $X_1 < X_2$
+  \item in absence of ties we have $(n_1 + n_2)!/(n_1!n_2!)=10$ possiple ranks for $X_1$ or $X_2$
+  \item what is the smallest possible p-value?
+  \end{itemize}
+\end{frame}
+
+\section{Wilcoxon Test}
+\begin{frame}\frametitle{Wilcoxon tests}
+    \begin{itemize}
+    \item the Wilcoxon tests the location of the median
+    \item it is a non-parametric alternative to Student's t test
+    \item it is based on the ranks -- and really simple, e.g. for the two sample test: sort your data, give them ranks, sum up the ranks by group, take the smaller sum and look in a table for the appropriate row/column (with ties are dealt with by averaging the appropriate ranks) 
+    \item in R it is (not very surprisingly) \texttt{wilcox.test()}
+    \item there is also a one and a two sample and a paired version
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Wilcoxon Test}
+\begin{itemize}
+\item the non-parametric test is much more appropriate when the errors are not normal, 
+\item can be more powerful if the distribution is strongly skewed by the presence of outliers
+\item typically the t-test will give the lower p-value, so the Wilcoxon test is said to be conservative: if a difference is significant under a Wilcoxon test it would have been even more significant under a t-test.
+\end{itemize}
+\end{frame}
 
 
-\appendix
-\flushlinkimages
+\begin{frame}[fragile]\frametitle{Wilcoxon Signed Rank Test}
+\begin{itemize}
+\item method for one sample or two dependent samples
+\item calculate the differences between the pairs of observations (or between values and hypothesized value)
+\item let $n$ be the number of non-zero differences
+\item rank the absolute values of the $n$ differences
+\item reassign the signs from step 1
+\item $T_+$ is the sum of the positive signed ranks, while $T_-$ is the sum of the negative ranks
+\item for a two tailed test the minimum of these two is taken as test statistic, in a upper-tailed $T_-$, in a lower-tailed $T_+$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Wilcoxon Signed-Rank Test}\footnotesize
+\begin{verbatim}
+> pre.test <- c(17,12,20,12,20,21,23,10,15,17,18,18)
+> post.test <- c(19,25,18,18,26,19,27,14,20,22,16,18)
+> wilcox.test(pre.test,post.test,paired = T)
+
+	Wilcoxon signed rank test with continuity correction
+
+data:  pre.test and post.test
+V = 7.5, p-value = 0.02527
+alternative hypothesis: true location shift is not equal to 0
+
+Warning messages:
+1: In wilcox.test.default(pre.test, post.test, paired = T) :
+  kann bei Bindungen keinen exakten p-Wert Berechnen
+2: In wilcox.test.default(pre.test, post.test, paired = T) :
+  kann den exakten p-Wert bei Nullen nicht berechnen
+\end{verbatim}
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Exercise}
+  \begin{enumerate}
+  \item load the data frame normtemp, which is contained in the UsingR package; it contains the body temperature of several individuals, the gender and the heart rate
+  \item test if the temperature is different in male (coded as 1) and female (coded as 2), use the appropriate test.
+  \item test again, compare the results of the t test and the wilcoxon.
+  \item plot the respective boxplots!
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}[allowframebreaks]\frametitle{Exercise}
+  \begin{enumerate}
+  \item load the \texttt{UsingR} package
+  \item The Simple data set \texttt{iq} contains simulated scores on a hypothetical IQ test. What analysis is appropriate for measuring the center of the distribution? Why?
+  \item The Simple data set \texttt{slc} contains data on red blood cell sodium-lithium countertransport activity for 190 individuals. Describe the shape of the distribution, estimate the center, state what is an appropriate measure of center for this data.
+  \item  Load the Simple data set \texttt{vacation}. This gives the number of paid holidays and vacation taken by workers in
+    the textile industry.
+    \begin{enumerate}
+    \item Is a test for $\bar{y}$ appropriate for this data?
+    \item Does a t-test seem appropriate?
+    \item If so, test the null hypothesis that $\mu = 24$. 
+    \end{enumerate}
+  \item  Repeat the above for the Simple data set \texttt{smokyph}. This data set measures pH levels for water samples in the Great Smoky Mountains. Use the waterph column \texttt{smokyph[[’waterph’]]} to test the null hypothesis that
+    $\mu = 7$. 
+  \end{enumerate}
+\end{frame}
+
+
+
+
+
 
 \end{document}
-

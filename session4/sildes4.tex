@@ -99,8 +99,8 @@ where height is the numeric vector of measurement values, sex is the vector cont
   \end{itemize}
 \end{frame} 
 
-\subsection{Wilcoxon signed-rank test}
-\begin{frame}\frametitle{Wilcoxon test}
+\subsection{Wilcoxon Test}
+\begin{frame}\frametitle{Wilcoxon tests}
     \begin{itemize}
     \item the Wilcoxon tests the location of the median
     \item it is a non-parametric alternative to Student's t test
@@ -110,7 +110,30 @@ where height is the numeric vector of measurement values, sex is the vector cont
     \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]\frametitle{Wilcoxon Rank-Sum Test}\footnotesize
+\begin{frame}[fragile]\frametitle{Wilcoxon Tests}
+\begin{itemize}
+
+\item the non-parametric test is much more appropriate when the errors are not normal, 
+\item can be more powerful if the distribution is strongly skewed by the presence of outliers
+\item typically, as here, the t-test will give the lower p-value, so the Wilcoxon test is said to be conservative: if a difference is significant under a Wilcoxon test it would have been even more significant under a t-test.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Wilcoxon Signed Rank Test}
+\begin{itemize}
+\item method for one sample or two dependent samples
+\item calculate the differences between the pairs of observations (or between values and hypothesized value)
+\item let $n$ be the number of non-zero differences
+\item rank the absolute values of the $n$ differences
+\item reassign the signs from step 1
+\item $T_+$ is the sum of the positive signed ranks, while $T_-$ is the sum of the negative ranks
+\item for a two tailed test the minimum of these two is taken as test statistic, in a upper-tailed $T_-$, in a lower-tailed $T_+$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Wilcoxon Signed Rank Test}\footnotesize
 \begin{verbatim}
 > pre.test <- c(17,12,20,12,20,21,23,10,15,17,18,18)
 > post.test <- c(19,25,18,18,26,19,27,14,20,22,16,18)
@@ -130,13 +153,7 @@ Warning messages:
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[fragile]\frametitle{Wilcoxon Rank-Sum Test}
-\begin{itemize}
-\item the non-parametric test is much more appropriate when the errors are not normal, 
-\item can be more powerful if the distribution is strongly skewed by the presence of outliers
-\item typically, as here, the t-test will give the lower p-value, so the Wilcoxon test is said to be conservative: if a difference is significant under a Wilcoxon test it would have been even more significant under a t-test.
-\end{itemize}
-\end{frame}
+
 
 \begin{frame}\frametitle{Exercise}
   \begin{enumerate}
