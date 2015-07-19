@@ -28,12 +28,28 @@ ggplot(births, aes(x = gestwks,y = bweight)) +
     geom_abline(intercept = coef(m)[1] + coef(m)[2],
                 slope = coef(m)[3],colour="red")
 
+ggsave("img/model2.png")
+
 ## relationship bweight ~ hyp * gestwks
 m <- lm(bweight ~ hyp * gestwks, data=births)
 summary(m)
 
+coef(m)
+
+ggplot(births, aes(x = gestwks,y = bweight)) +
+    geom_point() +
+    geom_abline(intercept = coef(m)[1],
+                slope = coef(m)[3],colour="blue") +
+    geom_abline(intercept = coef(m)[1] + coef(m)[2],
+                slope = coef(m)[3] + coef(m)[4],colour="red")
+
+ggsave("img/model3.png")
 
 ## center variable to get meaningful intercept
 births$gwsc <- births$gestwks-40
 m <- lm(bweight ~ hyp * gwsc, data=births)
 summary(m)
+coef(m)
+
+
+require(effects)
