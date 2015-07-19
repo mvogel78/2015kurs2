@@ -24,8 +24,11 @@ sum(orig.diff <= res)/10000 ## p-value
 ## compare with t-test
 t.test(sleep$extra ~ sleep$group)
 
-### Rank Based Permutation tests
+## wilcox signed rank
+pre.test <- c(17,12,20,12,20,21,23,10,15,17,18,18)
+post.test <- c(19,25,18,18,26,19,27,14,20,22,16,18)
 
-### Exercises
-require(dplyr)
-babies <- filter(babies, smoke == 1 & gestation != 999)
+wilcox.test(pre.test,post.test,paired = T)
+
+require(coin)
+wilcoxsign_test(pre.test ~ post.test)
