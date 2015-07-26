@@ -1,4 +1,4 @@
-## seqnr - id variable
+## seqn - id variable
 
 ## RIAGENDR - Gender
 ## RIDAGEYR - Age in years at screening 

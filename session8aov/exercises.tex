@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+
+\oddsidemargin=0in
+\evensidemargin=0in
+\textwidth=6.3in
+\topmargin=-0.5in
+\textheight=9in
+
+\parindent=0in
+\pagestyle{empty}
+
+\begin{document}
+\section{Exercises}
+\subsection{Combining Data Frames}
+On the course website you find an excel file \emph{nhanes.xlsx} containing 4 tables: demographics, body measurements, blood pressure, and physical activity. Each of the tables is a part of the nhanes 2011-2012 \url{http://wwwn.cdc.gov/nchs/nhanes/search/nhanes11_12.aspx}. The file \emph{codebook.txt} contains a short version of a codebook.
+\begin{itemize}
+\item try to load the package \texttt{readxl}. If it is not already installed, install it first.
+\item use the \texttt{read\_excel()} command to read in all 4 data sets.\footnotesize
+\begin{verbatim}
+> ## excel_sheets() given a filename returns all 
+> ## available sheets 
+> excel_sheets("nhanes1112.xlsx")
+[1] "demographics" "bp"           "physactivity" "bodymeas"    
+> ## read_excel() takes the filename and the sheet name 
+> ## (or position)
+> ## and reads in the data 
+> demogr <- read_excel("nhanes1112.xlsx","demographics")
+\end{verbatim}
+\item use \texttt{merge()} to combine these data frames twice
+  \begin{enumerate}
+  \item keep all the rows while merging
+  \item keep only the rows which are present in all of the data sets
+  \end{enumerate}
+  how many rows do both data frame have?
+\end{itemize}
+
+\subsection{Anova}
+  \begin{enumerate}
+  \item Look at the help of the TukeyHSD function. What is its purpose? 
+  \item Execute the code of the example near the end of the help page, interpret the results!
+  \item install and load the granovaGG package (a package for visualization of ANOVAs), load the \texttt{arousal} data frame and use the \texttt{stack()} command to bring the data in the long form. Do a anova analysis using the \texttt{granova.1w()}. Is there a difference between at least 2 of the groups? If indicated do a post-hoc test.
+  \item Visualize your results using boxplots
+  \end{enumerate}
+  \begin{enumerate}
+  \item Look at the help of the TukeyHSD function. What is its purpose? 
+  \item Execute the code of the example near the end of the help page, interpret the results!
+  \item install and load the granovaGG package (a package for visualization of ANOVAs), load the \texttt{arousal} data frame and use the \texttt{stack()} command to bring the data in the long form. Do a anova analysis. Is there a difference at least 2 of the groups? If indicated do a post-hoc test.
+  \end{enumerate}
+\end{document}

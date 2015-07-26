@@ -9,9 +9,12 @@
 
 \begin{frame}\frametitle{ANOVA}
   \begin{itemize}  
-  \item for more factors there there is two-way, three-way anova 
+  \item for more factors there is two-way, three-way anova 
   \item central idea is to compare two or more means by comparing variances
-  \item the statistical model $$y_{ij} = \mu_i + \epsilon_{ij}$$ where the error terms are independent an $\epsilon_{ij} \sim \mathcal{N}(0,\sigma)$ 
+  \item the statistical model: $$y_{ij} = \mu_i + \epsilon_{ij}$$ where the error terms are independent and $\epsilon_{ij} \sim \mathcal{N}(0,\sigma)$ 
+  \item Null Hypothesis: $$H_0: \mu_1=\mu_2=\cdots =\mu_k $$
+  \item Alternative: $H_A: \mu_i \neq \mu_j$ for at least one pair $i,j$
+
   \end{itemize}
 \end{frame}
 
@@ -210,10 +213,12 @@ Total & $55.5$ & $13$ & & \\   \hline
   \item we can use a table or software package
   \item I use here software to calculate the cumulative probability
   \end{itemize}
+\begin{exampleblock}{Input/Output}
 \begin{verbatim}
 > 1 - pf(15.75,1,12)
 [1] 0.001864103
 \end{verbatim}
+\end{exampleblock}
 \end{frame}
 
 \begin{frame}\frametitle{ANOVA}
@@ -233,6 +238,7 @@ Total & $55.5$ & $13$ & & \\   \hline
 
 
 \begin{frame}[fragile]\frametitle{ANOVA in R}
+  \begin{exampleblock}{Input/Output}\small
 \begin{verbatim}
 mm <- lm(ozone ~ garden, data=oneway)
 mm
@@ -244,11 +250,13 @@ Coefficients:
 (Intercept)      gardenb  
           7            3  
 \end{verbatim}
+  \end{exampleblock}
 \end{frame}
 
 
 \begin{frame}[fragile]\frametitle{ANOVA in R}
 \footnotesize
+  \begin{exampleblock}{Input/Output}\small
 \begin{verbatim}
 > summary(mm)
 
@@ -270,10 +278,11 @@ Residual standard error: 1.414 on 12 degrees of freedom
 Multiple R-squared:  0.5676,	Adjusted R-squared:  0.5315 
 F-statistic: 15.75 on 1 and 12 DF,  p-value: 0.001864
 \end{verbatim}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}[fragile]\frametitle{ANOVA in R}
-\footnotesize
+  \begin{exampleblock}{Input/Output}\footnotesize
 \begin{verbatim}
 > anova(mm)
 Analysis of Variance Table
@@ -285,12 +294,13 @@ Residuals 12   24.0     2.0
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 \end{verbatim}
+  \end{exampleblock}
 \end{frame}
 
 
 
-\begin{frame}[fragile,allowframebreaks]\frametitle{ANOVA in R}
-\footnotesize
+\begin{frame}[fragile]\frametitle{ANOVA in R}
+  \begin{exampleblock}{Input/Output}\footnotesize
 \begin{verbatim}
 > m2 <- aov(ozone ~ garden, data=oneway)
 > m2
@@ -310,6 +320,13 @@ garden       1   31.5    31.5   15.75 0.00186 **
 Residuals   12   24.0     2.0                   
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{ANOVA in R}
+  \begin{exampleblock}{Input/Output}\scriptsize
+\begin{verbatim}
 > summary.lm(m2)
 
 Call:
@@ -330,13 +347,8 @@ Residual standard error: 1.414 on 12 degrees of freedom
 Multiple R-squared:  0.5676,	Adjusted R-squared:  0.5315 
 F-statistic: 15.75 on 1 and 12 DF,  p-value: 0.001864
 
-> summary(m2)
-            Df Sum Sq Mean Sq F value  Pr(>F)   
-garden       1   31.5    31.5   15.75 0.00186 **
-Residuals   12   24.0     2.0                   
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 \end{verbatim}
+  \end{exampleblock}
 \end{frame}
 
 
@@ -363,12 +375,12 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 \end{frame}
 
 
-\begin{frame}\frame{Exercises}
+\begin{frame}\frametitle{Exercises}
   \begin{enumerate}
   \item Look at the help of the TukeyHSD function. What is its purpose? 
   \item Execute the code of the example near the end of the help page, interpret the results!
-  \item install and load the granovaGG package (a package for visualization of ANOVAs), load the \texttt{arousal} data frame and use the \texttt{stack()} command to bring the data in the long form. Do a anova analysis. Is there a difference at least 2 of the groups? If indicated do a post-hoc test.
-  \item Visualize your results
+  \item install and load the granovaGG package (a package for visualization of ANOVAs), load the \texttt{arousal} data frame and use the \texttt{stack()} command to bring the data in the long form. Do a anova analysis using the \texttt{granova.1w()}. Is there a difference between at least 2 of the groups? If indicated do a post-hoc test.
+  \item Visualize your results using boxplots
   \end{enumerate}
 \end{frame}
 
