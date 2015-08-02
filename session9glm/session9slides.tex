@@ -40,9 +40,8 @@
 %% Default font: lmodern, doesn't require fontspec % solves some default warnings
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}			
-\usepackage{gensymb}
 %\usepackage{sfmath}		% Sans Serif Math, off by default
-
+\usepackage{gensymb}
 
 %% Protects fonts from Beamer screwing with them
 %% http://tex.stackexchange.com/questions/10488/force-computer-modern-in-math-mode
@@ -119,7 +118,7 @@
 
 
 \author[Mandy Vogel\quad {mandy.vogel@googlemail.com}]{Mandy Vogel}
-\title[Models/Anova]{Models/Anova}
+\title[Beyond Linear Models]{Beyond Linear Models}
 \institute{University Leipzig}
 \date{\today}
 
@@ -161,9 +160,6 @@
   \tableofcontents
 \end{frame}
 
-\include{contentcombiningdf}
-\include{contentanova}
-
-
+\include{contentglm}
 
 \end{document}
