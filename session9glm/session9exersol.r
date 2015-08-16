@@ -4,6 +4,8 @@
 ## read_excel() command to read both data sets and
 
 require(readxl)
+excel_sheets("data.xlsx")
+
 mdata <- read_excel("data.xlsx","mother")
 cdata <- read_excel("data.xlsx","child")
 
@@ -14,6 +16,8 @@ names(cdata)
 
 intersect(names(mdata),names(cdata))
 
+
+births <- merge(mdata,cdata)
 births <- merge(mdata,cdata,by=c("id","preterm"))
 
 str(births)
@@ -30,6 +34,10 @@ summary(births$sex)
 births$sex <- factor(births$sex,levels = c("M","F"))
 summary(births$sex)
 
+summary(births$preterm)
+births$preterm <- factor(births$preterm,levels = c("preterm","normal"))
+summary(births$preterm)
+
 ## from lm() to glm()
 m1 <- lm(bweight ~ hyp, data=births)
 m2 <- glm(bweight ~ hyp, family=gaussian, data=births)
@@ -41,6 +49,8 @@ plot(y)
 abline(h=mean(y))
 
 p <- seq(0,1,by=0.05)
+
+p/(1-p)
 
 log(p/(1-p))
 
@@ -56,17 +66,21 @@ invlogit <- function(x){
 m <- glm(lowbw ~ hyp, family=binomial, data=births)
 
 invlogit(coef(m)[1])
+invlogit(coef(m)[1] + coef(m)[2])
 
 table(births$lowbw,births$hyp)
+
 40/(388+40)
+20/(52 + 20)
 
 ## proportion test
 prop.test(c(20,40),c(72,428))
-
 chisq.test(table(births$lowbw,births$hyp))
 
 ## effects plot
 require(effects)
+Effect("hyp",m)
+
 plot(Effect("hyp",m))
 
 ## effects
@@ -77,6 +91,7 @@ Effect("hyp",m)
 m2 <- glm(lowbw ~ hyp+sex, family=binomial, data=births)
 summary(m2)
 
+invlogit(coef(m2)[1])
 
 m3 <- glm(lowbw ~ hyp*sex, family=binomial, data=births)
 summary(m3)
@@ -108,6 +123,9 @@ Effect("hyp",m3)
 
 ## is their a difference in effects between boys and girls?
 ## Which model can answer this question?
+
+allEffects(m2)
+allEffects(m3)
 
 plot(Effect(c("hyp","sex"),m3))
 
