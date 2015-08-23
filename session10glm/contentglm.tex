@@ -1,6 +1,6 @@
 \section{Recap}
 
-\begin{frame}[fragile]\frametitle{R syntax - \texttt{glm()} vs \texttt{glm()}}
+\begin{frame}[fragile]\frametitle{R syntax - \texttt{glm()} vs \texttt{lm()}}
   \begin{itemize}
   \item the \texttt{glm()} function needs
     \begin{itemize}
@@ -91,13 +91,13 @@ Data from: Michael Hills and Bianca De Stavola (2002). A Short Introduction
 \end{frame}
 
 \begin{frame}[fragile]\frametitle{Exercises}
-Remember: We used hypertension of the mom to explain variation in the birth weight of the kid. Without looking in the material of the last session, try to redo the model. Here are some hints:
+Remember: We used hypertension of the mom to explain variation in the birth weight (in terms of low birth weight or not of course) of the kid. Without looking in the material of the last session, try to redo the model. Here are some hints:
 \begin{itemize}
 \item of course you need the \texttt{glm()} function
 \item you need to specify the formula which has to have the general form $y \sim x$
 \item additional you need to specify the data and the error family (in the case \texttt{binomial})
 \item use the \texttt{summary()} function on the model
-\item use \texttt{Effects()} or \texttt{allEffects()} commands on the model
+\item use \texttt{Effect()} or \texttt{allEffects()} commands on the model
 \item how to interpret the results? Is the effect of hypertension statistically significant?
 \end{itemize}
 \end{frame}
@@ -156,7 +156,6 @@ hyp
   \begin{center}
     \includegraphics[width = 8cm]{hypeffect.png}
   \end{center}
-
 \end{frame}
 
 \begin{frame}[fragile]\frametitle{Exercise - Solution}\footnotesize
@@ -204,9 +203,6 @@ hyp
   0.2777778 
 \end{verbatim}
   \end{exampleblock}
-  \begin{itemize}
-\item 
-\end{itemize}
 \end{frame}
 
 
@@ -437,7 +433,6 @@ AIC: 33.675
 \begin{frame}[fragile]\frametitle{Understanding the Coefficients}
 \begin{itemize}
 \item this relationship is described by $$\mbox{Pr(damage)}=\mbox{logit}^{-1}(11.66299 + -0.21623 \cdot \mbox{temp}) $$
-\item the intercept
   \begin{exampleblock}{Input/Output}
 \begin{verbatim}
 > invlogit(coef(m.oring)[1])
@@ -445,24 +440,25 @@ AIC: 33.675
   0.9999914 
 \end{verbatim}
   \end{exampleblock}
+\item the intercept is interpretable as the probability for a damaged O-ring at a temperature of 0\degree F
+\end{itemize}
+\end{frame}
 
-is interpretable as the probability for a damaged O-ring at a temperature of 0\degree F
+\begin{frame}[fragile]\frametitle{Understanding the Coefficients}
+\begin{itemize}
 \item the parameter for temperature describes how fast the probability decreases with increasing temperature and it is again best interpretable as odds ratio 
 \end{itemize}
-\begin{exampleblock}{Input/Output}\footnotesize
+\begin{exampleblock}{Input/Output}
 \begin{verbatim}
 > exp(coef(m.oring)[2])
      temp 
 0.8055471 
 \end{verbatim}
 \end{exampleblock}
-
 \end{frame}
 
-\begin{frame}[fragile]\frametitle{Understanding the Coefficients}\footnotesize
-\begin{verbatim}
 
-\end{verbatim}
+\begin{frame}[fragile]\frametitle{Understanding the Coefficients}\footnotesize
 \begin{center}
 \includegraphics[width=11.5cm]{challenger.png}
 \end{center}
@@ -699,554 +695,3 @@ Try to reproduce the plot! Hints:
 \end{frame}
 
 
-
-% \section{GLMs and Count Data}
-
-% \begin{frame}[fragile]\frametitle{Count Data}
-% \begin{itemize}
-% \item a great deal of the data collected is in the form of counts
-% \item for example:
-%   \begin{itemize}
-%   \item number of individuals that died
-%   \item number of firms going
-%   \item bankrupt, the number of days of frost, 
-%   \item the number of red blood cells on a microscope slide, and the 
-%   \item number of craters in a sector of lunar landscape
-%   \end{itemize}
-% \item with count data, the number 0 often appears as a value of the response (zero inflated data)
-% \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Count Data}
-% \begin{itemize}
-% \item we must consider a different cases in dealing with data on frequencies: cases
-%   \begin{itemize}
-%   \item   where we count how many
-% times something happened, but we have no way of knowing how often it did not happen
-% (e.g. lightning strikes, bankruptcies, deaths, births). 
-% \item count data on proportions, where we know the number doing a particular thing, but also the number
-% not doing that thing (e.g. the proportion dying, sex ratios at birth, proportions of different
-% groups responding to a questionnaire)
-%   \end{itemize}
-% \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{A Poisson Regression}
-%   \begin{itemize}
-%   \item The following example has a count (the number of reported cancer cases per year per clinic) as the response variable
-%   \item and a single continuous explanatory variable (the distance from a nuclear plant to the clinic in km). 
-%   \item The question is whether or not proximity to the reactor affects the number of cancer cases.\small
-% \begin{verbatim}
-% > cancer <- read.table("clusters.txt",header=T)
-% > head(cancer)
-%   Cancers Distance
-% 1       0 11.46952
-% 2       0 66.55395
-% 3       0 47.46230
-% 4       0 48.38129
-% 5       0 73.76534
-% 6       0 70.57555
-% \end{verbatim}
-%   \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}[fragile]\frametitle{Count Data}
-%   \begin{itemize}
-%   \item look at a barplot (cut the \texttt{Distance} variable in ten classes) and a scatter plot
-%   \end{itemize}
-%   \begin{columns}
-%     \begin{column}{0.5\textwidth}
-% \begin{center}
-% \includegraphics[width=4.5cm]{cancerdist.png}
-% \end{center}
-%     \end{column}
-%     \begin{column}{0.5\textwidth}
-% \begin{center}
-% \includegraphics[width=4.5cm]{cancerdist2.png}
-% \end{center}
-%     \end{column}
-%   \end{columns}
-
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Count Data}
-%   \begin{itemize}
-%   \item There seems to be a downward trend in cancer cases with distance. But is the trend significant?\footnotesize
-% \begin{verbatim}
-% > m <- glm(Cancers~Distance,family=poisson,data=cancer)
-% > summary(m)
-% Call:
-% glm(formula = Cancers ~ Distance, family = poisson, 
-%                                      data = cancer)
-
-% Deviance Residuals: 
-%     Min       1Q   Median       3Q      Max  
-% -1.5504  -1.3491  -1.1553   0.3877   3.1304  
-% Coefficients:
-%              Estimate Std. Error z value Pr(>|z|)  
-% (Intercept)  0.186865   0.188728   0.990   0.3221  
-% Distance    -0.006138   0.003667  -1.674   0.0941 .
-% (Dispersion parameter for poisson family taken to be 1)
-
-%     Null deviance: 149.48  on 93  degrees of freedom
-% Residual deviance: 146.64  on 92  degrees of freedom
-% AIC: 262.41
-% \end{verbatim}
-%   \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}[fragile]\frametitle{Count Data}
-%   \begin{itemize}
-%   \item The trend does not look to be significant, but look at the residual deviance:
-%   \item It is assumed that this is the same as the residual degrees of freedom (because the errors are supposed to be Poisson distributed) 
-%   \item this indicates that we have overdispersion (extra, unexplained variation in the response). 
-%   \item we compensate for the overdispersion by refitting the model using quasi-Poisson rather than Poisson errors
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Count Data}
-%   \begin{itemize}
-% \item the refitted model\footnotesize
-% \begin{verbatim}
-% > m <- glm(Cancers~Distance,family=quasipoisson,data=cancer)
-% > summary(m)
-% Call:
-% glm(formula = Cancers ~ Distance, 
-%                family = quasipoisson, data = cancer)
-% Deviance Residuals: 
-%     Min       1Q   Median       3Q      Max  
-% -1.5504  -1.3491  -1.1553   0.3877   3.1304  
-
-% Coefficients:
-%              Estimate Std. Error t value Pr(>|t|)
-% (Intercept)  0.186865   0.235364   0.794    0.429
-% Distance    -0.006138   0.004573  -1.342    0.183
-
-% (Dispersion parameter for quasipoisson family 
-%                                  taken to be 1.555271)
-%     Null deviance: 149.48  on 93  degrees of freedom
-% Residual deviance: 146.64  on 92  degrees of freedom
-% \end{verbatim}
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Interpreting the Coefficients}
-%   \begin{itemize}
-%   \item the estimates remained the same, but the p-vals changed
-%   \item so there is no compelling evidence to support the existence of a trend in cancer incidence with distance
-% from the nuclear plant (this is a completely made up example, neither considering varying population nor clinic density)
-%   \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}[fragile]\frametitle{Interpreting the Coefficients}
-%   \begin{itemize}
-%   \item if you use glms with Poisson errors, the default link function is \texttt{log}
-%   \item so the parameter estimates and the predictions from the model (the ‘linear predictor’) are in logs, and need to be antilogged
-%   \item so we have the following following formula for our model
-% $$\mbox{count}=\exp{(0.186865 - 0.006138 \cdot \mbox{Distance})}$$
-%   \item antilog the intercept:
-% \begin{verbatim}
-%   > exp(coef(m)[1])
-% (Intercept) 
-%    1.205464 
-% \end{verbatim}
-% \item get 1.2 expected cases at a distance of zero
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Interpreting the Coefficients}
-%   \begin{itemize}
-% \item the slope for \texttt{Distance} is a bit easier to interpret than with a logit link
-% \begin{verbatim}
-% > exp(coef(m)[2])
-%  Distance 
-% 0.9938805 
-% \end{verbatim}
-% means that for every additional km distance you get 0.006 less cancer cases  (it is nicer to say for every 10 km the expected count of cancer cases decreases by 6\%)
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Interpreting the Coefficients}
-%   \begin{itemize}
-% \item again, the \texttt{effects} package is very helpful to give an overview \small
-% \begin{verbatim}
-% > allEffects(m,xlevels=list(Distance=seq(0,100,by=10))
-% + )
-%  model: Cancers ~ Distance
-
-%  Distance effect
-% Distance
-%         0        10        20        30 
-% 1.2054642 1.1336940 1.0661968 1.0027182 
-%        40        50        60        70
-% 0.9430189 0.8868740 0.8340718 0.7844133
-%        80        90       100 
-% 0.7377114 0.6937900 0.6524835 
-% \end{verbatim}
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Interpreting the Coefficients}
-%   \begin{itemize}
-%   \item now the effect plot and the (non-significant) fitted line can be drawn
-%   \end{itemize}
-% \begin{center}
-% \includegraphics[width=6cm]{cancerdist3.png}
-% \end{center}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Interpreting the Coefficients}
-% \begin{center}
-% \includegraphics[width=6cm]{cancerdist2.png}
-% \end{center}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Anova with Count Data}
-% \begin{itemize}
-% \item next example the response variable is a count of infected blood cells per $\mbox{mm}^2$ on microscope slides prepared from randomly selected individuals
-% \item explanatory variables are smoker (logical, yes or no)
-% \item and body mass score (three levels, normal, overweight, obese)
-% \item so we fit the following model (including the interaction term)\tiny
-% \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}[fragile]\frametitle{Anova with Count Data}
-% \footnotesize
-% \begin{verbatim}
-% > m <- glm(cells~smoker*weight,family=poisson,data=cells)
-% > summary(m)
-% Call:
-% glm(formula = cells ~ smoker * weight, family = poisson, data = cells)
-% Deviance Residuals: 
-%     Min       1Q   Median       3Q      Max  
-% -2.6511  -1.1742  -0.9148   0.5533   3.6436  
-% Coefficients:           Estimate Std. Error z value Pr(>|z|)    
-% (Intercept)             -0.8712     0.1302  -6.692 2.20e-11 ***
-% smokerTRUE               0.8224     0.1833   4.486 7.27e-06 ***
-% weightobese              0.4993     0.1671   2.987 0.002817 ** 
-% weightover               0.2618     0.1866   1.404 0.160465    
-% smokerTRUE:weightobese   0.8063     0.2296   3.511 0.000446 ***
-% smokerTRUE:weightover    0.4935     0.2546   1.939 0.052548 .  
-
-% (Dispersion parameter for poisson family taken to be 1)
-%     Null deviance: 1052.95  on 510  degrees of freedom
-% Residual deviance:  792.85  on 505  degrees of freedom
-% AIC: 1318.5
-% \end{verbatim}
-% \end{frame}
-
-
-
-
-% \begin{frame}[fragile]\frametitle{Anova with Count Data}
-%   \begin{itemize}
-%   \item again we see overdispersion (residual deviance $>$ degrees of freedom)
-%   \item we compensate by refitting the model using quasi-Poisson errors
-%   \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}[fragile]\frametitle{Anova with Count Data}
-% \footnotesize
-% \begin{verbatim}
-% > m <- glm(cells~smoker*weight,family=quasipoisson,data=cells)
-% > summary(m)
-% Call:
-% glm(formula = cells ~ smoker * weight, family = quasipoisson, 
-%     data = cells)
-% Deviance Residuals: 
-%     Min       1Q   Median       3Q      Max  
-% -2.6511  -1.1742  -0.9148   0.5533   3.6436  
-% Coefficients:
-%                        Estimate Std. Error t value Pr(>|t|)    
-% (Intercept)             -0.8712     0.1760  -4.950 1.01e-06 ***
-% smokerTRUE               0.8224     0.2479   3.318 0.000973 ***
-% weightobese              0.4993     0.2260   2.209 0.027598 *  
-% weightover               0.2618     0.2522   1.038 0.299723    
-% smokerTRUE:weightobese   0.8063     0.3105   2.597 0.009675 ** 
-% smokerTRUE:weightover    0.4935     0.3442   1.434 0.152226    
-
-% (Dispersion parameter for quasipoisson family taken to be 1.827927)
-% \end{verbatim}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Interpreting the Coefficients}\footnotesize
-%   \begin{itemize}
-% \item remember poisson has log as link so
-% \begin{verbatim}
-% > exp(coef(m)[1])
-% (Intercept) 
-%   0.4184397 
-% \end{verbatim}
-% is the expected count of infected blood cells for a normal weighted non-smoker
-% \item all the other estimates are interpretable as factors (because of the log link!)
-% \item so a smoker has 
-% \begin{verbatim}
-% > exp(coef(m)[2])
-% smokerTRUE 
-%   2.276029 
-% \end{verbatim}
-% more than twice as many infected cells which is
-% \begin{verbatim}
-% > exp(coef(m)[1])*exp(coef(m)[2])
-% (Intercept) 
-%    0.952381 
-% \end{verbatim}
-% expected infected cells, etc. pp
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Interpreting the Coefficients}
-%   \begin{itemize}
-%   \item unfortunately \texttt{effect()} does not work on our model object, so we use \texttt{tapply()} (for simple models a good alternative, as soon as I remove an interaction term, or nested effects this does not work anymore)\footnotesize
-% \begin{verbatim}
-% > with(cells,tapply(cells,list(smoker,weight),mean))
-%          normal     obese      over
-% FALSE 0.4184397 0.6893939 0.5436893
-% TRUE  0.9523810 3.5142857 2.0270270
-% \end{verbatim}
-%   \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}[fragile]\frametitle{Interpreting the Coefficients}
-%   \begin{itemize}
-%   \item for visualization we use barplot with errorbars indicating the standard error
-%   \end{itemize}
-% \begin{center}
-% \includegraphics[width=7cm]{obesesmokers.png}
-% \end{center}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Ancova with Count Data}
-%   \begin{itemize}
-%   \item last example: analysis of covariance
-%   \item response is a count of the number of plant species on plots 
-%   \item that have different biomass (a continuous explanatory variable) and
-%   \item different soil pH (a categorical variable with three levels: high, mid and low)
-% \begin{verbatim}
-% > species<-read.table("species.txt",header=T)
-% > head(species)
-%     pH   Biomass Species
-% 1 high 0.4692972      30
-% 2 high 1.7308704      39
-% 3 high 2.0897785      44
-% 4 high 3.9257871      35
-% 5 high 4.3667927      25
-% 6 high 5.4819747      29
-% \end{verbatim}
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Ancova with Count Data}
-%   \begin{itemize}
-%   \item this time we begin with a scatter plot\small
-% \begin{verbatim}
-% p <- ggplot(species,aes(x=Biomass,y=Species,
-% +                         shape=pH,colour=pH)) +
-%      geom_point()
-% \end{verbatim}
-%   \end{itemize}
-% \begin{center}
-% \includegraphics[width=4.5cm]{species.png}
-% \end{center}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Ancova with Count Data}
-%   \begin{itemize}
-% \item we see: number of species declines with Biomass
-% \item soil pH has a big effect on Species 
-% \item Does the slope of the relationship between Species and Biomass depend
-% on pH?
-%   \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}[fragile]\frametitle{Ancova with Count Data}
-%   \begin{itemize}
-%   \item define the model and look at the summary\small
-% \begin{verbatim}
-% > m <- glm(Species~Biomass*pH,family=poisson,data=species)
-% > summary(m)
-% ...
-% Coefficients:
-%               Estimate Std. Error z value Pr(>|z|)    
-% (Intercept)    3.76812    0.06153  61.240  < 2e-16 ***
-% Biomass       -0.10713    0.01249  -8.577  < 2e-16 ***
-% pHlow         -0.81557    0.10284  -7.931 2.18e-15 ***
-% pHmid         -0.33146    0.09217  -3.596 0.000323 ***
-% Biomass:pHlow -0.15503    0.04003  -3.873 0.000108 ***
-% Biomass:pHmid -0.03189    0.02308  -1.382 0.166954    
-% ...
-% \end{verbatim}
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Ancova with Count Data}
-%   \begin{itemize}
-%   \item test for the need for different slopes by comparing this maximal model (with
-% six parameters) with a simpler model with different intercepts but the same slope
-% \begin{verbatim}
-% > m2 <- glm(Species~Biomass+pH,
-% +                 family=poisson,data=species)
-% > anova(m,m2,test="Chi")
-% Analysis of Deviance Table
-
-% Model 1: Species ~ Biomass * pH
-% Model 2: Species ~ Biomass + pH
-%   Resid. Df Resid. Dev Df Deviance  Pr(>Chi)    
-% 1        84     83.201                          
-% 2        86     99.242 -2   -16.04 0.0003288 ***
-% \end{verbatim}
-% \item AIC: m: 514.4; m2: 526.4 
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Ancova with Count Data}
-%   \begin{itemize}
-%   \item slopes are very significantly different $p = 0.00033$ , so it is justified to retain the more complicated model
-%   \item finally, we have a look on the effects and then draw the fitted lines through the scatterplot using the plot object \texttt{p} from above
-%   \end{itemize}\small
-% \begin{verbatim}
-% > allEffects(m,xlevels=list(Biomass=1:10))
-%  model: Species ~ Biomass * pH
-%  Biomass*pH effect
-%        pH
-% Biomass     high       low       mid
-%      1  38.89998 14.737487 27.048707
-%      2  34.94810 11.338867 23.538030
-%      3  31.39769  8.724005 20.483007
-%      4  28.20797  6.712158 17.824498
-%      5  25.34229  5.164264 15.511039
-%      6  22.76775  3.973330 13.497847
-%      ....
-% \end{verbatim}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{Ancova with Count Data}
-%   \begin{columns}
-%     \begin{column}{0.5\textwidth}
-% \begin{center}
-% \includegraphics[width=4.5cm]{species2.png}
-% \end{center}
-%     \end{column}
-%     \begin{column}{0.5\textwidth}
-% \begin{center}
-% \includegraphics[width=4.5cm]{species3.png}
-% \end{center}
-%     \end{column}
-%   \end{columns}
-% \end{frame}
-
-% \section{Count Data on Proportions}
-% \begin{frame}[fragile]\frametitle{Proportion Data}
-%   \begin{itemize}
-%   \item For comparisons of one binomial proportion with a constant, use \texttt{binom.test()}
-%   \item For comparison of two samples of proportion data, use \texttt{prop.test()}
-%   \item The use of GLMs on proportion data is for complex models
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{GLMs \& Proportion Data}
-%   \begin{itemize}
-%   \item uses also logit as link function and binomial error distribution
-%   \item if there is overdispersion use quasibinomial to compensate
-%   \item fitted values are counts
-%   \item we have seen one example so far: in the challenger example we have already used the responds variable in form of a proportion
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{GLMs \& Proportion Data}
-%   \begin{itemize}
-%   \item we use an example concerning sex ratios in insects as response and
-%   \item population density as explanatory variable
-%   \item so load the data and fit the model
-% \begin{verbatim}
-% > numbers <-read.table("sexratio.txt",header=T)
-% > head(numbers)
-%   density females males
-% 1       1       1     0
-% 2       4       3     1
-% 3      10       7     3
-% 4      22      18     4
-% 5      55      22    33
-% 6     121      41    80
-% > m <- glm(cbind(males,females)~density,
-% +                  family=binomial,data=numbers)
-% \end{verbatim}
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{GLMs \& Proportion Data}\footnotesize
-% \begin{verbatim}
-% > summary(m)
-% Call:
-% glm(formula = cbind(males, females) ~ density, family = binomial, 
-%     data = numbers)
-
-% Deviance Residuals: 
-%     Min       1Q   Median       3Q      Max  
-% -3.4619  -1.2760  -0.9911   0.5742   1.8795  
-
-% Coefficients:
-%              Estimate Std. Error z value Pr(>|z|)    
-% (Intercept) 0.0807368  0.1550376   0.521    0.603    
-% density     0.0035101  0.0005116   6.862 6.81e-12 ***
-
-% (Dispersion parameter for binomial family taken to be 1)
-%     Null deviance: 71.159  on 7  degrees of freedom
-% Residual deviance: 22.091  on 6  degrees of freedom
-% AIC: 54.618
-% \end{verbatim}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{GLMs \& Proportion Data}
-%   \begin{itemize}
-%   \item the residual deviance is larger than the residual degrees of freedom
-%   \item because it is something like a growth process we try a log transformation (before using quasibinomial family)\tiny
-% \begin{verbatim}
-% > m <- glm(cbind(males,females)~log(density),
-% +                           family=binomial,data=numbers)
-% > summary(m)
-% Call:
-% glm(formula = cbind(males, females) ~ log(density), 
-%                    family = binomial, data = numbers)
-% Deviance Residuals: 
-%     Min       1Q   Median       3Q      Max  
-% -1.9697  -0.3411   0.1499   0.4019   1.0372  
-
-% Coefficients:
-%              Estimate Std. Error z value Pr(>|z|)    
-% (Intercept)  -2.65927    0.48758  -5.454 4.92e-08 ***
-% log(density)  0.69410    0.09056   7.665 1.80e-14 ***
-
-%     Null deviance: 71.1593  on 7  degrees of freedom
-% Residual deviance:  5.6739  on 6  degrees of freedom
-% AIC: 38.201
-% \end{verbatim}
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{GLMs \& Proportion Data}
-%   \begin{itemize}
-%   \item the transformation caused a welcome decrease in the residual deviance
-%   \item we conclude that the proportion of animals that are males increases significantly with
-% increasing density, and 
-% \item that the logistic model is linearized by logarithmic transformation of the explanatory variable
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}[fragile]\frametitle{GLMs \& Proportion Data}
-% \begin{verbatim}
-% ggplot(numbers, aes(x=log(density),y=males/(males+females))) +
-%   geom_point() +
-%   geom_smooth(method=glm,family=binomial)
-% \end{verbatim}
-% \begin{center}
-% \includegraphics[width=4.5cm]{sexratio.png}
-% \end{center}
-% \end{frame}

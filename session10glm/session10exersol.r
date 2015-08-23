@@ -3,7 +3,8 @@ load("birthsweights.rdata")
 
 ## Exercises
 ## Remember: We used hypertension of the mom to explain variation
-## in the birth weight of the kid. Without looking in the material
+## in the birth weight (is it low birthweight or not) of the kid.
+## Without looking in the material
 ## of the last session, try to redo the model.
 
 m.hyp <- glm(lowbw ~ hyp, family=binomial, data=births)
@@ -61,12 +62,17 @@ ggplot(births,aes(x = gestwks, y = as.numeric(lowbw)-1)) +
 ## try to change the axis titles (xlab() and ylab())
 ## add a title (ggtitle())
 
+require(ggplot2)
 ggplot(births,aes(x = gestwks, y = as.numeric(lowbw)-1)) +
-    geom_smooth(method = "glm", family = "binomial",se = T,size = 2) +
-    geom_point(shape="|") +
+    geom_smooth(method = "glm", family = "binomial",se = T,size = 2, colour = "black") +
+    geom_point(shape="|", aes(colour = lowbw)) +
+    scale_colour_manual(values = c("green","red")) +
     xlab("gestational age") +
     ylab("probability of low birth weight") +
-    ggtitle("probability of low birth weight dependent on gestational age")
+    ggtitle("probability of low birth weight dependent on gestational age") +
+    theme(
+        legend.position = c(0.9,0.9)
+    )
 
 ## change the colour of the function to black
 ## change the colour of the points to red for the low birth weight
@@ -136,7 +142,7 @@ ggplot(orings,aes(x=temp,y=damage/trials)) +
     geom_point() +
     xlim(20,90) +
     geom_smooth(method = "glm", family = "binomial",
-                aes(weight = trials), fullrange =T) +
+                aes(weight = trials), fullrange =F) +
     xlab(expression(paste("temperature (",degree,"F)"))) +
     ylab("probability of damage") +
     scale_y_continuous(labels = percent)
