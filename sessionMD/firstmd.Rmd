@@ -1,0 +1,103 @@
+---
+title: "My first Markdown Document"
+author: "Mandy"
+date: "22 August 2015"
+output: html_document
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>. 
+
+This service is provided by [RStudio](https://www.rstudio.com/)
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+*italics* or _italics_
+
+**bold** or __bold__
+
+superscript^2^
+
+~~strike through~~
+
+
+```{r}
+summary(cars)
+```
+
+The **cars** data frame contains `r nrow(cars)` rows and `r ncol(cars)` columns.
+
+
+```{r}
+require(pander)
+pander(summary(cars))
+```
+# Linear Model
+
+```{r}
+m <- lm(dist ~ speed, data = cars)
+pander(summary(m))
+```
+
+
+# Linear Model without the R code
+
+```{r echo = F}
+m <- lm(dist ~ speed, data = cars)
+pander(summary(m))
+```
+
+# Linear Model without R code and without output
+
+nothing here
+
+```{r  echo = F, results = 'hide'}
+m <- lm(dist ~ speed, data = cars)
+pander(summary(m))
+```
+
+# Plots
+## using plot
+
+You can also embed plots, for example:
+
+```{r echo=F}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## using ggplot
+```{r}
+require(ggplot2)
+ggplot(cars,aes(x=speed, y=dist)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+# Lists
+## unordered list
+* first item
+* next item
+    + sub-item
+    + sub-item
+
+## ordered list
+1. first item
+4. forgotten item
+2. second item
+2. third item
+    + sub item
+    + sub item
+    
+# Tables
+Table Header 1 | Table Header 2
+---------------|-----------------
+cell 1|cell 2
+cell 3|cell 4
+
+# Images
+![R logo](img/Rlogo.jpg)
+
+![statistics](http://t1.gstatic.com/images?q=tbn:ANd9GcT2sr4_9Dzs0vTuY0XgWcwzdBZz-XNDIjzTSyGLBTrcvj9UV8Vm7q1mBJnH)
+
+

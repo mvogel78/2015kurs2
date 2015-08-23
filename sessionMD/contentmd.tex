@@ -1,0 +1,349 @@
+\section{What is Markdown}
+\label{md1}
+
+\begin{frame}\frametitle{Markdown}
+  And yet -- another language
+  \begin{itemize}
+  \item Markdown is a lightweight markup language
+  \item plain text formatting syntax designed
+  \item it can be converted to HTML and many other formats
+  \item it is very easy, so we will begin immediately
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}\frametitle{Configuration RStudio (for PDF)}
+  \begin{itemize}
+  \item go to \textit{Tools}
+  \item then \textit{Global Options}
+  \item \textit{Sweave}
+  \item choose \textit{knitr} for \texttt{Weave Rnw files using}
+  \item press \textit{Apply} and \textit{OK}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}\frametitle{The first R Markdown file}
+  \begin{itemize}
+  \item in RStudio go to the \textit{New file} menu
+  \item choose \textit{R Markdown}
+  \item in the dialog box type a title and your name in the respective fields
+  \item choose \textit{HTML} 
+  \item choose \textit{Document} from the list in the left-hand side
+  \item press ok
+  \item now save the file via the menu or clicking on the disc symbol
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}\frametitle{The First Page}
+  \begin{itemize}
+  \item what you get is a little example Markdown document
+  \item and you can produce a nice formatted html page by clicking on \textit{knit HTML}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}\frametitle{Change Output Format}
+  \begin{itemize}
+  \item you can change the export format to word or pdf by clicking on the arrow next to  \textit{knit HTML}
+  \item for producing PDFs you need a working \LaTeX installation
+  \item there are \LaTeX distributions for Windows, Linux and MacOS
+  \item \url{http://latex-project.org/ftp.html}
+  \item \LaTeX is big, so the installation takes a while
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{The Example Document}
+  If you have a look at the markdown in the example
+  \begin{itemize}
+  \item the header information are enclosed by \verb|---|
+\begin{verbatim}
+---
+title: "My first markdown document"
+author: "Mandy"
+date: "22. August 2015"
+output: word_document
+---
+\end{verbatim}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{The Example Document}
+  If you have a look at the markdown in the example
+  \begin{itemize}
+\item keywords: \texttt{title, author,} and \texttt{date}
+  \item the output format is specified by \texttt{output} (automatically done by RStudio)
+  \item for producing PDFs the dot contained in the date should be removed or escaped
+\begin{verbatim}
+---
+title: "My first markdown document"
+author: "Mandy"
+date: "22 August 2015"
+output: word_document
+---
+\end{verbatim}
+
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[fragile]\frametitle{The Example Document}
+  \begin{itemize}
+  \item in line 8 you see how to insert a link using angle brackets\small
+\begin{verbatim}
+This is an R Markdown document. Markdown is a simple
+formatting syntax for authoring HTML, PDF, and MS Word
+documents. For more details on using R Markdown see
+<http://rmarkdown.rstudio.com>.
+\end{verbatim}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Links}
+  \begin{itemize}
+  \item similarly you can create links, e.g. the word \texttt{RStudio} with a link to the Rstudio website: 
+\begin{verbatim}
+This service is provided by [RStudio](https://www.rstudio.com/)
+\end{verbatim}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{The Example Document}
+  \begin{itemize}
+  \item one or two stars (or underscores) can be used to produce italics or bold like in the next line
+\begin{verbatim}
+When you click the **Knit** button a document will
+be generated that includes both content as well as
+the output of any embedded R code chunks within the
+document. You can embed an R code chunk like this:
+\end{verbatim}
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{The Example Document}
+  \begin{itemize}
+  \item Try to add the following lines and rerun \textit{Knit HTML}
+    
+\begin{verbatim}
+*italics* or _italics_
+
+**bold** or __bold__
+
+superscript^2^
+
+~~strike through~~
+\end{verbatim}
+  
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Code Chunks}
+  \begin{itemize}
+  \item the next you see is
+    \small
+\begin{verbatim}
+```{r}
+summary(cars)
+```
+\end{verbatim}
+    \normalsize
+  \item if you look in the produced html page you see that code as well as the result
+  \item you can insert such chunks by typing
+        \small
+\begin{verbatim}
+```{r}
+
+```
+\end{verbatim}
+        \normalsize
+    or by clicking \textit{Insert Chunks} in the \textit{Code} menu or the \textit{Chunks} drop down in the upper right corner of the editor window
+  \item or by typing \texttt{Ctrl+Alt+i}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Inline Code}
+  \begin{itemize}
+  \item inline code is insert with a pair of single back tick:
+\begin{verbatim}
+The **cars** data frame contains `r nrow(cars)`
+rows and `r ncol(cars)` columns.
+\end{verbatim}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Pander}
+  \begin{itemize}
+  \item So. The result is OK, but not pretty.
+  \item there is a R package called pander
+  \item install the package
+  \item and add the following lines to your Rmd file
+    
+\begin{verbatim}
+```{r}
+require(pander)
+pander(summary(cars))
+```
+\end{verbatim}
+  
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}\frametitle{Pander}
+  \begin{itemize}
+  \item the pander package contains mainly just one command: \texttt{pander()}
+  \item \texttt{pander()} tries to format the output of R commands nicely for plotting
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Pander}
+Exercise:
+  \begin{enumerate}
+  \item add a section to your Rmd file. You can do this using \verb|#|
+    
+\begin{verbatim}
+# Linear Model
+\end{verbatim}
+    
+  \item add a new code chunk to your Rmd file
+  \item use \texttt{lm()} to build a model of \texttt{dist} dependend on \texttt{speed} with the data from the \texttt{cars} data frame
+  \item use \texttt{summary()} and \texttt{pander()} to add the output to your document
+  \end{enumerate}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Pander}
+  \begin{itemize}
+  \item if you do not want to include the R code itself in your document add the option \texttt{echo = F} to the markdown file
+\begin{verbatim}
+```{r  echo = F}
+m <- lm(dist ~ speed, data = cars)
+pander(summary(m))
+```
+\end{verbatim}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Hide R Output}
+  \begin{itemize}
+  \item you can hide R code and results by using \texttt{results = 'hide'}
+\begin{verbatim}
+```{r  echo = F, results = 'hide'}
+m <- lm(dist ~ speed, data = cars)
+pander(summary(m))
+```
+\end{verbatim}
+  \item the output of messages, warnings and errors can be suppressed by
+    \begin{itemize}
+    \item \texttt{message = F}
+    \item \texttt{warning = F} and
+    \item \texttt{error= F} respectively
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+  
+\begin{frame}[fragile]\frametitle{Plots}
+Exercise: The next part of the examples contains a graphic
+  \begin{enumerate}
+  \item insert a section above the plot
+\begin{verbatim}
+# Graphics
+\end{verbatim}
+  \item and a subsection
+\begin{verbatim}
+## using plot
+\end{verbatim}
+    
+  \item now insert a new subsection and try to build the same plot using \texttt{ggplot()}
+  \item do not forget to load the package
+  \item for the scatter plot you need the \texttt{geom\_point()}
+  \item add the line corresponding to the linear model (\texttt{geom\_line()} and you have to specify the method!)
+  \end{enumerate}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Plots}
+  \begin{itemize}
+  \item you can change the width and height of the plot by using \texttt{fig.width} and \texttt{fig.width} (not supported for word export)
+  \item \texttt{fig.align} can be used to change the alignment
+\begin{verbatim}
+```{r fig.align='center', fig.width=6}
+require(ggplot2)
+ggplot(cars,aes(x=speed, y=dist)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+\end{verbatim}
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[fragile]\frametitle{Lists}
+  \begin{itemize}
+  \item there are ordered and unordered lists\footnotesize
+\begin{verbatim}
+# Lists
+## unordered list
+* first item
+* next item
+    + sub-item
+    + sub-item
+
+## ordered list
+1. first item
+4. forgotten item
+2. second item
+2. third item
+    + sub item
+    + sub item
+
+\end{verbatim}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Tables}
+\footnotesize
+\begin{verbatim}
+Table Header 1 | Table Header 2
+---------------|-----------------
+cell 1|cell 2
+cell 3|cell 4
+\end{verbatim}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Images}
+\footnotesize
+\begin{verbatim}
+![R logo](img/Rlogo.jpg)
+\end{verbatim}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Exercise}
+  Create a new Rmarkdown document with the title \emph{Wood-boring beetle} or something like this. We want to make a document containing some summary statistics and a logistic regression. The data set we wanna use is contained in the \texttt{asbio} package.
+  \begin{enumerate}
+  \item load the package and the data \texttt{beetle}
+  \item there is a pdf with the name woodboring.pdf. Try to reproduce it!
+    \begin{itemize}
+    \item the first paragraph is taken from wikipedia (the link is contained in the document)
+    \item the second from the help page of the data set
+    \item 
+    \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+
