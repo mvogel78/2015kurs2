@@ -80,4 +80,42 @@ sc.race <- read.table("ScotsRaces.dat",header = T)
 m1 <- lm(time ~ climb + distance, data = sc.race)
 m1
 
+
+
 resid(m1)
+
+m.climb <- lm(time ~ distance, data = sc.race)
+m.dist <- lm(climb ~ distance, data = sc.race)
+
+m.res <- lm(resid(m.climb) ~ resid(m.dist))
+
+
+## av.plots()
+require(car)
+avPlots(m1)
+
+avPlot(m1,"climb")
+
+##
+head(cbind(resid(m.dist),
+           avPlot(m1,"climb"),
+           resid(m.climb)))
+      
+## summarizing the fit of a linaer model
+require(psych)
+describe(sc.race[,-1])
+
+M <- cor(sc.race[,-1])
+M
+
+pairs(sc.race[,-1])
+
+pairs(sc.race[,-1],panel = panel.smooth)
+
+require(corrplot)
+corrplot.mixed(M)
+
+### partial correlation
+require(ppcor)
+pcor.test(sc.race$distance,sc.race$climb,sc.race$time)
+

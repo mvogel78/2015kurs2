@@ -285,3 +285,202 @@ Coefficients:
   \end{exampleblock}
 \end{frame}
 
+
+\begin{frame}[fragile]\frametitle{Residuals and Adjusting}
+  \begin{itemize}
+  \item suppose you have one outcome $y$ and two explanatory variables $x1$ and $x2$
+  \item if you regress $y$ on a variable $x2$ (1)
+  \item and $x1$ on $x2$ (2)
+  \item and then the residuals from (1) on the residuals from (2)
+  \item this last fit is identical to the partial effect of $x1$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Residuals and Adjusting}
+  To get the partial effect of climb in model \texttt{m1}
+  \begin{itemize}
+  \item if you regress $time$ on a variable $climb$ (1)
+    \begin{exampleblock}{Input}
+\begin{verbatim}
+> m.climb <- lm(time ~ distance, data = sc.race)
+\end{verbatim}
+    \end{exampleblock}
+  \item and $climb$ on $distance2$ (2)
+\begin{exampleblock}{Input}
+\begin{verbatim}
+> m.dist <- lm(climb ~ distance, data = sc.race)
+\end{verbatim}
+\end{exampleblock}
+  \item and then the residuals from (1) on the residuals from (2)
+\begin{exampleblock}{Input}
+\begin{verbatim}
+> m.res <- lm(resid(m.climb) ~ resid(m.dist))
+\end{verbatim}
+\end{exampleblock}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Residuals and Adjusting}
+\begin{exampleblock}{Input}\scriptsize
+\begin{verbatim}
+> m.res
+
+Call:
+lm(formula = resid(m.climb) ~ resid(m.dist))
+
+Coefficients:
+  (Intercept)  resid(m.dist)  
+   -7.465e-16      1.178e+01  
+
+> m1
+
+Call:
+lm(formula = time ~ climb + distance, data = sc.race)
+
+Coefficients:
+(Intercept)        climb     distance  
+    -13.109       11.780        6.351  
+\end{verbatim}
+    \end{exampleblock}
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Residuals and Adjusting}
+  \begin{itemize}
+  \item this concept also holds for partial correlation
+  \item the \texttt{avPlots()} command (\texttt{car} package provides a feasible way to plot a partial effect
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{\texttt{avPlots()}}
+\begin{verbatim}
+> require(car)
+> avPlots(m1)
+\end{verbatim}
+\begin{center}
+\includegraphics[width=11.5cm]{avplot1.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{\texttt{avPlots()}}
+\begin{verbatim}
+avPlot(m1,"climb")
+\end{verbatim}
+\begin{center}
+\includegraphics[width=10.5cm]{avplot2.png}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]\frametitle{\texttt{avPlots()}}
+  \begin{itemize}
+  \item avPlots also returns the aforementioned residuals
+    \begin{exampleblock}{Input/Output}
+\begin{verbatim}
+> head(cbind(resid(m.dist),
++            avPlot(m1,"climb"),
++            resid(m.climb)))
+                  climb       time           
+1 -0.2037877 -0.2037877   3.253430   3.253430
+2  0.9769679  0.9769679   5.411298   5.411298
+3 -0.6230321 -0.6230321  -9.288702  -9.288702
+4 -1.0098511 -1.0098511 -10.243901 -10.243901
+5  1.1645426  1.1645426   2.124366   2.124366
+6  0.9605426  0.9605426  13.074366  13.074366
+\end{verbatim}
+    \end{exampleblock}
+  \end{itemize}
+\end{frame}
+
+\section{Summarizing the Fit of a Linear Model}
+\begin{frame}\frametitle{Exercise}
+  \begin{itemize}
+  \item get the mean and the standard deviation of the three numeric variables in the \texttt{sc.race} data frame
+  \item use the \texttt{pairs()} command and the \texttt{cor()} command to get a scatterplot matrix and the respective correlation matrix (Hint: these commands only work on numeric columns, so you have to get rid off the non-numeric ones. Remember indexing with negative integers)
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Exercise}
+  \begin{itemize}
+  \item get the mean and the standard deviation of the three numeric variables in the \texttt{sc.race} data frame
+  \end{itemize}
+  \begin{exampleblock}{Input/Output}\tiny
+\begin{verbatim}
+> describe(sc.race[,-1])
+         vars  n  mean    sd median trimmed   mad   min    max  range skew
+distance    1 35  7.53  5.52   6.00    6.55  2.22  2.00  28.00  26.00 1.99
+climb       2 35  1.82  1.62   1.00    1.54  0.74  0.30   7.50   7.20 1.68
+time        3 35 56.09 50.39  36.37   46.46 20.95 15.95 204.62 188.67 1.77
+         kurtosis   se
+distance     3.83 0.93
+climb        2.66 0.27
+time         2.07 8.52
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Solution}
+  \begin{itemize}
+  \item get the correlation matrix
+  \end{itemize}
+  \begin{exampleblock}{Input/Output}\small
+\begin{verbatim}
+> M <- cor(sc.race[,-1])
+> M
+          distance     climb      time
+distance 1.0000000 0.6523461 0.9430944
+climb    0.6523461 1.0000000 0.8326535
+time     0.9430944 0.8326535 1.0000000
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Solution}
+  \begin{itemize}
+  \item get the scatterplot matrix
+  \end{itemize}
+  \begin{exampleblock}{Input/Output}\small
+\begin{verbatim}
+> pairs(sc.race[,-1])
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Solution}
+  \begin{itemize}
+  \item get the scatterplot matrix
+  \end{itemize}
+\begin{center}
+\includegraphics[width=11.5cm]{pairs1.png}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]\frametitle{Solution}
+  \begin{itemize}
+  \item get the scatterplot matrix
+  \end{itemize}
+  \begin{exampleblock}{Input/Output}\small
+\begin{verbatim}
+> pairs(sc.race[,-1],panel = panel.smooth)
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Solution}
+  \begin{itemize}
+  \item get the scatterplot matrix
+  \end{itemize}
+\begin{center}
+\includegraphics[width=11.5cm]{pairs2.png}
+\end{center}
+\end{frame}
+
